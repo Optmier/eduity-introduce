@@ -1,0 +1,47 @@
+.hambuger-list {
+    margin: 30px 18px 0 18px;
+
+    & .list-header {
+        font-size: 26px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.47;
+        letter-spacing: -1.6px;
+        text-align: left;
+        color: #333333;
+        margin-bottom: 15px;
+    }
+    & .list-login {
+        height: 34px;
+        border: solid 1px #e5e5e5;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        text-align: left;
+        color: #8c8b8b;
+        padding: 6px 8px;
+        cursor: pointer;
+    }
+    & .list-text {
+        font-size: 16px;
+        font-weight: 550;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: -1.1px;
+        text-align: left;
+        color: #333333;
+    }
+    & .divider {
+        margin: 15px 16px;
+        border: none;
+        height: 1px;
+        flex-shrink: 0;
+        background-color: rgba(0, 0, 0, 0.12);
+    }
+}
