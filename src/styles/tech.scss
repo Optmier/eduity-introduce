@@ -3,7 +3,7 @@ $pointColor: #2c7b6c;
 .tech-root {
     background-color: white;
     color: #525252;
-    padding: 84px 24px 64px 24px;
+    padding: 96px 24px 64px 24px;
     word-break: keep-all;
     word-wrap: break-word;
 
@@ -16,7 +16,6 @@ $pointColor: #2c7b6c;
 
         & .tech-contents {
             font-weight: 500;
-            margin: 25px;
 
             & .title {
                 & p {
@@ -85,14 +84,14 @@ $pointColor: #2c7b6c;
             }
 
             & + .tech-contents {
-                margin-top: 64px;
+                margin-top: 92px;
             }
         }
     }
 
     @media (max-width: 768px) {
         & {
-            padding: 84px 24px 64px 24px;
+            padding: 96px 24px 64px 24px;
 
             & .responsive {
                 & .tech-contents {
