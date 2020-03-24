@@ -1,0 +1,126 @@
+$pointColor: #2c7b6c;
+
+.tech-root {
+    background-color: white;
+    color: #525252;
+    padding: 84px 24px 64px 24px;
+    word-break: keep-all;
+    word-wrap: break-word;
+
+    & .responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 840px;
+
+        & .tech-contents {
+            font-weight: 500;
+            margin: 25px;
+
+            & .title {
+                & p {
+                    font-size: 36px;
+                    font-weight: 600;
+                    margin-top: 0;
+                }
+            }
+
+            & .strong {
+                & p {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin: 0;
+                }
+            }
+
+            & .right-container {
+                & .right-image {
+                    background-image: url(/images/tech-img1.png);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    filter: grayscale(1);
+                    width: 100%;
+                    height: 300px;
+                    margin-top: -120px;
+                }
+
+                & video {
+                    width: 100%;
+                    min-width: 240px;
+                }
+            }
+
+            & .header {
+                padding: 25px 0;
+                margin: 0;
+            }
+            & .contents {
+                & .label {
+                    font-size: 20px;
+                    font-weight: 600;
+                    padding-top: 16px;
+                }
+            }
+
+            & .special-logo {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                max-width: 240px;
+            }
+
+            & .special {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding-left: 12px;
+
+                & p {
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+            }
+
+            & + .tech-contents {
+                margin-top: 64px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        & {
+            padding: 84px 24px 64px 24px;
+
+            & .responsive {
+                & .tech-contents {
+                    & .right-container {
+                        & .right-image {
+                            margin-left: 16%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        & {
+            & .responsive {
+                & .tech-contents {
+                    & .right-container {
+                        & .right-image {
+                            display: none;
+                        }
+                    }
+                    & .special {
+                        padding-left: 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

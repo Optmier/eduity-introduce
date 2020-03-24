@@ -1,0 +1,32 @@
+$pointColor: #2c7b6c;
+
+.book-online-root {
+    padding: 96px 0 96px 0;
+    color: #525252;
+
+    & .responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & .header {
+            font-weight: 500;
+            margin-bottom: 32px;
+
+            & p {
+                margin: 0;
+
+                &.main {
+                    font-size: 36px;
+                    font-weight: 600;
+                    text-align: center;
+                }
+
+                &.sub {
+                    font-size: 16px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

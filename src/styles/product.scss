@@ -1,0 +1,142 @@
+$pointColor: #2c7b6c;
+
+.product-root {
+    background-color: white;
+    color: #525252;
+    padding: 64px 24px 64px 24px;
+    word-break: keep-all;
+    word-wrap: break-word;
+
+    & .responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 840px;
+
+        & .top-contents {
+            font-weight: 500;
+            margin-top: 92px;
+
+            & .logo {
+                display: flex;
+                justify-content: center;
+
+                & img {
+                    height: 92px;
+                }
+            }
+
+            & .items {
+                display: flex;
+                margin-top: 96px;
+
+                & .cardView {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+
+                    & .card-img {
+                        display: flex;
+                        justify-content: center;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                            max-width: 128px;
+                            max-height: 128px;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    & .card-title {
+                        color: #525252;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+
+                    & .card-content {
+                        color: #525252;
+                        font-size: 16px;
+                        padding-top: 24px;
+                        line-height: 1.5;
+                        text-align: center;
+                    }
+
+                    & + .cardView {
+                        margin-left: 24px;
+                    }
+                }
+            }
+        }
+
+        & .main-contents {
+            display: flex;
+            flex-direction: column;
+            margin-top: 96px;
+
+            & .contents {
+                & .title {
+                    & p {
+                        font-size: 36px;
+                        font-weight: 600;
+                    }
+                }
+
+                & .strong {
+                    & p {
+                        font-size: 20px;
+                        font-weight: 600;
+                        margin: 0;
+                    }
+                }
+
+                & .content {
+                    & .m {
+                        font-weight: 600;
+                        margin-bottom: 0;
+                    }
+
+                    & .s {
+                        margin-top: 0;
+                    }
+                }
+
+                & .image-container {
+                    & img {
+                        width: 100%;
+                    }
+                }
+
+                & + .contents {
+                    margin-top: 48px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        & {
+            padding: 32px 24px 64px 24px;
+
+            & .responsive {
+                & .top-contents {
+                    & .items {
+                        flex-direction: column;
+
+                        & .cardView {
+                            & + .cardView {
+                                margin-left: 0;
+                                margin-top: 72px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+    }
+}

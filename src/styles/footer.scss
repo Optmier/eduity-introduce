@@ -1,0 +1,52 @@
+.footer-root {
+    background-color: black;
+    padding: 24px 24px 24px 1vw;
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    word-spacing: 0.2em;
+    overflow: hidden;
+
+    .react-reveal {
+        height: 100%;
+    }
+
+    & .footer-logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 48px;
+
+        & img {
+            height: 36px;
+        }
+    }
+
+    & .footer-contents {
+        & p {
+            word-break: keep-all;
+
+            & span {
+                white-space: pre;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        & {
+            padding: 16px;
+
+            & .footer-logo {
+                justify-content: flex-start;
+                margin: 0;
+                margin-bottom: 16px;
+
+                & img {
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
