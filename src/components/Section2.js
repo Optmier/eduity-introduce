@@ -71,7 +71,7 @@ function Section2() {
     ];
 
     return (
-        <SectionWrapper no={2} coverImage="bgcover2" marginBottom={64} darker>
+        <SectionWrapper no={2} coverImage="bgcover2" marginBottom={64}>
             <Fade cascade bottom distance="72px" duration={800} fraction={1}>
                 <div className="intro-header">
                     <p className="sub">{intro_section_2[0][window.lang]}</p>

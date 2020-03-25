@@ -45,9 +45,7 @@ function Section3() {
             <div className="responsive">
                 <div className="header">
                     <Fade bottom distance="72px" duration={800} fraction={1}>
-                        <div className={classNames(window.lang, 'header-font')}>
-                            <span className="mark">{intro_section_3[0][window.lang]}</span> 'Pierce'
-                        </div>
+                        <div className={classNames(window.lang, 'header-font')}>{intro_section_3[0][window.lang]} 'Pierce'</div>
                     </Fade>
                     <Fade bottom distance="72px" duration={800} fraction={1}>
                         <div className={classNames(window.lang, 'desc-font')}>{intro_section_3[1][window.lang]}</div>

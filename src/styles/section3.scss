@@ -8,6 +8,7 @@ $pointColor: #36bf80;
     & article {
         word-break: keep-all;
         word-wrap: break-word;
+        color: white;
 
         & .header {
             margin-bottom: 15vh;
@@ -15,6 +16,7 @@ $pointColor: #36bf80;
             & .header-font,
             .desc-font {
                 text-align: center;
+                color: white;
             }
 
             & .header-font {
@@ -49,6 +51,7 @@ $pointColor: #36bf80;
                             max-width: 128px;
                             max-height: 128px;
                             margin-bottom: 20px;
+                            filter: invert(1);
                         }
                     }
 
@@ -56,7 +59,7 @@ $pointColor: #36bf80;
                         font-size: 18px;
                         line-height: 1.5;
                         text-align: center;
-                        color: #212121;
+                        // color: #212121;
                     }
 
                     & .card-content {
@@ -64,7 +67,7 @@ $pointColor: #36bf80;
                         font-size: 14px;
                         line-height: 1.5;
                         text-align: center;
-                        color: #757575;
+                        // color: #757575;
                     }
                 }
 
