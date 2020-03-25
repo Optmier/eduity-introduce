@@ -5,6 +5,8 @@ import ContentView from '../components/ContentView';
 import teacher2 from '../components/svgs/teacher2.svg';
 import studying from '../components/svgs/studying.svg';
 import university from '../components/svgs/university.svg';
+import { NavLink, Route } from 'react-router-dom';
+import ProductContents from '../components/ProductContents';
 
 const { product } = strings;
 
@@ -37,8 +39,8 @@ function Product() {
         <div className="product-root">
             <div className="responsive">
                 <div className="top-contents">
-                    <div className="logo">
-                        <img src="logo.svg" alt="logo" />
+                    <div className="image-container">
+                        <img src="/images/our_services.png" alt="서비스전체표" />
                     </div>
                     <div className="items">
                         {datas.map((i, key) => (
@@ -50,65 +52,21 @@ function Product() {
                 </div>
 
                 <div className="main-contents">
-                    <div className="contents">
-                        <div className="title">
-                            <p>{product.prods.item_1.title[window.lang]}</p>
-                        </div>
-                        <div className="strong">
-                            <p>{product.prods.item_1.strong[window.lang]}</p>
-                        </div>
-                        <div className="content">
-                            <p className="m">{product.prods.item_1.p_1[window.lang]}</p>
-                            <p className="s">{product.prods.item_1.s_1[window.lang]}</p>
-                            <p className="m">{product.prods.item_1.p_2[window.lang]}</p>
-                            <p className="s">{product.prods.item_1.s_2[window.lang]}</p>
-                            <p className="m">{product.prods.item_1.p_3[window.lang]}</p>
-                            <p className="s">{product.prods.item_1.s_3[window.lang]}</p>
-                        </div>
+                    <div className="subRoute">
+                        <ul>
+                            <NavLink className="listStyle kr" to="/faq/01" activeClassName={'able'}>
+                                <li>
+                                    <span>01</span>지원 관련
+                                </li>
+                            </NavLink>
+                            <NavLink className="listStyle kr" to="/faq/02" activeClassName={'able'}>
+                                <li>
+                                    <span>02</span>스터디 진행
+                                </li>
+                            </NavLink>
+                        </ul>
                     </div>
-                    <div className="contents">
-                        <div className="title">
-                            <p>{product.prods.item_2.title[window.lang]}</p>
-                        </div>
-                        <div className="strong">
-                            <p>{product.prods.item_2.strong[window.lang]}</p>
-                        </div>
-                        <div className="content">
-                            <p>{product.prods.item_2.p_1[window.lang]}</p>
-                            <p>{product.prods.item_2.p_2[window.lang]}</p>
-                        </div>
-                    </div>
-                    <div className="contents">
-                        <div className="title">
-                            <p>{product.prods.item_3.title[window.lang]}</p>
-                        </div>
-                        <div className="strong">
-                            <p>{product.prods.item_3.strong[window.lang]}</p>
-                        </div>
-                        <div className="content">
-                            <p>{product.prods.item_3.p_1[window.lang]}</p>
-                        </div>
-                    </div>
-                    <div className="contents">
-                        <div className="title">
-                            <p>{product.prods.item_4.title[window.lang]}</p>
-                        </div>
-                        <div className="strong">
-                            <p>{product.prods.item_4.strong[window.lang]}</p>
-                        </div>
-                        <div className="content">
-                            <p>{product.prods.item_4.p_1[window.lang]}</p>
-                            <p>{product.prods.item_4.p_2[window.lang]}</p>
-                        </div>
-                    </div>
-                    <div className="contents">
-                        <div className="title">
-                            <p>{product.prods.item_5.title[window.lang]}</p>
-                        </div>
-                        <div className="image-container">
-                            <img src="/images/our_services.png" alt="서비스전체표" />
-                        </div>
-                    </div>
+                    <Route path="/product/:id" exact component={ProductContents}></Route>
                 </div>
             </div>
         </div>

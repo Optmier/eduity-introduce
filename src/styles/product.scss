@@ -18,6 +18,11 @@ $pointColor: #2c7b6c;
             font-weight: 500;
             margin-top: 92px;
 
+            & .image-container {
+                & img {
+                    width: 100%;
+                }
+            }
             & .logo {
                 display: flex;
                 justify-content: center;
@@ -100,12 +105,6 @@ $pointColor: #2c7b6c;
 
                     & .s {
                         margin-top: 0;
-                    }
-                }
-
-                & .image-container {
-                    & img {
-                        width: 100%;
                     }
                 }
 
