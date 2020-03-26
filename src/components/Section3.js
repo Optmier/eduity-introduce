@@ -17,17 +17,17 @@ function Section3() {
             highligt: 'Strategic',
             title: intro_section_3[2][window.lang],
             content: '',
-            img: vision,
+            img: '',
         },
         {
             title: intro_section_3[3][window.lang],
             content: '',
-            img: analytics,
+            img: '',
         },
         {
             title: intro_section_3[4][window.lang],
             content: '',
-            img: teacher,
+            img: '',
         },
     ];
 
@@ -41,7 +41,7 @@ function Section3() {
         // width: '18%',
     };
     return (
-        <SectionWrapper no={3} coverImage="bgcover3" marginBottom={64}>
+        <SectionWrapper no={3} coverImage="bgcover3" marginBottom={64} height="160px">
             <div className="responsive">
                 <div className="header">
                     <Fade bottom distance="72px" duration={800} fraction={1}>
