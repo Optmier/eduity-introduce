@@ -9,6 +9,7 @@ import ProductContents1 from '../components/ProductContents1';
 import ProductContents2 from '../components/ProductContents2';
 import ProductContents3 from '../components/ProductContents3';
 import ProductContents4 from '../components/ProductContents4';
+import classNames from 'classnames';
 
 const { product } = strings;
 
@@ -38,10 +39,10 @@ function Product() {
     ];
 
     const [id, setId] = useState('0');
+    const [flag, setFlag] = useState(false);
+
     const handle = e => {
         let id = e.target.id;
-        console.log(typeof id);
-
         setId(id);
     };
     const getStepContent = id => {
@@ -58,6 +59,7 @@ function Product() {
                 throw new Error('Unknown step');
         }
     };
+
     return (
         <>
             <div className="product-header-contents ">
@@ -72,7 +74,7 @@ function Product() {
                 <div className="responsive">
                     <div className="top-contents">
                         <div className="top-contents-header">
-                            <div className="en header-font">why Eduity?</div>
+                            <div className="en header-font">Why Eduity?</div>
                             <div className="ko desc-font ">에듀이티는 신기술과 함께 맞춤형 영어 콘텐츠를 제작하고 있습니다.</div>
                         </div>
                         <div className="image-container">
@@ -90,23 +92,25 @@ function Product() {
                     <div className="main-contents">
                         <div className="subRoute">
                             <ul>
-                                <li id="0" onClick={handle}>
+                                <li className={classNames('listStyle', { able: flag })} id="0" onClick={handle}>
                                     맞춤형 솔루션, PIERCE
                                 </li>
-                                <li id="1" onClick={handle}>
+                                <li className={classNames('listStyle', { able: flag })} id="1" onClick={handle}>
                                     1대1 튜터링
                                 </li>
-                                <li id="2" onClick={handle}>
+                                <li className={classNames('listStyle', { able: flag })} id="2" onClick={handle}>
                                     해외 입시 컨설팅
                                 </li>
-                                <li id="3" onClick={handle}>
+                                <li className={classNames('listStyle', { able: flag })} id="3" onClick={handle}>
                                     맞춤형 기획 서비스
                                 </li>
                             </ul>
                         </div>
-                        {getStepContent(id)}
                     </div>
                 </div>
+            </div>
+            <div className="getStepContent">
+                <div className="responsive">{getStepContent(id)}</div>
             </div>
         </>
     );
