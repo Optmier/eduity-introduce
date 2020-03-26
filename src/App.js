@@ -27,7 +27,7 @@ function App() {
                     <Route path="/about" component={About} />
 
                     <Route path="/product" component={Product} />
-                    <Route path="/tech:id" component={Tech} />
+                    <Route path="/tech" component={Tech} />
                     <Route path="/bookonline" component={BookOnline} />
                 </ScrollTop>
             </Wrapper>
