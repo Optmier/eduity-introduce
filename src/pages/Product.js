@@ -59,42 +59,56 @@ function Product() {
         }
     };
     return (
-        <div className="product-root">
-            <div className="responsive">
-                <div className="top-contents">
-                    <div className="image-container">
-                        <img src="/images/our_services.png" alt="서비스전체표" />
-                    </div>
-                    <div className="items">
-                        {datas.map((i, key) => (
-                            <ContentView content={i.content} img={i.img} key={key}>
-                                {i.title}
-                            </ContentView>
-                        ))}
-                    </div>
-                </div>
-
-                <div className="main-contents">
-                    <div className="subRoute">
-                        <ul>
-                            <li id="0" onClick={handle}>
-                                a
-                            </li>
-                            <li id="1" onClick={handle}>
-                                b
-                            </li>
-                            <li id="2" onClick={handle}>
-                                c
-                            </li>
-                            <li id="3" onClick={handle}>
-                                d
-                            </li>
-                        </ul>
-                    </div>
-                    {getStepContent(id)}
+        <>
+            <div className="product-header-contents ">
+                <div className="cover">
+                    <h4>
+                        당신만을 위한 맞춤형 영어 학습, <br></br>에듀이티와 함께해보세요.
+                    </h4>
+                    <p>Eduity, for Infinite Pioneer</p>
                 </div>
             </div>
-        </div>
+            <div className="product-root">
+                <div className="responsive">
+                    <div className="top-contents">
+                        <div className="top-contents-header">
+                            <div className="en header-font">why Eduity?</div>
+                            <div className="ko desc-font ">에듀이티는 신기술과 함께 맞춤형 영어 콘텐츠를 제작하고 있습니다.</div>
+                        </div>
+                        <div className="image-container">
+                            <img src="/images/our_services.png" alt="서비스전체표" />
+                        </div>
+                        <div className="items">
+                            {datas.map((i, key) => (
+                                <ContentView content={i.content} img={i.img} key={key}>
+                                    {i.title}
+                                </ContentView>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="main-contents">
+                        <div className="subRoute">
+                            <ul>
+                                <li id="0" onClick={handle}>
+                                    맞춤형 솔루션, PIERCE
+                                </li>
+                                <li id="1" onClick={handle}>
+                                    1대1 튜터링
+                                </li>
+                                <li id="2" onClick={handle}>
+                                    해외 입시 컨설팅
+                                </li>
+                                <li id="3" onClick={handle}>
+                                    맞춤형 기획 서비스
+                                </li>
+                            </ul>
+                        </div>
+                        {getStepContent(id)}
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }
 

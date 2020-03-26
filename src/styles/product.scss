@@ -1,9 +1,42 @@
 $pointColor: #2c7b6c;
 
+.product-header-contents {
+    padding-top: 55px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 95vh;
+    background-image: url(https://images.unsplash.com/photo-1543196614-e046c7d3d82e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    & .cover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 95vh;
+        //background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 1%, 20%, 0)), to(#00e099));
+        background: linear-gradient(165deg, rgba(43, 42, 42, 0.7) 23% 50%, 81%, rgba(0, 224, 154, 0.6) 100%);
+    }
+    & h4 {
+        margin: 0;
+        font-size: 50px;
+        font-weight: 400;
+    }
+    & p {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 2.86em;
+    }
+}
+
 .product-root {
     background-color: white;
     color: #525252;
-    padding: 64px 24px 64px 24px;
+    padding: 0px 24px 64px 24px;
     word-break: keep-all;
     word-wrap: break-word;
 
@@ -17,6 +50,17 @@ $pointColor: #2c7b6c;
         & .top-contents {
             font-weight: 500;
             margin-top: 92px;
+
+            & .top-contents-header {
+                text-align: center;
+                margin-bottom: 100px;
+                & > .header-font {
+                    font-size: 42px;
+                }
+                & > .desc-font {
+                    font-size: 22px;
+                }
+            }
 
             & .image-container {
                 & img {
