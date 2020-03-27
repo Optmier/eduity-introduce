@@ -2,7 +2,7 @@ $pointColor: #00e099;
 
 .tech-header {
     width: 100%;
-    height: 95vh;
+    height: 90vh;
     overflow: hidden;
     position: relative;
     //background: rgba(0, 0, 0, 0.65);
@@ -90,7 +90,8 @@ $pointColor: #00e099;
             }
 
             & .header {
-                padding: 25px 0;
+                padding-top: 70px;
+                padding-bottom: 25px;
                 margin: 0;
             }
             & .contents {
@@ -123,6 +124,24 @@ $pointColor: #00e099;
 
             & + .tech-contents {
                 margin-top: 92px;
+            }
+
+            & .MuiTabs-indicator {
+                background-color: #00e099;
+            }
+
+            & .MuiAppBar-colorDefault {
+                background-color: white;
+                box-shadow: none;
+            }
+            & .MuiTab-root {
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 19px;
+                font-weight: 550;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.47;
+                letter-spacing: -1.6px;
             }
         }
     }

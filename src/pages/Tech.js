@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Grid } from '@material-ui/core';
 import '../styles/tech.scss';
-import { NavLink, Route } from 'react-router-dom';
 import { strings } from '../datas/strings';
 import TechContents from '../components/TechContents';
 import WhiteLogo from '../components/svgs/nav_logo_white.png';
@@ -30,23 +29,8 @@ function Tech() {
 
             <div className="tech-root">
                 <div className="responsive">
-                    <div className="tec-subRoute">
-                        <ul>
-                            <NavLink className="listStyle kr" to="/tech/01" activeClassName={'able'}>
-                                <li>
-                                    <span>01</span>지원 관련
-                                </li>
-                            </NavLink>
-                            <NavLink className="listStyle kr" to="/tech/02" activeClassName={'able'}>
-                                <li>
-                                    <span>02</span>스터디 진행
-                                </li>
-                            </NavLink>
-                        </ul>
-                    </div>
-
-                    <div className="tec-subRoute-contents">
-                        <Route path="/tech/:id" exact component={TechContents}></Route>
+                    <div className="tech-contents">
+                        <TechContents></TechContents>
                     </div>
                     <div className="tech-contents">
                         <Grid container spacing={0}>
