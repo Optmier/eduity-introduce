@@ -4,22 +4,23 @@ $pointColor: #36bf80;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     & article {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 16px 48px;
-        height: 160px;
+        padding: 16px 24px;
         max-width: 960px;
         font-weight: 500;
         margin: 0 auto;
         word-break: keep-all;
         word-wrap: break-word;
+        text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
         color: white;
 
         & .header {
-            margin-bottom: 15vh;
+            // margin-bottom: 15vh;
 
             & .header-font,
             .desc-font {
@@ -29,10 +30,55 @@ $pointColor: #36bf80;
 
             & .header-font {
                 font-size: 32px;
+                margin-bottom: 24px;
+                text-align: left;
             }
 
             & .desc-font {
+                max-width: 560px;
                 font-size: 20px;
+                margin-bottom: 8px;
+                text-align: left;
+
+                & span {
+                    font-weight: 600;
+                }
+            }
+
+            & .morebtn-wrapper {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 48px;
+                margin-right: 28px;
+
+                & a {
+                    display: flex;
+                    font-weight: 600;
+
+                    & .icon {
+                        filter: drop-shadow(1px 3px 4px rgba(0, 0, 0, 0.4));
+                        margin-top: 1px;
+                        margin-right: 4px;
+                        transition: transform 0.3s ease-out 0s;
+                    }
+
+                    & .text {
+                        text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
+                        transition: transform 0.3s ease-out 0.05s;
+                    }
+
+                    &:hover {
+                        & .icon {
+                            transform: translateX(16px);
+                            transition-delay: 0.05s;
+                        }
+
+                        & .text {
+                            transform: translateX(16px);
+                            transition-delay: 0s;
+                        }
+                    }
+                }
             }
         }
 
@@ -90,12 +136,9 @@ $pointColor: #36bf80;
         & article {
             & .responsive {
                 width: 98%;
-                padding: 48px 0;
             }
 
             & .header {
-                margin-bottom: 48px;
-
                 & .desc-font {
                     font-size: 18px;
                 }
@@ -114,6 +157,14 @@ $pointColor: #36bf80;
                         margin-top: 72px;
                     }
                 }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        & article {
+            & .responsive {
+                width: 98%;
             }
         }
     }
