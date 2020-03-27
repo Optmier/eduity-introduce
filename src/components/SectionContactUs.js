@@ -1,31 +1,44 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Button, Grid, withStyles } from '@material-ui/core';
 import { Fade } from 'react-reveal';
+import { Link } from 'react-router-dom';
 import '../styles/section_contact_us.scss';
 import SectionWrapper from './SectionWrapper';
 
 function SectionContactUs() {
+    const BookButton = withStyles(theme => ({
+        root: {
+            color: 'white',
+            border: '2px solid #ffffffa8',
+            borderRadius: 4,
+            fontFamily: window.lang === 'ko' ? 'Noto Sans KR, sans-serif' : 'Monsterrat, sans-serif',
+            fontSize: '18px',
+            width: '192px',
+            height: '72px',
+        },
+    }))(Button);
+
     return (
-        <SectionWrapper height="64vh" no="-contact-us" coverImage="bgcover-contact-us" marginBottom={0} darker>
-            <Grid container spacing={0}>
+        <SectionWrapper height="192px" no="-contact-us" coverImage="bgcover-contact-us" marginBottom={0}>
+            <Grid container spacing={3}>
                 <Grid item xs={12} sm={6}>
                     <Fade left distance="72px" duration={800} fraction={1}>
-                        <div className="intro-header en">
-                            <p>Contact Us</p>
+                        <div className="left">
+                            <p className="main">
+                                <span>상담이</span> 필요하신가요?
+                            </p>
+                            <p className="sub">
+                                에듀이티와 <span>프리미엄 무료 교육 상담</span>을 받아보세요.
+                            </p>
                         </div>
                     </Fade>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Fade right cascade distance="72px" duration={800} fraction={1}>
-                        <div className="intro-content">
-                            <p>전광휘</p>
-                            <p>
-                                <a href="tel:123-456-7890">010-5912-1545</a>
-                            </p>
-                            <p>
-                                <a href="mailto:khjeon1994@gmail.com">khjeon1994@gmail.com</a>
-                            </p>
-                            <p>서울 강남구 테헤란로 146 현익빌딩 12, 13층</p>
+                    <Fade right distance="72px" duration={800} fraction={1}>
+                        <div className="right">
+                            <Link to="/bookonline">
+                                <BookButton variant="outlined">무료 교육 상담 신청</BookButton>
+                            </Link>
                         </div>
                     </Fade>
                 </Grid>

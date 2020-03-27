@@ -30,10 +30,9 @@ function SectionProblem() {
                     </Fade>
                     <Fade right delay={333} distance="72px" duration={800} fraction={0.666}>
                         <p>
-                            <span className="mark">{intro_section_problem[3].p1[window.lang]}</span>
+                            {intro_section_problem[3].p1[window.lang]}
                             {intro_section_problem[3].p2[window.lang]}
-                            <span className="mark">​{intro_section_problem[3].p3[window.lang]}​</span>
-                            {intro_section_problem[3].p4[window.lang]}
+                            {intro_section_problem[3].p3[window.lang]}​{intro_section_problem[3].p4[window.lang]}
                         </p>
                     </Fade>
                 </div>

@@ -7,6 +7,8 @@
     word-break: keep-all;
     word-wrap: break-word;
     overflow: hidden;
+    text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+    color: white;
 
     & .right {
         transition: margin 1s;
@@ -23,7 +25,7 @@
             font-style: normal;
             line-height: 2;
             letter-spacing: -1.6px;
-            color: #333333;
+            // color: #333333;
             text-decoration: underline;
         }
         & img {
@@ -39,10 +41,10 @@
         font-style: normal;
         line-height: 1.9;
         letter-spacing: -1.1px;
-        color: #666666;
+        // color: #666666;
     }
     & .mark {
-        background: #b7ffed;
+        // background: #b7ffed;
     }
 
     @media (max-width: 768px) {

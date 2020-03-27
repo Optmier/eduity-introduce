@@ -22,8 +22,8 @@ function Main() {
         <>
             <Section1 />
             <SectionProblem />
-            <Section2 />
             <Section3 />
+            <Section2 />
             {/* <SectionEvents /> */}
             <SectionContactUs />
             <SectionLocation />
