@@ -131,8 +131,10 @@ $pointColor: #00e099;
                     padding: 0;
                     display: flex;
                     & li {
+                        width: 25%;
                         cursor: pointer;
                         list-style: none;
+                        text-align: center;
                     }
                     & .listStyle {
                         padding: 10px 15px;
@@ -189,11 +191,12 @@ $pointColor: #00e099;
 
 .getStepContent {
     background-color: #f5f7fa;
+    min-height: 60vh;
     & .responsive {
         width: 100%;
         max-width: 840px;
         & .contents {
-            padding: 50px 0;
+            padding: 65px 0;
             & .title {
                 & p {
                     margin-top: 0;

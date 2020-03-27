@@ -39,12 +39,23 @@ function Product() {
     ];
 
     const [id, setId] = useState('0');
-    const [flag, setFlag] = useState(false);
+    const [flag, setFlag] = useState({
+        '0': true,
+        '1': false,
+        '2': false,
+        '3': false,
+    });
 
     const handle = e => {
         let id = e.target.id;
         setId(id);
+
+        setFlag({
+            ...!flag,
+            [id]: true,
+        });
     };
+
     const getStepContent = id => {
         switch (id) {
             case '0':
@@ -92,16 +103,16 @@ function Product() {
                     <div className="main-contents">
                         <div className="subRoute">
                             <ul>
-                                <li className={classNames('listStyle', { able: flag })} id="0" onClick={handle}>
+                                <li className={classNames('listStyle', { able: flag['0'] })} id="0" onClick={handle}>
                                     맞춤형 솔루션, PIERCE
                                 </li>
-                                <li className={classNames('listStyle', { able: flag })} id="1" onClick={handle}>
+                                <li className={classNames('listStyle', { able: flag['1'] })} id="1" onClick={handle}>
                                     1대1 튜터링
                                 </li>
-                                <li className={classNames('listStyle', { able: flag })} id="2" onClick={handle}>
+                                <li className={classNames('listStyle', { able: flag['2'] })} id="2" onClick={handle}>
                                     해외 입시 컨설팅
                                 </li>
-                                <li className={classNames('listStyle', { able: flag })} id="3" onClick={handle}>
+                                <li className={classNames('listStyle', { able: flag['3'] })} id="3" onClick={handle}>
                                     맞춤형 기획 서비스
                                 </li>
                             </ul>
