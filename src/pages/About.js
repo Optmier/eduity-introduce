@@ -14,10 +14,14 @@ function About() {
     return (
         <div className="about-root">
             <div className="responsive">
-                <div className="about-cover"></div>
+                {/* <div className="about-cover"></div> */}
                 <div className="about-contents">
                     <div className="title">
-                        <p>{about.title[window.lang]}</p>
+                        <p>
+                            {about.title[window.lang]}
+                            <br></br>
+                            {about.title_1[window.lang]}
+                        </p>
                     </div>
                     <div className="strong">
                         <p>{about.strong[window.lang]}</p>

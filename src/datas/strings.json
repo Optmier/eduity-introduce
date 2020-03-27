@@ -130,8 +130,12 @@
         },
         "about": {
             "title": {
-                "ko": "About Eduity",
-                "en": "About Eduity"
+                "ko": "Eduity,",
+                "en": "Eduity,"
+            },
+            "title_1": {
+                "ko": "for infinite pioneer",
+                "en": "for infinite pioneer"
             },
             "strong": {
                 "ko": "Solutions for Success",
