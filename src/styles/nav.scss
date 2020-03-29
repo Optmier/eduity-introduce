@@ -71,15 +71,17 @@ a {
 
         height: 100%;
 
-        & .item {
-            display: flex;
-            align-items: center;
-            height: 95%;
+        & a {
+            & .item {
+                display: flex;
+                align-items: center;
+                height: 95%;
 
-            cursor: pointer;
-            transition: all 0.3s;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
 
-            & + .item {
+            & + a {
                 margin-left: 36px;
             }
         }
