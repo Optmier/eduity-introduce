@@ -33,16 +33,7 @@ function Tech() {
                         <TechContents></TechContents>
                     </div>
                     <div className="tech-contents">
-                        <Grid container spacing={0}>
-                            <Grid item xs={12} sm={4}>
-                                <img className="special-logo" src="/images/logo_matrios.png" alt="Matrios_Logo" />
-                            </Grid>
-                            <Grid item xs={12} sm={8}>
-                                <div className="special">
-                                    <p>{tech.tech_3[window.lang]}</p>
-                                </div>
-                            </Grid>
-                        </Grid>
+                        <img className="special-logo" src="/images/matrios.png" alt="Matrios_Logo" />
                     </div>
                 </div>
             </div>

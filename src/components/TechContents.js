@@ -44,7 +44,6 @@ function a11yProps(index) {
 
 const useStyles = makeStyles(theme => ({
     root: {
-        backgroundColor: 'white',
         width: '100%',
     },
 }));
@@ -83,67 +82,72 @@ function TechContents() {
                     <Tab label="AI 시선흐름 추천 기술" {...a11yProps(1)} />
                 </CssTabs>
             </AppBar>
+
             <SwipeableViews axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'} index={value} onChangeIndex={handleChangeIndex}>
                 <TabPanel value={value} index={0} dir={theme.direction}>
-                    <div className="header">
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} sm={6}>
-                                <div className="title">
-                                    <p>{tech.tech_1.title[window.lang]}</p>
-                                </div>
-                                <div className="strong">
-                                    <p>{tech.tech_1.strong[window.lang]}</p>
-                                </div>
+                    <div className="tab-contents">
+                        <div className="header">
+                            <Grid container spacing={2}>
+                                <Grid item xs={12} sm={6}>
+                                    <div className="title">
+                                        <p>{tech.tech_1.title[window.lang]}</p>
+                                    </div>
+                                    <div className="strong">
+                                        <p>{tech.tech_1.strong[window.lang]}</p>
+                                    </div>
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <div className="right-container">
+                                        <video controls>
+                                            <source src="/videos/eyetraking_demo.mp4" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                </Grid>
                             </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <div className="right-container">
-                                    <video controls>
-                                        <source src="/videos/eyetraking_demo.mp4" type="video/mp4" />
-                                    </video>
-                                </div>
-                            </Grid>
-                        </Grid>
-                    </div>
+                        </div>
 
-                    <div className="contents">
-                        <p className="label">{tech.label_problem[window.lang]}</p>
-                        <p>{tech.tech_1.p_1[window.lang]}</p>
-                        <p>{tech.tech_1.p_2[window.lang]}</p>
-                        <p>{tech.tech_1.p_3[window.lang]}</p>
-                        <p className="label">{tech.label_solution[window.lang]}</p>
-                        <p>{tech.tech_1.s_1[window.lang]}</p>
-                        <p>{tech.tech_1.s_2[window.lang]}</p>
+                        <div className="contents">
+                            <p className="label">{tech.label_problem[window.lang]}</p>
+                            <p>{tech.tech_1.p_1[window.lang]}</p>
+                            <p>{tech.tech_1.p_2[window.lang]}</p>
+                            <p>{tech.tech_1.p_3[window.lang]}</p>
+                            <p className="label">{tech.label_solution[window.lang]}</p>
+                            <p>{tech.tech_1.s_1[window.lang]}</p>
+                            <p>{tech.tech_1.s_2[window.lang]}</p>
+                        </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
-                    <div className="header">
-                        <div className="title">
-                            <p>{tech.tech_2.title[window.lang]}</p>
+                    <div className="tab-contents">
+                        <div className="header">
+                            <div className="title">
+                                <p>{tech.tech_2.title[window.lang]}</p>
+                            </div>
+                            <Grid container spacing={2}>
+                                <Grid item xs={12} sm={6}>
+                                    <div className="strong">
+                                        <p>{tech.tech_2.strong[window.lang]}</p>
+                                    </div>
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <div className="right-container">
+                                        <div className="right-image"></div>
+                                    </div>
+                                </Grid>
+                            </Grid>
                         </div>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} sm={6}>
-                                <div className="strong">
-                                    <p>{tech.tech_2.strong[window.lang]}</p>
-                                </div>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <div className="right-container">
-                                    <div className="right-image"></div>
-                                </div>
-                            </Grid>
-                        </Grid>
-                    </div>
 
-                    <div className="contents">
-                        <p className="label">{tech.label_problem[window.lang]}</p>
-                        <p>{tech.tech_2.p_1[window.lang]}</p>
-                        <p>{tech.tech_2.p_2[window.lang]}</p>
-                        <p>{tech.tech_2.p_3[window.lang]}</p>
-                        <p>{tech.tech_2.p_4[window.lang]}</p>
-                        <p className="label">{tech.label_solution[window.lang]}</p>
-                        <p>{tech.tech_2.s_1[window.lang]}</p>
-                        <p>{tech.tech_2.s_2[window.lang]}</p>
-                        <p>{tech.tech_2.s_3[window.lang]}</p>
+                        <div className="contents">
+                            <p className="label">{tech.label_problem[window.lang]}</p>
+                            <p>{tech.tech_2.p_1[window.lang]}</p>
+                            <p>{tech.tech_2.p_2[window.lang]}</p>
+                            <p>{tech.tech_2.p_3[window.lang]}</p>
+                            <p>{tech.tech_2.p_4[window.lang]}</p>
+                            <p className="label">{tech.label_solution[window.lang]}</p>
+                            <p>{tech.tech_2.s_1[window.lang]}</p>
+                            <p>{tech.tech_2.s_2[window.lang]}</p>
+                            <p>{tech.tech_2.s_3[window.lang]}</p>
+                        </div>
                     </div>
                 </TabPanel>
             </SwipeableViews>
