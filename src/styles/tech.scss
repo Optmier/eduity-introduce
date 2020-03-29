@@ -1,4 +1,42 @@
-$pointColor: #2c7b6c;
+$pointColor: #00e099;
+
+.tech-header {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+    //background: rgba(0, 0, 0, 0.65);
+    background: linear-gradient(310deg, rgba(0, 0, 0, 0.7) 23% 50%, 81%, rgba(0, 224, 154, 0.3) 100%);
+    & > .bg {
+        position: absolute;
+        top: -100px;
+        left: 0px;
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1000;
+        overflow: hidden;
+    }
+    & > .content-box {
+        color: white;
+        margin-top: 59px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        & > img {
+            width: 250px;
+        }
+
+        & p {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 2.86em;
+        }
+    }
+}
 
 .tech-root {
     background-color: white;
@@ -52,7 +90,8 @@ $pointColor: #2c7b6c;
             }
 
             & .header {
-                padding: 25px 0;
+                padding-top: 70px;
+                padding-bottom: 25px;
                 margin: 0;
             }
             & .contents {
@@ -85,6 +124,24 @@ $pointColor: #2c7b6c;
 
             & + .tech-contents {
                 margin-top: 92px;
+            }
+
+            & .MuiTabs-indicator {
+                background-color: #00e099;
+            }
+
+            & .MuiAppBar-colorDefault {
+                background-color: white;
+                box-shadow: none;
+            }
+            & .MuiTab-root {
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 19px;
+                font-weight: 550;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.47;
+                letter-spacing: -1.6px;
             }
         }
     }

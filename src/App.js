@@ -25,8 +25,8 @@ function App() {
                 <ScrollTop>
                     <Route path="/" component={Main} exact />
                     <Route path="/about" component={About} />
-                    <Route path="/tech" component={Tech} />
                     <Route path="/product" component={Product} />
+                    <Route path="/tech" component={Tech} />
                     <Route path="/bookonline" component={BookOnline} />
                 </ScrollTop>
             </Wrapper>
