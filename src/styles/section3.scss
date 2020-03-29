@@ -1,4 +1,4 @@
-$pointColor: #36bf80;
+$pointColor: #00e099;
 
 .section3 {
     display: flex;
@@ -10,7 +10,7 @@ $pointColor: #36bf80;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 16px 24px;
+        padding: 144px 24px;
         max-width: 960px;
         font-weight: 500;
         margin: 0 auto;
@@ -48,7 +48,7 @@ $pointColor: #36bf80;
             & .morebtn-wrapper {
                 display: flex;
                 justify-content: flex-end;
-                margin-top: 48px;
+                margin-top: 72px;
                 margin-right: 28px;
 
                 & a {
@@ -59,21 +59,23 @@ $pointColor: #36bf80;
                         filter: drop-shadow(1px 3px 4px rgba(0, 0, 0, 0.4));
                         margin-top: 1px;
                         margin-right: 4px;
-                        transition: transform 0.3s ease-out 0s;
+                        transition: color 0.3s ease-out 0s, transform 0.3s ease-out 0s;
                     }
 
                     & .text {
                         text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
-                        transition: transform 0.3s ease-out 0.05s;
+                        transition: color 0.3s ease-out 0.05s, transform 0.3s ease-out 0.05s;
                     }
 
                     &:hover {
                         & .icon {
+                            color: $pointColor;
                             transform: translateX(16px);
                             transition-delay: 0.05s;
                         }
 
                         & .text {
+                            color: $pointColor;
                             transform: translateX(16px);
                             transition-delay: 0s;
                         }

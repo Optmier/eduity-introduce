@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 import { Button, Grid, withStyles } from '@material-ui/core';
 import { FaChevronRight } from 'react-icons/fa';
 import { strings } from '../datas/strings';
+import BorderAnimatedButton from './BorderAnimatedButton';
 
 const { intro_section_3 } = strings;
 
@@ -98,6 +99,7 @@ function Section3() {
                                 <div className="text">
                                     <span>더 알아보기</span>
                                 </div>
+                                {/* <BorderAnimatedButton darker>무료 교육 상담 신청</BorderAnimatedButton> */}
                             </Link>
                         </div>
                     </Fade>

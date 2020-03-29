@@ -24,6 +24,7 @@ const EdButton = withStyles(theme => ({
         '&:hover': {
             backgroundColor: '#2c7b6c32',
             borderColor: '#225e53',
+            borderWidth: '2px',
             color: '#225e53',
         },
         '&:active': {
@@ -45,9 +46,11 @@ const EdTextField = withStyles(theme => ({
         '& .MuiOutlinedInput-root': {
             '&:hover fieldset': {
                 borderColor: '#2c7b6c',
+                borderWidth: '2px',
             },
             '&.Mui-focused fieldset': {
                 borderColor: '#2c7b6c',
+                borderWidth: '3px',
             },
         },
     },
@@ -63,9 +66,11 @@ const EdSelectForm = withStyles({
         },
         '& .MuiOutlinedInput-root': {
             '&:hover fieldset': {
+                borderWidth: '2px',
                 borderColor: '#2c7b6c',
             },
             '&.Mui-focused fieldset': {
+                borderWidth: '3px',
                 borderColor: '#2c7b6c',
             },
         },
@@ -215,7 +220,7 @@ function BookOnlineForm() {
             <div className="responsive">
                 <div className="header">
                     <p className="main">교육 상담 신청</p>
-                    <p className="sub">친절하게 상담해 드리겠습니다 :)</p>
+                    {/* <p className="sub">친절하게 상담해 드리겠습니다 :)</p> */}
                 </div>
                 <div className="contents">
                     <Grid container spacing={3}>
