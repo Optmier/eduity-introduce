@@ -4,6 +4,7 @@ import { Fade } from 'react-reveal';
 import { Link } from 'react-router-dom';
 import '../styles/section_contact_us.scss';
 import SectionWrapper from './SectionWrapper';
+import BorderAnimatedButton from './BorderAnimatedButton';
 
 function SectionContactUs() {
     const BookButton = withStyles(theme => ({
@@ -15,6 +16,17 @@ function SectionContactUs() {
             fontSize: '18px',
             width: '192px',
             height: '72px',
+            '&:hover': {
+                backgroundColor: '#00e099',
+                borderColor: '#00e099',
+                // boxShadow: '0px 15px 20px rgba(46, 229, 157, 0.4)',
+                color: '#000000',
+            },
+            '&:active': {
+                backgroundColor: '#00e099',
+                borderColor: '#00e0993b',
+                color: '#000000',
+            },
         },
     }))(Button);
 
@@ -37,7 +49,8 @@ function SectionContactUs() {
                     <Fade right distance="72px" duration={800} fraction={1}>
                         <div className="right">
                             <Link to="/bookonline">
-                                <BookButton variant="outlined">무료 교육 상담 신청</BookButton>
+                                {/* <BookButton variant="outlined">무료 교육 상담 신청</BookButton> */}
+                                <BorderAnimatedButton darker>무료 교육 상담 신청</BorderAnimatedButton>
                             </Link>
                         </div>
                     </Fade>

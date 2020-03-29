@@ -50,19 +50,19 @@ const { nav_menus } = strings;
 
 const NavMenuItem = React.memo(function NavMenuItem({ linkTo, children }) {
     return (
-        <div className="item">
-            <NavLink
-                to={linkTo}
-                activeStyle={{
-                    borderBottom: '3px solid #4dc2af',
-                    display: 'flex',
-                    alignItems: 'center',
-                    height: '100%',
-                }}
-            >
-                {children}
-            </NavLink>
-        </div>
+        <NavLink
+            to={linkTo}
+            activeStyle={{
+                borderBottom: '3px solid #00e099',
+                display: 'flex',
+                alignItems: 'center',
+                height: '100%',
+                boxSizing: 'border-box',
+                paddingTop: '3px',
+            }}
+        >
+            <div className="item">{children}</div>
+        </NavLink>
     );
 });
 
