@@ -111,6 +111,8 @@ $pointColor: #00e099;
             }
 
             & .special-logo {
+                border: 1px solid #00e099;
+                border-radius: 8px;
                 display: flex;
                 margin-left: auto;
                 margin-right: auto;
