@@ -68,7 +68,7 @@ function Product() {
             case '3':
                 return <ProductContents4></ProductContents4>;
             default:
-                throw new Error('Unknown step');
+                throw new Error('스텝 오류!!!!');
         }
     };
 
@@ -81,7 +81,7 @@ function Product() {
                             <h4>
                                 당신만을 위한 맞춤형 영어 학습, <br></br>에듀이티와 함께해보세요.
                             </h4>
-                            <p>Eduity, for Infinite Pioneer</p>
+                            <p>Eduity for Infinite Pioneer</p>
                         </div>
                     </Fade>
                 </div>
@@ -106,8 +106,8 @@ function Product() {
                             <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
                                 <div className="card-fade">
                                     {datas.map((i, key) => (
-                                        <div>
-                                            <ContentView content={i.content} img={i.img} key={key}>
+                                        <div key={key}>
+                                            <ContentView content={i.content} img={i.img}>
                                                 {i.title}
                                             </ContentView>
                                         </div>

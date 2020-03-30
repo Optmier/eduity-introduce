@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
 import { Fade } from 'react-reveal';
 import '../styles/tech.scss';
-import { strings } from '../datas/strings';
 import TechContents from '../components/TechContents';
 import WhiteLogo from '../components/svgs/nav_logo_white.png';
-
-const { tech } = strings;
 
 function Tech() {
     useEffect(() => {
@@ -24,7 +21,7 @@ function Tech() {
                     <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
                         <div>
                             <img src={WhiteLogo} alt="whitelogo" />
-                            <p>Eduity, for Infinite Pioneer</p>
+                            <p>Eduity for Infinite Pioneer</p>
                         </div>
                     </Fade>
                 </div>
