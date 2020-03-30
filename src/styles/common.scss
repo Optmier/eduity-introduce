@@ -231,6 +231,19 @@ html {
         margin: 0 auto;
     }
 
+    .bgcover1 {
+        background-image: url('/images/introcover1-low.jpg');
+    }
+
+    .bgcover2 {
+        background: linear-gradient(150deg, #222831ee 34%, 90%, rgba(0, 224, 154, 0.5) 109%), url('/images/introcover3-low.jpg');
+    }
+
+    .bgcover3 {
+        background: linear-gradient(165deg, #000000b0 32% 8%, 90%, rgba(0, 224, 154, 0.21) 105%), url('/images/introcover2-low.jpg');
+        // background-image: url('/images/introcover2.jpg');
+    }
+
     .card {
         width: 48.5%;
         & + & {
