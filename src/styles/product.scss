@@ -34,8 +34,14 @@ $pointColor: #00e099;
 }
 
 .product-root {
-    background-color: white;
-    color: #525252;
+    //background-color: white;
+    //color: #525252;
+    color: white;
+    background-image: linear-gradient(0deg, #2228318c 35% 50%, 100%, rgba(0, 224, 154, 0.28) 100%), url(/images/product_section_cover.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     padding: 0px 24px;
     word-break: keep-all;
     word-wrap: break-word;
@@ -56,9 +62,11 @@ $pointColor: #00e099;
                 margin-bottom: 100px;
                 & > .header-font {
                     font-size: 42px;
+                    color: white;
                 }
                 & > .desc-font {
                     font-size: 22px;
+                    color: #c5c2c2;
                 }
             }
 
@@ -80,37 +88,33 @@ $pointColor: #00e099;
                 display: flex;
                 margin-top: 96px;
 
+                & .card-fade {
+                    display: flex;
+                }
                 & .cardView {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    width: 100%;
+                    justify-self: center;
+                    width: 90%;
 
                     & .card-img {
                         display: flex;
                         justify-content: center;
-
-                        & img {
-                            width: 100%;
-                            height: 100%;
-                            max-width: 128px;
-                            max-height: 128px;
-                            margin-bottom: 20px;
-                        }
                     }
 
                     & .card-title {
-                        color: #525252;
                         font-size: 20px;
                         font-weight: 600;
+                        color: white;
                     }
 
                     & .card-content {
-                        color: #525252;
                         font-size: 16px;
                         padding-top: 24px;
                         line-height: 1.5;
                         text-align: center;
+                        color: #c5c2c2;
                     }
 
                     & + .cardView {
@@ -139,7 +143,7 @@ $pointColor: #00e099;
                     & .listStyle {
                         padding: 10px 15px;
                         font-size: 18px;
-                        color: #e2e2e2;
+                        color: #adacac61;
                         & + & {
                             margin-left: 0;
                         }
@@ -149,12 +153,12 @@ $pointColor: #00e099;
                         }
 
                         &:hover {
-                            background-color: rgba(0, 0, 0, 0.04);
+                            background-color: rgba(146, 144, 144, 0.09);
                         }
                     }
                     & .able {
-                        color: black;
-                        border-bottom: $pointColor 2px solid;
+                        color: white;
+                        border-bottom: $pointColor 5px solid;
                         & span {
                             color: $pointColor;
                         }
@@ -165,6 +169,7 @@ $pointColor: #00e099;
     }
 
     @media (max-width: 768px) {
+        transition: margin 1s;
         & {
             padding: 32px 24px 64px 24px;
 
@@ -173,10 +178,15 @@ $pointColor: #00e099;
                     & .items {
                         flex-direction: column;
 
+                        & .card-fade {
+                            flex-direction: column;
+                            justify-self: center;
+                            align-items: center;
+                        }
                         & .cardView {
-                            & + .cardView {
-                                margin-left: 0;
-                                margin-top: 72px;
+                            margin-bottom: 70px;
+                            & .card-content {
+                                width: 70%;
                             }
                         }
                     }
@@ -190,8 +200,10 @@ $pointColor: #00e099;
 }
 
 .getStepContent {
-    background-color: #f5f7fa;
+    background-color: #324345;
     min-height: 60vh;
+    color: white;
+
     & .responsive {
         width: 100%;
         max-width: 840px;
@@ -209,7 +221,7 @@ $pointColor: #00e099;
                 & p {
                     font-size: 20px;
                     font-weight: 600;
-                    margin: 0;
+                    margin: 0 0 0 15px 0;
                 }
             }
 
@@ -221,6 +233,7 @@ $pointColor: #00e099;
 
                 & .s {
                     margin-top: 0;
+                    color: #c5c2c2;
                 }
             }
 

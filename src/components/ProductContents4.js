@@ -13,8 +13,8 @@ function ProductContents() {
                 <p>{product.prods.item_4.strong[window.lang]}</p>
             </div>
             <div className="content">
-                <p>{product.prods.item_4.p_1[window.lang]}</p>
-                <p>{product.prods.item_4.p_2[window.lang]}</p>
+                <p className="s">{product.prods.item_4.p_1[window.lang]}</p>
+                <p className="s">{product.prods.item_4.p_2[window.lang]}</p>
             </div>
         </div>
     );

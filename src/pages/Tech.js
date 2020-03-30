@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Grid } from '@material-ui/core';
+import { Fade } from 'react-reveal';
 import '../styles/tech.scss';
 import { strings } from '../datas/strings';
 import TechContents from '../components/TechContents';
@@ -21,9 +21,12 @@ function Tech() {
                     <source src="/videos/bg.mp4" type="video/mp4" />
                 </video>
                 <div className="content-box">
-                    <img src={WhiteLogo} alt="whitelogo" />
-
-                    <p>Eduity, for Infinite Pioneer</p>
+                    <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
+                        <div>
+                            <img src={WhiteLogo} alt="whitelogo" />
+                            <p>Eduity, for Infinite Pioneer</p>
+                        </div>
+                    </Fade>
                 </div>
             </div>
 

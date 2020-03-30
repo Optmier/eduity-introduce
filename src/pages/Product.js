@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 import '../styles/product.scss';
 import { strings } from '../datas/strings';
 import ContentView from '../components/ContentView';
-import teacher2 from '../components/svgs/teacher2.svg';
-import studying from '../components/svgs/studying.svg';
-import university from '../components/svgs/university.svg';
+import Teacher from '../components/svgs/teacher2';
+import Studying from '../components/svgs/studying';
+import University from '../components/svgs/university';
 import ProductContents1 from '../components/ProductContents1';
 import ProductContents2 from '../components/ProductContents2';
 import ProductContents3 from '../components/ProductContents3';
 import ProductContents4 from '../components/ProductContents4';
 import classNames from 'classnames';
+import { Fade } from 'react-reveal';
 
 const { product } = strings;
 
@@ -24,17 +25,17 @@ function Product() {
         {
             title: product.top_items.item_1.title[window.lang],
             content: product.top_items.item_1.content[window.lang],
-            img: teacher2,
+            img: <Teacher fill="white"></Teacher>,
         },
         {
             title: product.top_items.item_2.title[window.lang],
             content: product.top_items.item_2.content[window.lang],
-            img: studying,
+            img: <Studying fill="white"></Studying>,
         },
         {
             title: product.top_items.item_3.title[window.lang],
             content: product.top_items.item_3.content[window.lang],
-            img: university,
+            img: <University fill="white"></University>,
         },
     ];
 
@@ -75,28 +76,44 @@ function Product() {
         <>
             <div className="product-header-contents ">
                 <div className="cover">
-                    <h4>
-                        당신만을 위한 맞춤형 영어 학습, <br></br>에듀이티와 함께해보세요.
-                    </h4>
-                    <p>Eduity, for Infinite Pioneer</p>
+                    <Fade bottom cascade distance="120px" duration={1000} fraction={0.9}>
+                        <div>
+                            <h4>
+                                당신만을 위한 맞춤형 영어 학습, <br></br>에듀이티와 함께해보세요.
+                            </h4>
+                            <p>Eduity, for Infinite Pioneer</p>
+                        </div>
+                    </Fade>
                 </div>
             </div>
             <div className="product-root">
                 <div className="responsive">
                     <div className="top-contents">
-                        <div className="top-contents-header">
-                            <div className="en header-font">Why Eduity?</div>
-                            <div className="ko desc-font ">에듀이티는 신기술과 함께 맞춤형 영어 콘텐츠를 제작하고 있습니다.</div>
-                        </div>
-                        <div className="image-container">
-                            <img src="/images/our_services.png" alt="서비스전체표" />
-                        </div>
+                        <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
+                            <div>
+                                <div className="top-contents-header">
+                                    <div className="en header-font">Why Eduity?</div>
+                                    <div className="ko desc-font ">
+                                        에듀이티는 교육과 기술의 장점을 활용하여 학습자의 영어학습효과를 높입니다.
+                                    </div>
+                                </div>
+                                <div className="image-container">
+                                    <img src="/images/our_services.png" alt="서비스전체표" />
+                                </div>
+                            </div>
+                        </Fade>
                         <div className="items">
-                            {datas.map((i, key) => (
-                                <ContentView content={i.content} img={i.img} key={key}>
-                                    {i.title}
-                                </ContentView>
-                            ))}
+                            <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
+                                <div className="card-fade">
+                                    {datas.map((i, key) => (
+                                        <div>
+                                            <ContentView content={i.content} img={i.img} key={key}>
+                                                {i.title}
+                                            </ContentView>
+                                        </div>
+                                    ))}
+                                </div>
+                            </Fade>
                         </div>
                     </div>
 
@@ -104,16 +121,16 @@ function Product() {
                         <div className="subRoute">
                             <ul>
                                 <li className={classNames('listStyle', { able: flag['0'] })} id="0" onClick={handle}>
-                                    맞춤형 솔루션, PIERCE
+                                    <span>01</span>맞춤형 솔루션
                                 </li>
                                 <li className={classNames('listStyle', { able: flag['1'] })} id="1" onClick={handle}>
-                                    1대1 튜터링
+                                    <span>02</span>1대1 튜터링
                                 </li>
                                 <li className={classNames('listStyle', { able: flag['2'] })} id="2" onClick={handle}>
-                                    해외 입시 컨설팅
+                                    <span>03</span>해외 입시 컨설팅
                                 </li>
                                 <li className={classNames('listStyle', { able: flag['3'] })} id="3" onClick={handle}>
-                                    맞춤형 기획 서비스
+                                    <span>04</span> 맞춤형 기획 서비스
                                 </li>
                             </ul>
                         </div>
