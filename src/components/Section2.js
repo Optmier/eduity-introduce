@@ -56,17 +56,17 @@ function Section2() {
             highligt: 'Strategic',
             title: intro_section_2[2][window.lang],
             content: intro_section_2[3][window.lang],
-            img: '/images/team_cover_1.webp',
+            img: '/images/team_cover_1.jpg',
         },
         {
             title: intro_section_2[4][window.lang],
             content: intro_section_2[5][window.lang],
-            img: '/images/team_cover_2.webp',
+            img: '/images/team_cover_2.jpg',
         },
         {
             title: intro_section_2[6][window.lang],
             content: intro_section_2[7][window.lang],
-            img: '/images/team_cover_3.webp',
+            img: '/images/team_cover_3.jpg',
         },
     ];
 
