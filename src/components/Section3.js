@@ -51,7 +51,7 @@ function Section3() {
             color: '#00e099',
             border: '2px solid #ffffff',
             borderRadius: 4,
-            fontFamily: window.lang === 'ko' ? 'Noto Sans KR, sans-serif' : 'Monsterrat, sans-serif',
+            fontFamily: window.lang === 'ko' ? "'Noto Sans KR', sans-serif" : "'Montserrat', sans-serif",
             fontSize: '18px',
             width: '192px',
             height: '72px',

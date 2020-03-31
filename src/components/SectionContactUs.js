@@ -12,7 +12,7 @@ function SectionContactUs() {
             color: 'white',
             border: '2px solid #ffffffa8',
             borderRadius: 4,
-            fontFamily: window.lang === 'ko' ? 'Noto Sans KR, sans-serif' : 'Monsterrat, sans-serif',
+            fontFamily: window.lang === 'ko' ? "'Noto Sans KR', sans-serif" : "'Montserrat', sans-serif",
             fontSize: '18px',
             width: '192px',
             height: '72px',

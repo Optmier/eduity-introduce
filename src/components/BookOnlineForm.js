@@ -19,7 +19,7 @@ const EdButton = withStyles(theme => ({
         border: '1px solid #2c7b6c',
         color: '#2c7b6c',
         height: '48px',
-        fontFamily: window.lang === 'ko' ? 'Noto Sans KR, sans-serif' : 'Monsterrat, sans-serif',
+        fontFamily: window.lang === 'ko' ? "'Noto Sans KR', sans-serif" : "'Montserrat', sans-serif",
         fontSize: '16px',
         '&:hover': {
             backgroundColor: '#2c7b6c32',

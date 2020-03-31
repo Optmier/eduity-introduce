@@ -37,7 +37,8 @@ $pointColor: #00e099;
     //background-color: white;
     //color: #525252;
     color: white;
-    background-image: linear-gradient(0deg, #2228318c 35% 50%, 100%, rgba(0, 224, 154, 0.28) 100%), url(/images/product_section_cover.jpeg);
+    background-image: linear-gradient(0deg, #2228318c 35% 50%, 100%, rgba(0, 224, 154, 0.28) 100%),
+        url('/images/product_section_cover.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -171,7 +172,7 @@ $pointColor: #00e099;
     @media (max-width: 768px) {
         transition: margin 1s;
         background-image: linear-gradient(0deg, #2228318c 35% 50%, 100%, rgba(0, 224, 154, 0.28) 100%),
-            url(/images/product_section_cover_low.jpeg);
+            url('/images/product_section_cover_low.jpg');
 
         & {
             padding: 32px 24px 64px 24px;
