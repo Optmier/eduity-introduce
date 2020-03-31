@@ -36,6 +36,12 @@ $pointColor: #00e099;
             line-height: 2.86em;
         }
     }
+
+    @media (max-width: 768px) {
+        & > video {
+            display: none;
+        }
+    }
 }
 
 .tech-root {
