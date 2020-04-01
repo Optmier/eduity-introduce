@@ -17,6 +17,7 @@ function Tech() {
                 <video loop autoPlay muted className="bg">
                     <source src="/videos/bg.mp4" type="video/mp4" />
                 </video>
+
                 <div className="content-box">
                     <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
                         <div>
