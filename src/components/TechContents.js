@@ -99,7 +99,7 @@ function TechContents() {
                                 <Grid item xs={12} sm={6}>
                                     <div className="right-container">
                                         <video controls>
-                                            <source src="/videos/eyetraking_demo.mp4" type="video/mp4" />
+                                            <source src="/videos/eyetracking_demo.mp4" type="video/mp4" />
                                         </video>
                                     </div>
                                 </Grid>
