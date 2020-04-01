@@ -205,7 +205,7 @@ $pointColor: #00e099;
 
 .getStepContent {
     background-color: #324345;
-    min-height: 60vh;
+    min-height: 70vh;
     color: white;
 
     & .responsive {
@@ -216,6 +216,7 @@ $pointColor: #00e099;
             & .title {
                 & p {
                     margin-top: 0;
+                    margin-bottom: 70px;
                     font-size: 36px;
                     font-weight: 600;
                 }
