@@ -42,13 +42,13 @@
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-position: center;
-                        border: 1px solid #c4c4c4ad;
+                        border: 1px solid #00e099;
                         border-radius: 50%;
                         box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
-                        width: 128px;
-                        height: 128px;
-                        min-width: 128px;
-                        min-height: 128px;
+                        width: 168px;
+                        height: 168px;
+                        min-width: 168px;
+                        min-height: 168px;
                     }
 
                     & .team-text {
@@ -109,6 +109,13 @@
 
                 & .intro-teams {
                     & .team {
+                        & .team-image {
+                            width: 108px;
+                            height: 108px;
+                            min-width: 108px;
+                            min-height: 108px;
+                        }
+
                         & .team-text {
                             & .team-title {
                                 font-size: 28px;
