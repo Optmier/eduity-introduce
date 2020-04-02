@@ -6,8 +6,8 @@ $pointColor: #00e099;
     text-align: center;
     width: 100%;
     height: 95vh;
-    background-image: url(https://images.unsplash.com/photo-1543196614-e046c7d3d82e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2098&q=80);
-    background-position: center;
+    background-image: url('/images/product_header.jpg');
+
     background-repeat: no-repeat;
     background-attachment: fixed;
 
@@ -30,6 +30,25 @@ $pointColor: #00e099;
         font-size: 28px;
         font-weight: 600;
         line-height: 2.86em;
+    }
+
+    @media (max-width: 768px) {
+        background-image: url('/images/product_header_low.jpg');
+        height: 80vh;
+        & .cover {
+            height: 80vh;
+        }
+        & h4 {
+            margin: 0;
+            font-size: 26px;
+            line-height: 39px;
+            font-weight: 600;
+        }
+        & p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 2.86em;
+        }
     }
 }
 
@@ -179,6 +198,16 @@ $pointColor: #00e099;
 
             & .responsive {
                 & .top-contents {
+                    & .top-contents-header {
+                        text-align: center;
+                        margin-bottom: 100px;
+                        & > .header-font {
+                            font-size: 26px;
+                        }
+                        & > .desc-font {
+                            font-size: 18px;
+                        }
+                    }
                     & .items {
                         flex-direction: column;
 
@@ -198,24 +227,22 @@ $pointColor: #00e099;
             }
         }
     }
-
-    @media (max-width: 600px) {
-    }
 }
 
 .getStepContent {
     background-color: #324345;
-    min-height: 60vh;
+    min-height: 80vh;
     color: white;
 
-    & .responsive {
-        width: 100%;
+    & > .responsive {
+        width: 85%;
         max-width: 840px;
         & .contents {
             padding-top: 50px;
             & .title {
                 & p {
                     margin-top: 0;
+                    margin-bottom: 70px;
                     font-size: 36px;
                     font-weight: 600;
                 }
@@ -223,16 +250,16 @@ $pointColor: #00e099;
 
             & .strong {
                 & p {
+                    margin-bottom: 50px;
                     font-size: 20px;
                     font-weight: 600;
-                    margin: 0 0 0 15px 0;
                 }
             }
 
             & .content {
                 & .m {
                     font-weight: 600;
-                    margin-bottom: 0;
+                    margin-bottom: 10px;
                 }
 
                 & .s {
@@ -243,6 +270,28 @@ $pointColor: #00e099;
 
             & + .contents {
                 margin-top: 48px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        min-height: 90vh;
+        & .contents {
+            & .title {
+                & p {
+                    margin-top: 0;
+                    margin-bottom: 50px;
+                    font-size: 26px;
+                    font-weight: 600;
+                }
+            }
+
+            & .strong {
+                & p {
+                    margin-bottom: 40px;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
             }
         }
     }
