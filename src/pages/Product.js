@@ -75,16 +75,14 @@ function Product() {
     return (
         <>
             <div className="product-header-contents ">
-                <div className="cover">
-                    <Fade bottom cascade distance="120px" duration={1000} fraction={0.9}>
-                        <div>
-                            <h4>
-                                당신만을 위한 맞춤형 영어 학습, <br></br>에듀이티와 함께해보세요.
-                            </h4>
-                            <p>Eduity for Infinite Pioneer</p>
-                        </div>
-                    </Fade>
-                </div>
+                <Fade bottom cascade distance="120px" duration={1000} fraction={0.9}>
+                    <div>
+                        <h4>
+                            당신만을 위한 맞춤형 영어 학습, <br></br>에듀이티와 함께해보세요.
+                        </h4>
+                        <p>Eduity for Infinite Pioneer</p>
+                    </div>
+                </Fade>
             </div>
             <div className="product-root">
                 <div className="responsive">
