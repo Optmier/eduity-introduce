@@ -34,9 +34,9 @@ $pointColor: #00e099;
 
     @media (max-width: 768px) {
         background-image: url('/images/product_header_low.jpg');
-        height: 80vh;
+        height: 75vh;
         & .cover {
-            height: 80vh;
+            height: 75vh;
         }
         & h4 {
             margin: 0;
@@ -275,7 +275,7 @@ $pointColor: #00e099;
     }
 
     @media (max-width: 768px) {
-        min-height: 90vh;
+        min-height: 100vh;
         & .contents {
             & .title {
                 & p {

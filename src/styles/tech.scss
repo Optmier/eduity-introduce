@@ -56,11 +56,6 @@ $pointColor: #00e099;
     //background-color: white;
     //color: #525252;
     color: white;
-    background-image: linear-gradient(310deg, #222831ee 14% 22%, 90%, rgba(0, 224, 154, 0.4) 100%), url('/images/tech_section_cover.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     padding: 96px 24px 64px 24px;
     word-break: keep-all;
     word-wrap: break-word;
@@ -159,16 +154,27 @@ $pointColor: #00e099;
         }
     }
 
+    @media (min-width: 769px) {
+        background-image: linear-gradient(310deg, #222831ee 14% 22%, 90%, rgba(0, 224, 154, 0.4) 100%),
+            url('/images/tech_section_cover.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
     @media (max-width: 768px) {
         &::before {
-            content: ' ';
-            display: block;
             background-image: linear-gradient(310deg, #222831ee 14% 22%, 90%, rgba(0, 224, 154, 0.4) 100%),
                 url('/images/tech_section_cover_low.jpg');
+
+            content: ' ';
+            display: block;
             background-position: center;
             background-size: cover;
+            height: 100%;
             width: 100vw;
-            top: 100vh;
+            top: 0;
+            bottom: 0;
             left: 0;
             right: 0;
             position: fixed;
