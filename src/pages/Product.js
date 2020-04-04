@@ -58,6 +58,7 @@ function Product() {
     };
 
     const getStepContent = id => {
+        console.log(id);
         switch (id) {
             case '0':
                 return <ProductContents1></ProductContents1>;
@@ -68,7 +69,7 @@ function Product() {
             case '3':
                 return <ProductContents4></ProductContents4>;
             default:
-                throw new Error('스텝 오류!!!!');
+                document.location.reload();
         }
     };
 

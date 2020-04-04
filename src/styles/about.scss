@@ -53,6 +53,9 @@ $pointColor: #00e099;
     @media (max-width: 768px) {
         & {
             background: linear-gradient(90deg, #222831 4% 0%, 80%, #015f4178), url('/images/about_cover-low.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             padding: 72px 24px 48px 24px;
 
             & .responsive {
