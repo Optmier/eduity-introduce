@@ -58,7 +58,7 @@ function Product() {
     };
 
     const getStepContent = id => {
-        console.log(id);
+        // console.log(id);
         switch (id) {
             case '0':
                 return <ProductContents1></ProductContents1>;
