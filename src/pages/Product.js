@@ -39,38 +39,40 @@ function Product() {
         },
     ];
 
-    const [id, setId] = useState('0');
+    //const [id, setId] = useState(0);
     const [flag, setFlag] = useState({
-        '0': true,
-        '1': false,
-        '2': false,
-        '3': false,
+        0: true,
+        1: false,
+        2: false,
+        3: false,
     });
 
+    const [productContent, setContent] = useState(<ProductContents1 />);
+
+    const getStepContent = id => {
+        switch (id) {
+            case 0:
+                return <ProductContents1></ProductContents1>;
+            case 1:
+                return <ProductContents2></ProductContents2>;
+            case 2:
+                return <ProductContents3></ProductContents3>;
+            case 3:
+                return <ProductContents4></ProductContents4>;
+            default:
+                //getStepContent(id);
+                document.location.reload();
+        }
+    };
     const handle = e => {
         let id = e.target.id;
-        setId(id);
+        // setId(id);
 
         setFlag({
             ...!flag,
             [id]: true,
         });
-    };
-
-    const getStepContent = id => {
-        // console.log(id);
-        switch (id) {
-            case '0':
-                return <ProductContents1></ProductContents1>;
-            case '1':
-                return <ProductContents2></ProductContents2>;
-            case '2':
-                return <ProductContents3></ProductContents3>;
-            case '3':
-                return <ProductContents4></ProductContents4>;
-            default:
-                document.location.reload();
-        }
+        setContent(getStepContent(parseInt(id)));
     };
 
     return (
@@ -119,17 +121,17 @@ function Product() {
                     <div className="main-contents">
                         <div className="subRoute">
                             <ul>
-                                <li className={classNames('listStyle', { able: flag['0'] })} id="0" onClick={handle}>
-                                    <span>01</span>맞춤형 솔루션
+                                <li className={classNames('listStyle', { able: flag[0] })} id={0} onClick={handle}>
+                                    <span id={0}>01</span>맞춤형 솔루션
                                 </li>
-                                <li className={classNames('listStyle', { able: flag['1'] })} id="1" onClick={handle}>
-                                    <span>02</span>1대1 튜터링
+                                <li className={classNames('listStyle', { able: flag[1] })} id={1} onClick={handle}>
+                                    <span id={1}>02</span>1대1 튜터링
                                 </li>
-                                <li className={classNames('listStyle', { able: flag['2'] })} id="2" onClick={handle}>
-                                    <span>03</span>해외 입시 컨설팅
+                                <li className={classNames('listStyle', { able: flag[2] })} id={2} onClick={handle}>
+                                    <span id={2}>03</span>해외 입시 컨설팅
                                 </li>
-                                <li className={classNames('listStyle', { able: flag['3'] })} id="3" onClick={handle}>
-                                    <span>04</span> 맞춤형 기획 서비스
+                                <li className={classNames('listStyle', { able: flag[3] })} id={3} onClick={handle}>
+                                    <span id={3}>04</span> 맞춤형 기획 서비스
                                 </li>
                             </ul>
                         </div>
@@ -137,7 +139,7 @@ function Product() {
                 </div>
             </div>
             <div className="getStepContent">
-                <div className="responsive">{getStepContent(id)}</div>
+                <div className="responsive">{productContent}</div>
             </div>
         </>
     );
