@@ -178,6 +178,7 @@ $pointColor: #00e099;
 
                         & span {
                             margin-right: 5px;
+                            pointer-events: none;
                         }
 
                         &:hover {
