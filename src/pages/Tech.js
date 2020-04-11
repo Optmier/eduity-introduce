@@ -6,6 +6,7 @@ import WhiteLogo from '../components/svgs/nav_logo_white.png';
 
 function Tech() {
     useEffect(() => {
+        window.analytics.logEvent('기술 페이지 접속');
         document.querySelector('.nav-root').classList.add('scrolled');
         document.querySelector('.nav-logo>.color').classList.add('scrolled');
         document.querySelector('.nav-logo>.white').classList.add('scrolled');

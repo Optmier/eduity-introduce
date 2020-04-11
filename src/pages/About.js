@@ -6,6 +6,7 @@ const { about } = strings;
 
 function About() {
     useEffect(() => {
+        window.analytics.logEvent('About 페이지 접속');
         document.querySelector('.nav-root').classList.add('scrolled');
         document.querySelector('.nav-logo>.color').classList.add('scrolled');
         document.querySelector('.nav-logo>.white').classList.add('scrolled');

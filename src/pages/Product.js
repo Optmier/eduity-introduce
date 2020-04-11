@@ -16,6 +16,7 @@ const { product } = strings;
 
 function Product() {
     useEffect(() => {
+        window.analytics.logEvent('제폼 페이지 접속');
         document.querySelector('.nav-root').classList.add('scrolled');
         document.querySelector('.nav-logo>.color').classList.add('scrolled');
         document.querySelector('.nav-logo>.white').classList.add('scrolled');
@@ -47,7 +48,7 @@ function Product() {
         '3': false,
     });
 
-    const handle = e => {
+    const handle = (e) => {
         let id = e.target.id;
         setId(id);
 
@@ -57,7 +58,7 @@ function Product() {
         });
     };
 
-    const getStepContent = id => {
+    const getStepContent = (id) => {
         // console.log(id);
         switch (id) {
             case '0':

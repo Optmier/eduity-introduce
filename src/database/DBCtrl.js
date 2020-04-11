@@ -8,19 +8,20 @@ import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
 import 'firebase/database';
+import 'firebase/analytics';
 
 /** 파이어베이스 초기화 및 초반 관리자 로그인 상태 */
 // 파이어베이스 초기화
 firebase.initializeApp(apiConfig);
 
 // 마스터키로 관리자 로그인
-firebase.auth().onAuthStateChanged(async user => {
+firebase.auth().onAuthStateChanged(async (user) => {
     // 로그인한 사용자가 없으면 관리자로 로그인
     if (!user) {
         firebase
             .auth()
             .signInWithEmailAndPassword(id, pw)
-            .catch(err => {
+            .catch((err) => {
                 const errCode = err.code;
                 const errMsg = err.message;
                 console.error(errCode, errMsg);
@@ -80,7 +81,7 @@ const dbCtrl = {
                 ordQuestion: form.ordQuestion,
                 ordDateTime: datestr,
             },
-            err => {
+            (err) => {
                 if (err) {
                     callback.onError(err);
                 } else {

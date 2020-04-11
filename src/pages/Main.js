@@ -9,6 +9,7 @@ import SectionProblem from '../components/SectionProblem';
 
 function Main() {
     useEffect(() => {
+        window.analytics.logEvent('메인 페이지 접속');
         setTimeout(() => {
             if (window.scrollY <= 3) {
                 document.querySelector('.nav-root').classList.remove('scrolled');

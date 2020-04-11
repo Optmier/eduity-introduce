@@ -10,12 +10,16 @@ import ScrollTop from './components/ScrollTop';
 import About from './pages/About';
 import Tech from './pages/Tech';
 import Product from './pages/Product';
+import { firebase } from './database/DBCtrl';
 
 if (!localStorage.getItem('lang')) {
     localStorage.setItem('lang', 'ko');
     window.lang = 'ko';
 }
 window.lang = localStorage.getItem('lang');
+
+window.analytics = firebase.analytics();
+window.analytics.logEvent('사용자가 접속함');
 
 function App() {
     return (
