@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles/common.scss';
 import Wrapper from './components/Wrapper';
 import Nav from './components/Nav';
@@ -22,6 +22,14 @@ window.analytics = firebase.analytics();
 window.analytics.logEvent('사용자가 접속함');
 
 function App() {
+    const onUnload = () => {
+        window.analytics.logEvent('접속 종료함');
+    };
+
+    useEffect(() => {
+        window.addEventListener('unload', onUnload);
+    }, []);
+
     return (
         <>
             <Nav optStatic={window.location.pathname === '/' ? false : true} />
