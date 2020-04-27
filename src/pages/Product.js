@@ -9,6 +9,7 @@ import ProductContents1 from '../components/ProductContents1';
 import ProductContents2 from '../components/ProductContents2';
 import ProductContents3 from '../components/ProductContents3';
 import ProductContents4 from '../components/ProductContents4';
+import ProductReasons from '../components/ProductReasons';
 import classNames from 'classnames';
 import { Fade } from 'react-reveal';
 
@@ -96,6 +97,10 @@ function Product() {
                                     <div className="ko desc-font ">
                                         에듀이티는 교육과 기술의 장점을 활용하여 학습자의 영어학습효과를 높입니다.
                                     </div>
+                                </div>
+
+                                <div className="reasons-container">
+                                    <ProductReasons></ProductReasons>
                                 </div>
                                 <div className="image-container">
                                     <img src="/images/our_services.png" alt="서비스전체표" />
