@@ -14,10 +14,6 @@ function ProductReasons({ title, content, img, reverse }) {
                         </div>
 
                         <div className="ko ment">{title}</div>
-
-                        <div className="sub-ment">
-                            <p>{content}</p>
-                        </div>
                     </div>
                     <div className="right">
                         <div className="image-container">{img}</div>

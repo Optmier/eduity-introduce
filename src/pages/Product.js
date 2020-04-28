@@ -83,8 +83,6 @@ function Product() {
                     진행합니다.
                 </p>
             ),
-            content:
-                '시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다. 시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다.',
             img: <img src="/images/our_services.png" alt="서비스전체표" />,
             reverse: false,
         },
@@ -94,8 +92,6 @@ function Product() {
                     <span className="pointcolor">Eduity</span>는 <span className="pointcolor">가격대비</span> 확실한 효과를 보장합니다.
                 </p>
             ),
-            content:
-                '시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다. 시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다.',
             img: <img src="/images/our_services.png" alt="서비스전체표" />,
             reverse: true,
         },
@@ -105,9 +101,7 @@ function Product() {
                     <span className="pointcolor">Eduity</span>는 <span className="pointcolor">70%</span>의 <br></br>합격률을 자랑합니다.
                 </p>
             ),
-            content:
-                '시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다. 시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다.',
-            img: <img src="/images/our_services.png" alt="서비스전체표" />,
+            img: <img src="/images/chart배경.png" alt="chart" />,
             reverse: false,
         },
     ];
