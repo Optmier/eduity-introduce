@@ -12,6 +12,8 @@ import ProductContents4 from '../components/ProductContents4';
 import ProductReasons from '../components/ProductReasons';
 import classNames from 'classnames';
 import { Fade } from 'react-reveal';
+import { findByLabelText } from '@testing-library/react';
+import { Grid } from '@material-ui/core';
 
 const { product } = strings;
 
@@ -122,6 +124,109 @@ function Product() {
                         <p>Eduity for Infinite Pioneer</p>
                     </div>
                 </Fade>
+            </div>
+            <div className="subitem-process-root">
+                <div className="responsive">
+                    {/* 새로 리뉴얼한 부분 - 세인*/}
+                    <div className="sub-products">
+                        <div className="sub-product-item-container">
+                            <div className="product-item-header">
+                                <div className="en header-font">
+                                    <span>01</span> 무료 상담 진행
+                                </div>
+                                <div className="ko desc-font ">
+                                    본격적인 교육 및 컨설팅에 앞서 20분간의 전화 또는 대면 상담이 무상으로 진행됩니다.
+                                </div>
+                            </div>
+                            <div className="product-item-contents"></div>
+                        </div>
+
+                        <div className="sub-product-item-container">
+                            <div className="product-item-header">
+                                <div className="en header-font">
+                                    <span>02</span> 1대 1 맞춤형 교육
+                                </div>
+                                <div className="ko desc-font ">오직 소수만을 위한 1대 1 맞춤형 교육 시스템!</div>
+                            </div>
+                            <div className="product-item-contents">
+                                <Grid container direction="row" justify="center" alignItems="center">
+                                    <div className="content-card">
+                                        <div className="card-title">어학시험</div>
+                                        <div className="card-content">
+                                            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
+                                                <div>
+                                                    <p>SAT</p>
+                                                    <p>TOFEL</p>
+                                                    <p>AP 수학</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="content-card">
+                                        <div className="card-title">GPA관리</div>
+                                        <div className="card-content">
+                                            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
+                                                <div>
+                                                    <p>과목 선정</p>
+                                                    <p>과제 Support</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Grid>
+                            </div>
+                        </div>
+
+                        <div className="sub-product-item-container">
+                            <div className="product-item-header">
+                                <div className="en header-font">
+                                    <span>03</span> 진학 및 입시 컨설팅
+                                </div>
+                                <div className="ko desc-font ">에듀이티만의 밀착 관리 컨설팅 시스템을 만나보세요.</div>
+                            </div>
+                            <div className="product-item-contents">
+                                <Grid container direction="row" justify="center" alignItems="center">
+                                    <div className="content-card">
+                                        <div className="card-title">미국 보딩스쿨</div>
+                                        <div className="card-content">
+                                            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
+                                                <div>
+                                                    <p>지원서, 에세이, 과외활동</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="content-card">
+                                        <div className="card-title">국내 국제학교</div>
+                                        <div className="card-content">
+                                            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
+                                                <div>
+                                                    <p>지원서, 에세이, 과외활동</p>
+                                                    <p>인재상 설정</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="content-card">
+                                        <div className="card-title">미국 대학</div>
+                                        <div className="card-content">
+                                            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
+                                                <div>
+                                                    <p>지원서, 에세이, 과외활동</p>
+                                                    <p>
+                                                        아이비리그 합격자 포트폴리오<br></br>무상 제공
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Grid>
+                            </div>
+                        </div>
+                    </div>
+                    {/* 새로 리뉴얼한 부분 - 세인 */}
+                </div>
             </div>
             <div className="product-root">
                 <div className="responsive">

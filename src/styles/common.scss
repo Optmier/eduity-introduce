@@ -111,7 +111,8 @@ html {
 // }
 
 .ko {
-    font-family: 'Noto Sans KR', sans-serif;
+    // font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Montserrat', 'Noto Sans KR';
     &.header-font {
         font-size: 28px;
         font-weight: 510;
@@ -137,7 +138,8 @@ html {
     }
 }
 .en {
-    font-family: 'Montserrat', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Noto Sans KR';
     &.header-font {
         font-size: 28px;
         font-weight: 500;
