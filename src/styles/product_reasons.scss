@@ -1,8 +1,57 @@
 $pointColor: #4dc2af;
 
-.pointcolor {
-    color: $pointColor;
-}
-.ment {
+.product-reasons {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+.left {
+    width: 42%;
+    & .quote {
+        & img {
+            width: 55px;
+            filter: invert(1) opacity(0.9);
+        }
+    }
+    & .ment {
+        font-size: 26px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.48;
+
+        text-align: left;
+        color: #ffffff;
+        & p {
+            margin-top: 0;
+        }
+        & .pointcolor {
+            color: $pointColor;
+            font-size: 38px;
+        }
+    }
+    & .sub-ment {
+        margin-top: 16px;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.48;
+
+        text-align: left;
+        color: #a9a5a5;
+    }
+}
+
+.right {
+    width: 53%;
+    & .image-container {
+        & img {
+            width: 100%;
+        }
+    }
 }

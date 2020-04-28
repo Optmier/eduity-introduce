@@ -75,6 +75,42 @@ function Product() {
         }
     };
 
+    const reasons_datas = [
+        {
+            title: (
+                <p>
+                    <span className="pointcolor">Eduity</span>는 <span className="pointcolor">소수정예</span>를 통한 1대1 밀착 학습 관리를
+                    진행합니다.
+                </p>
+            ),
+            content:
+                '시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다. 시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다.',
+            img: <img src="/images/our_services.png" alt="서비스전체표" />,
+            reverse: false,
+        },
+        {
+            title: (
+                <p>
+                    <span className="pointcolor">Eduity</span>는 <span className="pointcolor">가격대비</span> 확실한 효과를 보장합니다.
+                </p>
+            ),
+            content:
+                '시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다. 시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다.',
+            img: <img src="/images/our_services.png" alt="서비스전체표" />,
+            reverse: true,
+        },
+        {
+            title: (
+                <p>
+                    <span className="pointcolor">Eduity</span>는 <span className="pointcolor">70%</span>의 <br></br>합격률을 자랑합니다.
+                </p>
+            ),
+            content:
+                '시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다. 시험 분야별 특화된 전문 강사를 배정하여 교육의 효율성을 극대화 시킵니다.',
+            img: <img src="/images/our_services.png" alt="서비스전체표" />,
+            reverse: false,
+        },
+    ];
     return (
         <>
             <div className="product-header-contents ">
@@ -90,24 +126,24 @@ function Product() {
             <div className="product-root">
                 <div className="responsive">
                     <div className="top-contents">
-                        <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
-                            <div>
-                                <div className="top-contents-header">
-                                    <div className="en header-font">Why Eduity?</div>
-                                    <div className="ko desc-font ">
-                                        에듀이티는 교육과 기술의 장점을 활용하여 학습자의 영어학습효과를 높입니다.
-                                    </div>
-                                </div>
+                        <div className="top-contents-header">
+                            <div className="en header-font">Why Eduity?</div>
+                            <div className="ko desc-font ">에듀이티는 교육과 기술의 장점을 활용하여 학습자의 영어학습효과를 높입니다.</div>
+                        </div>
 
-                                <div className="reasons-container">
-                                    <ProductReasons></ProductReasons>
-                                </div>
-                                <div className="image-container">
-                                    <img src="/images/our_services.png" alt="서비스전체표" />
-                                </div>
-                            </div>
-                        </Fade>
-                        <div className="items">
+                        <div className="reasons-container">
+                            {reasons_datas.map((i, key) => (
+                                <ProductReasons
+                                    key={key}
+                                    reverse={i.reverse}
+                                    title={i.title}
+                                    content={i.content}
+                                    img={i.img}
+                                ></ProductReasons>
+                            ))}
+                        </div>
+
+                        {/* <div className="items">
                             <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
                                 <div className="card-fade">
                                     {datas.map((i, key) => (
@@ -119,7 +155,7 @@ function Product() {
                                     ))}
                                 </div>
                             </Fade>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="main-contents">
