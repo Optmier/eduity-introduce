@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/product.scss';
-import { strings } from '../datas/strings';
-import ContentView from '../components/ContentView';
-import Teacher from '../components/svgs/teacher2';
-import Studying from '../components/svgs/studying';
-import University from '../components/svgs/university';
 import ProductContents1 from '../components/ProductContents1';
 import ProductContents2 from '../components/ProductContents2';
 import ProductContents3 from '../components/ProductContents3';
@@ -13,7 +8,7 @@ import ProductReasons from '../components/ProductReasons';
 import classNames from 'classnames';
 import { Fade } from 'react-reveal';
 
-const { product } = strings;
+//const { product } = strings;
 
 function Product() {
     useEffect(() => {
@@ -23,23 +18,23 @@ function Product() {
         document.querySelector('.nav-logo>.white').classList.add('scrolled');
     }, []);
 
-    const datas = [
-        {
-            title: product.top_items.item_1.title[window.lang],
-            content: product.top_items.item_1.content[window.lang],
-            img: <Teacher fill="white"></Teacher>,
-        },
-        {
-            title: product.top_items.item_2.title[window.lang],
-            content: product.top_items.item_2.content[window.lang],
-            img: <Studying fill="white"></Studying>,
-        },
-        {
-            title: product.top_items.item_3.title[window.lang],
-            content: product.top_items.item_3.content[window.lang],
-            img: <University fill="white"></University>,
-        },
-    ];
+    // const datas = [
+    //     {
+    //         title: product.top_items.item_1.title[window.lang],
+    //         content: product.top_items.item_1.content[window.lang],
+    //         img: <Teacher fill="white"></Teacher>,
+    //     },
+    //     {
+    //         title: product.top_items.item_2.title[window.lang],
+    //         content: product.top_items.item_2.content[window.lang],
+    //         img: <Studying fill="white"></Studying>,
+    //     },
+    //     {
+    //         title: product.top_items.item_3.title[window.lang],
+    //         content: product.top_items.item_3.content[window.lang],
+    //         img: <University fill="white"></University>,
+    //     },
+    // ];
 
     const [id, setId] = useState('0');
     const [flag, setFlag] = useState({
@@ -60,7 +55,6 @@ function Product() {
     };
 
     const getStepContent = (id) => {
-        // console.log(id);
         switch (id) {
             case '0':
                 return <ProductContents1></ProductContents1>;
@@ -83,26 +77,32 @@ function Product() {
                     진행합니다.
                 </p>
             ),
+            content: '시험 분야별 전문 강사와의 맞춤형 매칭부터 학생 수준별 교육 커리큘럼을 모두 제작하여 교육의 효율성을 극대화 시킵니다.',
             img: <img src="/images/our_services.png" alt="서비스전체표" />,
             reverse: false,
+            counts: false,
         },
         {
             title: (
                 <p>
-                    <span className="pointcolor">Eduity</span>는 <span className="pointcolor">가격대비</span> 확실한 효과를 보장합니다.
+                    <span className="pointcolor">Eduity</span>는 <span className="pointcolor">선택적</span> 가격제도를 실시합니다.
                 </p>
             ),
+            content: '필수커리큘럼만 교육하여 불필요한 가격을 삭제하여 가격의 투명성을 지향하며, 가격대비 확실한 효과를 보장합니다.',
             img: <img src="/images/our_services.png" alt="서비스전체표" />,
             reverse: true,
+            counts: false,
         },
         {
             title: (
                 <p>
-                    <span className="pointcolor">Eduity</span>는 <span className="pointcolor">70%</span>의 <br></br>합격률을 자랑합니다.
+                    <span className="pointcolor">Eduity</span>는 <span className="pointcolor">63%</span>의 <br></br>합격률을 자랑합니다.
                 </p>
             ),
+            content: '경험이 많은 전문강사와 입시 컨선턴트의 협업을 통해 어학점수 향상과 목표 학교의 높은 합격률을 자랑합니다.',
             img: <img src="/images/chart배경.png" alt="chart" />,
             reverse: false,
+            counts: true,
         },
     ];
     return (
@@ -133,6 +133,7 @@ function Product() {
                                     title={i.title}
                                     content={i.content}
                                     img={i.img}
+                                    counts={i.counts}
                                 ></ProductReasons>
                             ))}
                         </div>
