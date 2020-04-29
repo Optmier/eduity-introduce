@@ -9,6 +9,8 @@ $pointColor: #00e099;
     color: white;
     text-align: center;
     height: 100vh;
+    font-family: 'Montserrat', 'Noto Sans KR';
+
     & h4 {
         margin: 0;
         font-size: 50px;
@@ -111,7 +113,7 @@ $pointColor: #00e099;
                     & .content-card {
                         min-width: 256px;
                         max-width: 256px;
-                        min-height: 192px;
+                        min-height: 280px;
                         background-color: white;
                         border-radius: 4px;
                         overflow: hidden;
@@ -121,9 +123,9 @@ $pointColor: #00e099;
 
                         & .card-title {
                             background-color: $pointColor;
-                            font-size: 18px;
+                            font-size: 20px;
                             font-weight: 600;
-                            padding: 4px 0;
+                            padding: 8px 0;
                             text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
                         }
 
@@ -132,9 +134,10 @@ $pointColor: #00e099;
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            height: calc(100% - 51px);
                             padding: 8px 12px;
-                            min-height: 140px;
+                            min-height: 220px;
+                            font-size: 18px;
+                            font-weight: 600;
                         }
 
                         & + .content-card {

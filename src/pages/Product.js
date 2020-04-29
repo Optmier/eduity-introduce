@@ -14,6 +14,7 @@ import classNames from 'classnames';
 import { Fade } from 'react-reveal';
 import { findByLabelText } from '@testing-library/react';
 import { Grid } from '@material-ui/core';
+import SectionContactUs from '../components/SectionContactUs';
 
 const { product } = strings;
 
@@ -43,10 +44,10 @@ function Product() {
         },
     ];
 
-    const [id, setId] = useState('0');
+    const [id, setId] = useState('1');
     const [flag, setFlag] = useState({
-        '0': true,
-        '1': false,
+        '0': false,
+        '1': true,
         '2': false,
         '3': false,
     });
@@ -158,6 +159,7 @@ function Product() {
                                                     <p>SAT</p>
                                                     <p>TOFEL</p>
                                                     <p>AP 수학</p>
+                                                    <p>AMC 10, 12</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -192,7 +194,9 @@ function Product() {
                                         <div className="card-content">
                                             <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
                                                 <div>
-                                                    <p>지원서, 에세이, 과외활동</p>
+                                                    <p>지원서</p>
+                                                    <p>에세이</p>
+                                                    <p>과외활동</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -202,7 +206,9 @@ function Product() {
                                         <div className="card-content">
                                             <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
                                                 <div>
-                                                    <p>지원서, 에세이, 과외활동</p>
+                                                    <p>지원서</p>
+                                                    <p>에세이</p>
+                                                    <p>과외활동</p>
                                                     <p>인재상 설정</p>
                                                 </div>
                                             </div>
@@ -213,9 +219,11 @@ function Product() {
                                         <div className="card-content">
                                             <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
                                                 <div>
-                                                    <p>지원서, 에세이, 과외활동</p>
-                                                    <p>
-                                                        아이비리그 합격자 포트폴리오<br></br>무상 제공
+                                                    <p>지원서</p>
+                                                    <p>에세이</p>
+                                                    <p>과외활동</p>
+                                                    <p style={{ fontSize: 14, fontWeight: 500 }}>
+                                                        (아이비리그 합격자 포트폴리오<br></br>무상 제공*)
                                                     </p>
                                                 </div>
                                             </div>
@@ -228,6 +236,7 @@ function Product() {
                     {/* 새로 리뉴얼한 부분 - 세인 */}
                 </div>
             </div>
+            <SectionContactUs />
             <div className="product-root">
                 <div className="responsive">
                     <div className="top-contents">
@@ -266,17 +275,18 @@ function Product() {
                     <div className="main-contents">
                         <div className="subRoute">
                             <ul>
-                                <li className={classNames('listStyle', { able: flag['0'] })} id="0" onClick={handle}>
-                                    <span>01</span>맞춤형 솔루션
-                                </li>
                                 <li className={classNames('listStyle', { able: flag['1'] })} id="1" onClick={handle}>
-                                    <span>02</span>1대1 튜터링
+                                    <span>01</span>1대1 튜터링
                                 </li>
                                 <li className={classNames('listStyle', { able: flag['2'] })} id="2" onClick={handle}>
-                                    <span>03</span>해외 입시 컨설팅
+                                    <span>02</span>해외 입시 컨설팅
                                 </li>
                                 <li className={classNames('listStyle', { able: flag['3'] })} id="3" onClick={handle}>
-                                    <span>04</span> 맞춤형 기획 서비스
+                                    <span>03</span> 맞춤형 기획 서비스
+                                </li>
+                                <li className={classNames('listStyle', { able: false })} /* id="0" */ /* onClick={handle} */>
+                                    <span>04</span>맞춤형 솔루션<br></br>
+                                    <span style={{ fontSize: 14 }}>(준비중*)</span>
                                 </li>
                             </ul>
                         </div>
