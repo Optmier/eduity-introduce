@@ -30,7 +30,7 @@ function ProductReasons({ title, content, img, reverse, counts }) {
             useEasing: false,
         }),
     ];
-
+  
     return (
         <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
             <div>
@@ -84,6 +84,7 @@ function ProductReasons({ title, content, img, reverse, counts }) {
                         ) : (
                             ''
                         )}
+
                         <div className="image-container">{img}</div>
                     </div>
                 </div>

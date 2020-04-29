@@ -23,6 +23,7 @@ const FooterContent = React.memo(function FooterContent() {
                 <span>
                     전화: <a href="tel:123-456-7890">010-5912-1545</a>
                 </span>
+                {' | '}
                 <span>
                     이메일: <a href="mailto:khjeon1994@gmail.com">khjeon1994@gmail.com</a>
                 </span>
