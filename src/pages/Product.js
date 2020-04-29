@@ -95,7 +95,6 @@ function Product() {
             img: <img src="/images/our_services.png" alt="서비스전체표" />,
             reverse: true,
             counts: false,
-
         },
         {
             title: (
@@ -107,7 +106,6 @@ function Product() {
             img: <img src="/images/chart배경.png" alt="chart" />,
             reverse: false,
             counts: true,
-
         },
     ];
     return (
@@ -143,7 +141,7 @@ function Product() {
                                 <div className="en header-font">
                                     <span>02</span> 1대 1 맞춤형 교육
                                 </div>
-                                <div className="ko desc-font ">오직 소수만을 위한 1대 1 맞춤형 교육 시스템!</div>
+                                <div className="ko desc-font ">오직 소수만을 위한 1대 1 맞춤형 교육 시스템을 제공합니다.</div>
                             </div>
                             <div className="product-item-contents">
                                 <Grid container direction="row" justify="center" alignItems="center">
@@ -219,7 +217,7 @@ function Product() {
                                                     <p>에세이</p>
                                                     <p>과외활동</p>
                                                     <p style={{ fontSize: 14, fontWeight: 500 }}>
-                                                        (아이비리그 합격자 포트폴리오<br></br>무상 제공*)
+                                                        (아이비리그 합격자<br></br>포트폴리오 무상 제공*)
                                                     </p>
                                                 </div>
                                             </div>

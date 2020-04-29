@@ -1,12 +1,10 @@
-
 $pointColor: #00e099;
-
 
 .product-reasons {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 128px;
 
     & .left {
         width: 42%;
@@ -67,6 +65,7 @@ $pointColor: #00e099;
                 color: $pointColor;
             }
             & .count-ment {
+                font-family: 'Montserrat', 'Noto Sans KR';
                 padding-left: 100px;
                 display: flex;
                 align-items: center;
