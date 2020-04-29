@@ -1,57 +1,85 @@
-$pointColor: #4dc2af;
+
+$pointColor: #00e099;
+
 
 .product-reasons {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 100px;
+
+    & .left {
+        width: 42%;
+        & .quote {
+            & img {
+                width: 55px;
+                filter: invert(1) opacity(0.9);
+            }
+        }
+        & .ment {
+            font-size: 26px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.48;
+
+            text-align: left;
+            color: #ffffff;
+            & p {
+                margin-top: 0;
+            }
+            & .pointcolor {
+                color: $pointColor;
+                font-size: 38px;
+            }
+        }
+        & .sub-ment {
+            margin-top: 16px;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.48;
+
+            text-align: left;
+            color: #a9a5a5;
+        }
+    }
+
+    & .right {
+        width: 53%;
+        display: flex;
+
+        & .count-up {
+            position: absolute;
+            z-index: 1;
+
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.48;
+            text-align: left;
+            color: white;
+
+            & .count-pointcolor {
+                font-size: 22px;
+                color: $pointColor;
+            }
+            & .count-ment {
+                padding-left: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+        }
+        & .image-container {
+            & img {
+                width: 100%;
+            }
+        }
+    }
 }
 .flex-reverse {
     flex-direction: row-reverse;
-}
-.left {
-    width: 42%;
-    & .quote {
-        & img {
-            width: 55px;
-            filter: invert(1);
-        }
-    }
-    & .ment {
-        font-size: 26px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.48;
-
-        text-align: left;
-        color: #ffffff;
-        & p {
-            margin-top: 0;
-        }
-        & .pointcolor {
-            color: $pointColor;
-            font-size: 38px;
-        }
-    }
-    & .sub-ment {
-        margin-top: 16px;
-        font-size: 16px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.48;
-
-        text-align: left;
-        color: #a9a5a5;
-    }
-}
-
-.right {
-    width: 53%;
-    & .image-container {
-        & img {
-            width: 100%;
-        }
-    }
 }

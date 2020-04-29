@@ -13,6 +13,7 @@
     "firebase": "^7.12.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
+    "react-countup": "^4.3.3",
     "react-dom": "^16.13.0",
     "react-icons": "^3.9.0",
     "react-reveal": "^1.2.2",
