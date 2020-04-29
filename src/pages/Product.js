@@ -92,7 +92,7 @@ function Product() {
                 </p>
             ),
             content: '필수커리큘럼만 교육하여 불필요한 가격을 삭제하여 가격의 투명성을 지향하며, 가격대비 확실한 효과를 보장합니다.',
-            img: <img src="/images/our_services.png" alt="서비스전체표" />,
+            img: <img src="/images/price_news.png" alt="price_news" />,
             reverse: true,
             counts: false,
         },
