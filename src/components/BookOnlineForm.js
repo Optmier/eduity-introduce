@@ -12,14 +12,14 @@ const EdCheckbox = withStyles({
         },
     },
     checked: {},
-})(props => <Checkbox color="default" {...props} />);
+})((props) => <Checkbox color="default" {...props} />);
 
-const EdButton = withStyles(theme => ({
+const EdButton = withStyles((theme) => ({
     root: {
         border: '1px solid #2c7b6c',
         color: '#2c7b6c',
         height: '48px',
-        fontFamily: window.lang === 'ko' ? "'Noto Sans KR', sans-serif" : "'Montserrat', sans-serif",
+        fontFamily: "'Montserrat', 'Noto Sans KR'",
         fontSize: '16px',
         '&:hover': {
             backgroundColor: '#2c7b6c32',
@@ -35,7 +35,7 @@ const EdButton = withStyles(theme => ({
     },
 }))(Button);
 
-const EdTextField = withStyles(theme => ({
+const EdTextField = withStyles((theme) => ({
     root: {
         '& label.Mui-focused': {
             color: '#2c7b6c',
@@ -103,44 +103,44 @@ function BookOnlineForm() {
     const { name, age, phone, email, question } = inputs;
 
     /******************** input State ********************/
-    const onChange = useCallback(e => {
+    const onChange = useCallback((e) => {
         const { name, value } = e.target;
-        setInputs(inputs => ({
+        setInputs((inputs) => ({
             ...inputs,
             [name]: value,
         }));
 
-        setErrors(errors => ({
+        setErrors((errors) => ({
             ...errors,
             [name]: false,
         }));
     }, []);
 
     /******************** select State ********************/
-    const handleSetOrderType = event => {
+    const handleSetOrderType = (event) => {
         setOrderType(event.target.value);
-        setErrors(errors => ({
+        setErrors((errors) => ({
             ...errors,
             ['orderType']: false,
         }));
     };
-    const handleSetServiceType = event => {
+    const handleSetServiceType = (event) => {
         setServiceType(event.target.value);
-        setErrors(errors => ({
+        setErrors((errors) => ({
             ...errors,
             ['serviceType']: false,
         }));
     };
 
-    const handleSetAgree = event => {
+    const handleSetAgree = (event) => {
         setAgree(event.target.checked);
     };
 
     const submitForm = () => {
         /******************** error 체크 ********************/
-        Object.keys(inputs).map(name => {
+        Object.keys(inputs).map((name) => {
             if (inputs[name].trim() === '') {
-                setErrors(errors => ({
+                setErrors((errors) => ({
                     ...errors,
                     [name]: true,
                 }));
@@ -148,20 +148,20 @@ function BookOnlineForm() {
         });
 
         if (serviceType === '') {
-            setErrors(errors => ({
+            setErrors((errors) => ({
                 ...errors,
                 ['serviceType']: true,
             }));
         }
         if (orderType === '') {
-            setErrors(errors => ({
+            setErrors((errors) => ({
                 ...errors,
                 ['orderType']: true,
             }));
         }
 
         /****************************************************/
-        if (Object.values(inputs).every(elem => elem.trim() !== '') && serviceType !== '' && orderType !== '') {
+        if (Object.values(inputs).every((elem) => elem.trim() !== '') && serviceType !== '' && orderType !== '') {
             if (agree) {
                 dispatch({
                     type: 'BOOK',

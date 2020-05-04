@@ -36,7 +36,7 @@ const { nav_menus } = strings;
 //         root: {
 //             padding: 0,
 //             color: 'inherit',
-//             fontFamily: lang === 'ko' ? 'Noto Sans KR, sans-serif' : 'Montserrat, sans-serif',
+//             fontFamily: "'Montserrat', 'Noto Sans KR'",
 //         },
 //     }))(Select);
 

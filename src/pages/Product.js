@@ -125,106 +125,122 @@ function Product() {
                     {/* 새로 리뉴얼한 부분 - 세인*/}
                     <div className="sub-products">
                         <div className="sub-product-item-container">
-                            <div className="product-item-header">
-                                <div className="en header-font">
-                                    <span>01</span> 무료 상담 진행
+                            <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
+                                <div className="product-item-header">
+                                    <div className="en header-font">
+                                        <span>01</span> 무료 상담 진행
+                                    </div>
+                                    <div className="ko desc-font ">
+                                        본격적인 교육 및 컨설팅에 앞서 20분간의 전화 또는 대면 상담이 무상으로 진행됩니다.
+                                    </div>
                                 </div>
-                                <div className="ko desc-font ">
-                                    본격적인 교육 및 컨설팅에 앞서 20분간의 전화 또는 대면 상담이 무상으로 진행됩니다.
-                                </div>
-                            </div>
+                            </Fade>
                             <div className="product-item-contents"></div>
                         </div>
 
                         <div className="sub-product-item-container">
-                            <div className="product-item-header">
-                                <div className="en header-font">
-                                    <span>02</span> 1대 1 맞춤형 교육
+                            <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
+                                <div className="product-item-header">
+                                    <div className="en header-font">
+                                        <span>02</span> 1대 1 맞춤형 교육
+                                    </div>
+                                    <div className="ko desc-font ">오직 소수만을 위한 1대 1 맞춤형 교육 시스템을 제공합니다.</div>
                                 </div>
-                                <div className="ko desc-font ">오직 소수만을 위한 1대 1 맞춤형 교육 시스템을 제공합니다.</div>
-                            </div>
-                            <div className="product-item-contents">
-                                <Grid container direction="row" justify="center" alignItems="center">
-                                    <div className="content-card">
-                                        <div className="card-title">어학시험</div>
-                                        <div className="card-content">
-                                            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
-                                                <div>
-                                                    <p>SAT</p>
-                                                    <p>TOFEL</p>
-                                                    <p>AP 수학</p>
-                                                    <p>AMC 10, 12</p>
+                                <div className="product-item-contents">
+                                    <Grid container direction="row" justify="center" alignItems="center">
+                                        <div className="content-card">
+                                            <div className="card-title">어학시험</div>
+                                            <div className="card-content">
+                                                <div
+                                                    style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}
+                                                >
+                                                    <div>
+                                                        <p>SAT</p>
+                                                        <p>TOFEL</p>
+                                                        <p>AP 수학</p>
+                                                        <p>AMC 10, 12</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div className="content-card">
-                                        <div className="card-title">GPA관리</div>
-                                        <div className="card-content">
-                                            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
-                                                <div>
-                                                    <p>과목 선정</p>
-                                                    <p>과제 Support</p>
+                                        <div className="content-card">
+                                            <div className="card-title">GPA관리</div>
+                                            <div className="card-content">
+                                                <div
+                                                    style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}
+                                                >
+                                                    <div>
+                                                        <p>과목 선정</p>
+                                                        <p>과제 Support</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </Grid>
-                            </div>
+                                    </Grid>
+                                </div>
+                            </Fade>
                         </div>
 
                         <div className="sub-product-item-container">
-                            <div className="product-item-header">
-                                <div className="en header-font">
-                                    <span>03</span> 진학 및 입시 컨설팅
+                            <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
+                                <div className="product-item-header">
+                                    <div className="en header-font">
+                                        <span>03</span> 진학 및 입시 컨설팅
+                                    </div>
+                                    <div className="ko desc-font ">에듀이티만의 밀착 관리 컨설팅 시스템을 만나보세요.</div>
                                 </div>
-                                <div className="ko desc-font ">에듀이티만의 밀착 관리 컨설팅 시스템을 만나보세요.</div>
-                            </div>
-                            <div className="product-item-contents">
-                                <Grid container direction="row" justify="center" alignItems="center">
-                                    <div className="content-card">
-                                        <div className="card-title">미국 보딩스쿨</div>
-                                        <div className="card-content">
-                                            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
-                                                <div>
-                                                    <p>지원서</p>
-                                                    <p>에세이</p>
-                                                    <p>과외활동</p>
+                                <div className="product-item-contents">
+                                    <Grid container direction="row" justify="center" alignItems="center">
+                                        <div className="content-card">
+                                            <div className="card-title">미국 보딩스쿨</div>
+                                            <div className="card-content">
+                                                <div
+                                                    style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}
+                                                >
+                                                    <div>
+                                                        <p>지원서</p>
+                                                        <p>에세이</p>
+                                                        <p>과외활동</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="content-card">
-                                        <div className="card-title">국내 국제학교</div>
-                                        <div className="card-content">
-                                            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
-                                                <div>
-                                                    <p>지원서</p>
-                                                    <p>에세이</p>
-                                                    <p>과외활동</p>
-                                                    <p>인재상 설정</p>
+                                        <div className="content-card">
+                                            <div className="card-title">국내 국제학교</div>
+                                            <div className="card-content">
+                                                <div
+                                                    style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}
+                                                >
+                                                    <div>
+                                                        <p>지원서</p>
+                                                        <p>에세이</p>
+                                                        <p>과외활동</p>
+                                                        <p>인재상 설정</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="content-card">
-                                        <div className="card-title">미국 대학</div>
-                                        <div className="card-content">
-                                            <div style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}>
-                                                <div>
-                                                    <p>지원서</p>
-                                                    <p>에세이</p>
-                                                    <p>과외활동</p>
-                                                    <p style={{ fontSize: 14, fontWeight: 500 }}>
-                                                        (아이비리그 합격자<br></br>포트폴리오 무상 제공*)
-                                                    </p>
+                                        <div className="content-card">
+                                            <div className="card-title">미국 대학</div>
+                                            <div className="card-content">
+                                                <div
+                                                    style={{ display: 'flex', flexDirection: 'row', height: '100%', alignItems: 'center' }}
+                                                >
+                                                    <div>
+                                                        <p>지원서</p>
+                                                        <p>에세이</p>
+                                                        <p>과외활동</p>
+                                                        <p style={{ fontSize: 14, fontWeight: 500 }}>
+                                                            (아이비리그 합격자<br></br>포트폴리오 무상 제공*)
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </Grid>
-                            </div>
+                                    </Grid>
+                                </div>
+                            </Fade>
                         </div>
                     </div>
                     {/* 새로 리뉴얼한 부분 - 세인 */}
