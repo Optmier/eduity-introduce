@@ -45,13 +45,13 @@ function Section3() {
         // width: '18%',
     };
 
-    const MoreButton = withStyles(theme => ({
+    const MoreButton = withStyles((theme) => ({
         root: {
             backgroundColor: '#ffffff',
             color: '#00e099',
             border: '2px solid #ffffff',
             borderRadius: 4,
-            fontFamily: window.lang === 'ko' ? "'Noto Sans KR', sans-serif" : "'Montserrat', sans-serif",
+            fontFamily: "'Montserrat', 'Noto Sans KR'",
             fontSize: '18px',
             width: '192px',
             height: '72px',

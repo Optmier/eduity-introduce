@@ -42,12 +42,12 @@ const getDateString = (datetime, type) => {
 };
 
 const EventCard = React.memo(function EventCard({ title, content, location, datetime, link, image }) {
-    const MoreButton = withStyles(theme => ({
+    const MoreButton = withStyles((theme) => ({
         root: {
             color: 'white',
             border: '1px solid #ffffffa8',
             borderRadius: 4,
-            fontFamily: window.lang === 'ko' ? "'Noto Sans KR', sans-serif" : "'Montserrat', sans-serif",
+            fontFamily: "'Montserrat', 'Noto Sans KR'",
             width: '144px',
             height: '46px',
         },

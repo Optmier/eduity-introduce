@@ -7,12 +7,12 @@ import SectionWrapper from './SectionWrapper';
 import BorderAnimatedButton from './BorderAnimatedButton';
 
 function SectionContactUs() {
-    const BookButton = withStyles(theme => ({
+    const BookButton = withStyles((theme) => ({
         root: {
             color: 'white',
             border: '2px solid #ffffffa8',
             borderRadius: 4,
-            fontFamily: window.lang === 'ko' ? "'Noto Sans KR', sans-serif" : "'Montserrat', sans-serif",
+            fontFamily: "'Montserrat', 'Noto Sans KR'",
             fontSize: '18px',
             width: '192px',
             height: '72px',

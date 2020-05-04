@@ -42,7 +42,7 @@ function a11yProps(index) {
     };
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
     },
@@ -50,8 +50,11 @@ const useStyles = makeStyles(theme => ({
 
 const CssTabs = withStyles({
     root: {
-        fontFamily: ['Noto Sans KR', 'sans-serif'],
+        fontFamily: ['Montserrat', 'Noto Sans KR'],
         fontSize: '20px',
+        '.MuiBox-root': {
+            fontFamily: 'inherit',
+        },
     },
 })(Tabs);
 
@@ -64,7 +67,7 @@ function TechContents() {
         setValue(newValue);
     };
 
-    const handleChangeIndex = index => {
+    const handleChangeIndex = (index) => {
         setValue(index);
     };
 

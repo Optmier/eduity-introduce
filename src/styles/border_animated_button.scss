@@ -14,7 +14,7 @@
         display: block;
         position: relative;
         overflow: hidden;
-        transition: all 0.35s ease-in-out 0.35s;
+        transition: all 0.3s ease-in-out 0.3s;
         margin: 0 auto;
         width: fit-content;
         text-align: center;
@@ -47,12 +47,12 @@
         background: #353b44;
         z-index: 100;
         position: relative;
-        transition: all 0.35s ease-in-out 0.35s;
+        transition: all 0.3s ease-in-out 0.3s;
     }
     .button:hover span {
         background: #00e099;
         color: rgb(0, 0, 0);
-        transition: all 0.35s ease-in-out 0.35s;
+        transition: all 0.3s ease-in-out 0.3s;
     }
     .button:after {
         bottom: -100%;
@@ -62,12 +62,12 @@
         height: 100%;
         position: absolute;
         background: #00e099;
-        transition: all 0.35s ease-in-out 0.5s;
+        transition: all 0.3s ease-in-out 0.333s;
     }
     .button:hover:after {
         right: 0;
         bottom: 0;
-        transition: all ease-in-out 0.35s;
+        transition: all ease-in-out 0.3s;
     }
     .button:before {
         top: -100%;
@@ -77,11 +77,11 @@
         height: 100%;
         position: absolute;
         background: #00e099;
-        transition: all 0.35s ease-in-out 0.5s;
+        transition: all 0.3s ease-in-out 0.333s;
     }
     .button:hover:before {
         left: 0;
         top: 0;
-        transition: all ease-in-out 0.35s;
+        transition: all ease-in-out 0.3s;
     }
 }
