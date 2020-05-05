@@ -47,7 +47,7 @@ $pointColor: #00e099;
     & .right {
         width: 50%;
         display: flex;
-
+        align-items: center;
         & .count-up {
             position: absolute;
             z-index: 1;
@@ -81,4 +81,27 @@ $pointColor: #00e099;
 }
 .flex-reverse {
     flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .product-reasons {
+        flex-direction: column;
+        & .left,
+        .right {
+            width: 100%;
+        }
+
+        & .right {
+            & .count-up {
+                line-height: 0.7;
+                & .count-ment {
+                    padding: 0;
+                }
+            }
+        }
+
+        & .left + .right {
+            margin-top: 26px;
+        }
+    }
 }

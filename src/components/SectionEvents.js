@@ -92,7 +92,7 @@ function SectionEvents() {
     return (
         <SectionWrapper height="100vh" no="-events" coverImage="bgcover-events" marginBottom={64} darker>
             <Fade bottom distance="72px" duration={800} fraction={1}>
-                <div className="intro-header en">
+                <div className="intro-header">
                     <p>다가오는 이벤트</p>
                 </div>
             </Fade>

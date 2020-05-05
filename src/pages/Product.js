@@ -127,10 +127,10 @@ function Product() {
                         <div className="sub-product-item-container">
                             <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
                                 <div className="product-item-header">
-                                    <div className="en header-font">
+                                    <div className="header-font">
                                         <span>01</span> 무료 상담 진행
                                     </div>
-                                    <div className="ko desc-font ">
+                                    <div className="desc-font ">
                                         본격적인 교육 및 컨설팅에 앞서 20분간의 전화 또는 대면 상담이 무상으로 진행됩니다.
                                     </div>
                                 </div>
@@ -141,10 +141,10 @@ function Product() {
                         <div className="sub-product-item-container">
                             <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
                                 <div className="product-item-header">
-                                    <div className="en header-font">
+                                    <div className="header-font">
                                         <span>02</span> 1대 1 맞춤형 교육
                                     </div>
-                                    <div className="ko desc-font ">오직 소수만을 위한 1대 1 맞춤형 교육 시스템을 제공합니다.</div>
+                                    <div className="desc-font ">오직 소수만을 위한 1대 1 맞춤형 교육 시스템을 제공합니다.</div>
                                 </div>
                                 <div className="product-item-contents">
                                     <Grid container direction="row" justify="center" alignItems="center">
@@ -185,10 +185,10 @@ function Product() {
                         <div className="sub-product-item-container">
                             <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
                                 <div className="product-item-header">
-                                    <div className="en header-font">
+                                    <div className="header-font">
                                         <span>03</span> 진학 및 입시 컨설팅
                                     </div>
-                                    <div className="ko desc-font ">에듀이티만의 밀착 관리 컨설팅 시스템을 만나보세요.</div>
+                                    <div className="desc-font ">에듀이티만의 밀착 관리 컨설팅 시스템을 만나보세요.</div>
                                 </div>
                                 <div className="product-item-contents">
                                     <Grid container direction="row" justify="center" alignItems="center">
@@ -251,8 +251,8 @@ function Product() {
                 <div className="responsive">
                     <div className="top-contents">
                         <div className="top-contents-header">
-                            <div className="en header-font">Why Eduity?</div>
-                            <div className="ko desc-font ">에듀이티는 교육과 기술의 장점을 활용하여 학습자의 영어학습효과를 높입니다.</div>
+                            <div className="header-font">Why Eduity?</div>
+                            <div className="desc-font ">에듀이티는 교육과 기술의 장점을 활용하여 학습자의 영어학습효과를 높입니다.</div>
                         </div>
 
                         <div className="reasons-container">
