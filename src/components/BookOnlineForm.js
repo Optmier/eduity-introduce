@@ -216,7 +216,7 @@ function BookOnlineForm() {
     };
 
     return (
-        <div className="book-online-root ko">
+        <div className="book-online-root">
             <div className="responsive">
                 <div className="header">
                     <p className="main">교육 상담 신청</p>
