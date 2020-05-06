@@ -333,6 +333,34 @@ $pointColor: #00e099;
                 }
             }
         }
+
+        & .main-contents-mobile {
+            display: flex;
+            margin-top: 96px;
+            & button {
+                color: white;
+            }
+            & .subRoute {
+                height: 120px;
+                overflow: hidden;
+                position: relative;
+
+                & ul,
+                li {
+                    list-style: none;
+                }
+
+                & ul {
+                    width: calc(100% * 4);
+                    display: flex;
+                    transition: 1s;
+                }
+                & li {
+                    width: calc(100% / 4);
+                    height: 100px;
+                }
+            }
+        }
     }
     & .getStepContent {
         background-color: #324345;

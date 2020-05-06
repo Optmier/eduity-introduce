@@ -1,15 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/product.scss';
-import ProductContents1 from '../components/ProductContents1';
-import ProductContents2 from '../components/ProductContents2';
-import ProductContents3 from '../components/ProductContents3';
-import ProductContents4 from '../components/ProductContents4';
 import ProductReasons from '../components/ProductReasons';
-import classNames from 'classnames';
 import { Fade } from 'react-reveal';
 import { findByLabelText } from '@testing-library/react';
 import { Grid } from '@material-ui/core';
 import SectionContactUs from '../components/SectionContactUs';
+import ProductRoute from '../components/ProductRoute';
 
 //const { product } = strings;
 
@@ -20,57 +16,6 @@ function Product() {
         document.querySelector('.nav-logo>.color').classList.add('scrolled');
         document.querySelector('.nav-logo>.white').classList.add('scrolled');
     }, []);
-
-    // const datas = [
-    //     {
-    //         title: product.top_items.item_1.title[window.lang],
-    //         content: product.top_items.item_1.content[window.lang],
-    //         img: <Teacher fill="white"></Teacher>,
-    //     },
-    //     {
-    //         title: product.top_items.item_2.title[window.lang],
-    //         content: product.top_items.item_2.content[window.lang],
-    //         img: <Studying fill="white"></Studying>,
-    //     },
-    //     {
-    //         title: product.top_items.item_3.title[window.lang],
-    //         content: product.top_items.item_3.content[window.lang],
-    //         img: <University fill="white"></University>,
-    //     },
-    // ];
-
-    const [id, setId] = useState('1');
-    const [flag, setFlag] = useState({
-        '0': false,
-        '1': true,
-        '2': false,
-        '3': false,
-    });
-
-    const handle = (e) => {
-        let id = e.target.id;
-        setId(id);
-
-        setFlag({
-            ...!flag,
-            [id]: true,
-        });
-    };
-
-    const getStepContent = (id) => {
-        switch (id) {
-            case '0':
-                return <ProductContents1></ProductContents1>;
-            case '1':
-                return <ProductContents2></ProductContents2>;
-            case '2':
-                return <ProductContents3></ProductContents3>;
-            case '3':
-                return <ProductContents4></ProductContents4>;
-            default:
-                document.location.reload();
-        }
-    };
 
     const reasons_datas = [
         {
@@ -286,31 +231,7 @@ function Product() {
             </div>
 
             <div className="product-root-subRoute">
-                <div className="responsive">
-                    <div className="main-contents">
-                        <div className="subRoute">
-                            <ul>
-                                <li className={classNames('listStyle', { able: flag['1'] })} id="1" onClick={handle}>
-                                    <span>01</span>1대1 튜터링
-                                </li>
-                                <li className={classNames('listStyle', { able: flag['2'] })} id="2" onClick={handle}>
-                                    <span>02</span>해외 입시 컨설팅
-                                </li>
-                                <li className={classNames('listStyle', { able: flag['3'] })} id="3" onClick={handle}>
-                                    <span>03</span> 맞춤형 기획 서비스
-                                </li>
-                                <li className={classNames('listStyle', { able: false })} /* id="0" */ /* onClick={handle} */>
-                                    <span>04</span>맞춤형 솔루션<br></br>
-                                    <span style={{ fontSize: 14 }}>(준비중*)</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="getStepContent">
-                    <div className="responsive">{getStepContent(id)}</div>
-                </div>
+                <ProductRoute></ProductRoute>
             </div>
         </>
     );
