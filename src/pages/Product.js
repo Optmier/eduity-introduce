@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../styles/product.scss';
 import ProductContents1 from '../components/ProductContents1';
 import ProductContents2 from '../components/ProductContents2';
@@ -282,7 +282,11 @@ function Product() {
                             </Fade>
                         </div> */}
                     </div>
+                </div>
+            </div>
 
+            <div className="product-root-subRoute">
+                <div className="responsive">
                     <div className="main-contents">
                         <div className="subRoute">
                             <ul>
@@ -303,9 +307,10 @@ function Product() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="getStepContent">
-                <div className="responsive">{getStepContent(id)}</div>
+
+                <div className="getStepContent">
+                    <div className="responsive">{getStepContent(id)}</div>
+                </div>
             </div>
         </>
     );
