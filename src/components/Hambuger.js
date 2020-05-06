@@ -32,14 +32,14 @@ function Hambuger() {
     const [state, setState] = useState({
         right: false,
     });
-    const toggleDrawer = (side, open) => event => {
+    const toggleDrawer = (side, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
 
         setState({ ...state, [side]: open });
     };
-    const sideList = side => (
+    const sideList = (side) => (
         <div
             className={classNames(classes.list, window.lang)}
             role="presentation"

@@ -40,7 +40,7 @@ function ProductReasons({ title, content, img, reverse, counts }) {
                             <img src="/images/quote.png" alt="큰따옴표" />
                         </div>
 
-                        <div className="ko ment">{title}</div>
+                        <div className="ment">{title}</div>
 
                         <div className="sub-ment">
                             <p>{content}</p>
