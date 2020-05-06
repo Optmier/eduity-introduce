@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Fade } from 'react-reveal';
 import '../styles/tech.scss';
 import TechContents from '../components/TechContents';
@@ -14,6 +15,9 @@ function Tech() {
 
     return (
         <>
+            <Helmet>
+                <title>기술 :: 에듀이티 | Eduity for infinite pioneer</title>
+            </Helmet>
             <div className="tech-header">
                 <video loop autoPlay muted className="bg">
                     <source src="/videos/bg.mp4" type="video/mp4" />
