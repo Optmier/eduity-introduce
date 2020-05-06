@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import '../styles/product.scss';
 import ProductContents1 from '../components/ProductContents1';
 import ProductContents2 from '../components/ProductContents2';
@@ -110,6 +111,9 @@ function Product() {
     ];
     return (
         <>
+            <Helmet>
+                <title>서비스 소개 :: 에듀이티 | Eduity for infinite pioneer</title>
+            </Helmet>
             <div className="product-header-contents ">
                 <Fade bottom cascade distance="120px" duration={1000} fraction={0.9}>
                     <div>

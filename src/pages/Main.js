@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Section1 from '../components/Section1';
 import Section2 from '../components/Section2';
 import Section3 from '../components/Section3';
@@ -21,6 +22,9 @@ function Main() {
 
     return (
         <>
+            <Helmet>
+                <title>미국 대학 보딩스쿨 컨설팅 | 국내 국제고 컨설팅 | 어학연수 컨설팅 :: 에듀이티 | Eduity for infinite pioneer</title>
+            </Helmet>
             <Section1 />
             <SectionProblem />
             <Section3 />

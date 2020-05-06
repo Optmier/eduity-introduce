@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import '../styles/about.scss';
 import { strings } from '../datas/strings';
 
@@ -13,28 +14,33 @@ function About() {
     }, []);
 
     return (
-        <div className="about-root">
-            <div className="responsive">
-                {/* <div className="about-cover"></div> */}
-                <div className="about-contents">
-                    <div className="title">
-                        <p>
-                            {about.title[window.lang]}
-                            <br></br>
-                            {about.title_1[window.lang]}
-                        </p>
-                    </div>
-                    <div className="strong">
-                        <p>{about.strong[window.lang]}</p>
-                    </div>
-                    <div className="content">
-                        <p>{about.content_p_1[window.lang]}</p>
-                        <p>{about.content_p_2[window.lang]}</p>
-                        <p>{about.content_p_3[window.lang]}</p>
+        <>
+            <Helmet>
+                <title>회사 소개 :: 에듀이티 | Eduity for infinite pioneer</title>
+            </Helmet>
+            <div className="about-root">
+                <div className="responsive">
+                    {/* <div className="about-cover"></div> */}
+                    <div className="about-contents">
+                        <div className="title">
+                            <p>
+                                {about.title[window.lang]}
+                                <br></br>
+                                {about.title_1[window.lang]}
+                            </p>
+                        </div>
+                        <div className="strong">
+                            <p>{about.strong[window.lang]}</p>
+                        </div>
+                        <div className="content">
+                            <p>{about.content_p_1[window.lang]}</p>
+                            <p>{about.content_p_2[window.lang]}</p>
+                            <p>{about.content_p_3[window.lang]}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

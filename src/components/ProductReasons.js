@@ -13,7 +13,7 @@ function ProductReasons({ title, content, img, reverse, counts }) {
         }),
         useCountUp({
             start: 0,
-            end: 63,
+            end: 70,
             duration: 2,
             useEasing: false,
         }),
@@ -30,7 +30,7 @@ function ProductReasons({ title, content, img, reverse, counts }) {
             useEasing: false,
         }),
     ];
-  
+
     return (
         <Fade bottom cascade distance="120px" duration={1000} fraction={0.5}>
             <div>

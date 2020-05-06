@@ -52,9 +52,6 @@ const CssTabs = withStyles({
     root: {
         fontFamily: ['Montserrat', 'Noto Sans KR'],
         fontSize: '20px',
-        '.MuiBox-root': {
-            fontFamily: 'inherit',
-        },
     },
 })(Tabs);
 
