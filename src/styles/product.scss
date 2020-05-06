@@ -338,26 +338,21 @@ $pointColor: #00e099;
             display: flex;
             margin-top: 96px;
             & button {
-                color: white;
+                background-color: transparent;
+                border: none;
+                outline: none;
             }
+
             & .subRoute {
-                height: 120px;
-                overflow: hidden;
-                position: relative;
-
-                & ul,
-                li {
-                    list-style: none;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & .header-font {
+                    color: white;
                 }
-
-                & ul {
-                    width: calc(100% * 4);
-                    display: flex;
-                    transition: 1s;
-                }
-                & li {
-                    width: calc(100% / 4);
-                    height: 100px;
+                & p {
+                    margin: 15px 0;
                 }
             }
         }

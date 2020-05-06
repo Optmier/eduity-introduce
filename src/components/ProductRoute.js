@@ -3,6 +3,7 @@ import ProductContents1 from '../components/ProductContents1';
 import ProductContents2 from '../components/ProductContents2';
 import ProductContents3 from '../components/ProductContents3';
 import ProductContents4 from '../components/ProductContents4';
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import classNames from 'classnames';
 
 let size = {
@@ -26,59 +27,56 @@ function ProductRoute() {
         };
     }, [width]);
 
-    const [id, setId] = useState('1');
-    const [flag, setFlag] = useState({
-        '0': false,
-        '1': true,
-        '2': false,
-        '3': false,
-    });
-
+    const titles = ['맞춤형 솔루션', '1대1 튜터링', '해외 입시 컨설팅', '맞춤형 기획 서비스'];
+    const [contentId, setContentId] = useState(1);
+    const [flag, setFlag] = useState(1);
+    const [title, setTitle] = useState(titles[1]);
     const handle = (e) => {
+        let id = parseInt(e.target.id);
+        setContentId(id);
+        setFlag(id);
+    };
+    const handleMoblie = (e) => {
         let id = e.target.id;
-        setId(id);
 
-        setFlag({
-            ...!flag,
-            [id]: true,
-        });
+        if (id === 'right') {
+            if (contentId >= 3) {
+                setContentId(1);
+                setFlag(1);
+                setTitle(titles[1]);
+            } else {
+                setContentId(contentId + 1);
+                setFlag(flag + 1);
+                setTitle(titles[flag + 1]);
+            }
+        } else if (id === 'left') {
+            if (contentId <= 1) {
+                setContentId(3);
+                setFlag(3);
+                setTitle(titles[3]);
+            } else {
+                setContentId(contentId - 1);
+                setFlag(flag - 1);
+                setTitle(titles[flag - 1]);
+            }
+        }
     };
 
-    const getStepContent = (id) => {
-        switch (id) {
-            case '0':
+    const getStepContent = (contentId) => {
+        switch (contentId) {
+            case 0:
                 return <ProductContents1></ProductContents1>;
-            case '1':
+            case 1:
                 return <ProductContents2></ProductContents2>;
-            case '2':
+            case 2:
                 return <ProductContents3></ProductContents3>;
-            case '3':
+            case 3:
                 return <ProductContents4></ProductContents4>;
             default:
                 document.location.reload();
         }
     };
 
-    var slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-        showDivs((slideIndex += n));
-    }
-    function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName('mySlides');
-        if (n > x.length) {
-            slideIndex = 1;
-        }
-        if (n < 1) {
-            slideIndex = x.length;
-        }
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = 'none';
-        }
-        x[slideIndex - 1].style.display = 'block';
-    }
     return (
         <>
             <div className="responsive">
@@ -86,13 +84,13 @@ function ProductRoute() {
                     <div className="main-contents">
                         <div className="subRoute">
                             <ul>
-                                <li className={classNames('listStyle', { able: flag['1'] })} id="1" onClick={handle}>
+                                <li className={classNames('listStyle', { able: flag === 1 })} id="1" onClick={handle}>
                                     <span>01</span>1대1 튜터링
                                 </li>
-                                <li className={classNames('listStyle', { able: flag['2'] })} id="2" onClick={handle}>
+                                <li className={classNames('listStyle', { able: flag === 2 })} id="2" onClick={handle}>
                                     <span>02</span>해외 입시 컨설팅
                                 </li>
-                                <li className={classNames('listStyle', { able: flag['3'] })} id="3" onClick={handle}>
+                                <li className={classNames('listStyle', { able: flag === 3 })} id="3" onClick={handle}>
                                     <span>03</span> 맞춤형 기획 서비스
                                 </li>
                                 <li className={classNames('listStyle', { able: false })} /* id="0" */ /* onClick={handle} */>
@@ -104,31 +102,21 @@ function ProductRoute() {
                     </div>
                 ) : (
                     <div className="main-contents-mobile">
-                        <button onClick={plusDivs(-1)}>왼쪽</button>
                         <div className="subRoute">
-                            <ul>
-                                <li className={classNames('listStyle', { able: flag['1'] }, 'mySlides')} id="1" onClick={handle}>
-                                    <span>01</span>1대1 튜터링
-                                </li>
-                                <li className={classNames('listStyle', { able: flag['2'] }, 'mySlides')} id="2" onClick={handle}>
-                                    <span>02</span>해외 입시 컨설팅
-                                </li>
-                                <li className={classNames('listStyle', { able: flag['3'] }, 'mySlides')} id="3" onClick={handle}>
-                                    <span>03</span> 맞춤형 기획 서비스
-                                </li>
-                                <li className={classNames('listStyle', { able: false })} /* id="0" */ /* onClick={handle} */>
-                                    <span>04</span>맞춤형 솔루션<br></br>
-                                    <span style={{ fontSize: 14 }}>(준비중*)</span>
-                                </li>
-                            </ul>
+                            <button id="left" onClick={handleMoblie}>
+                                <AiOutlineLeft size={24} color={'white'} style={{ pointerEvents: 'none' }}></AiOutlineLeft>
+                            </button>
+                            <p className="header-font">{title}</p>
+                            <button id="right" onClick={handleMoblie}>
+                                <AiOutlineRight size={24} color={'white'} style={{ pointerEvents: 'none' }}></AiOutlineRight>
+                            </button>
                         </div>
-                        <button onClick={plusDivs(-1)}>오른쪽</button>
                     </div>
                 )}
             </div>
 
             <div className="getStepContent">
-                <div className="responsive">{getStepContent(id)}</div>
+                <div className="responsive">{getStepContent(contentId)}</div>
             </div>
         </>
     );
