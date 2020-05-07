@@ -27,7 +27,7 @@ function ProductRoute() {
         };
     }, [width]);
 
-    const titles = ['맞춤형 솔루션', '1대1 튜터링', '해외 입시 컨설팅', '맞춤형 기획 서비스'];
+    const titles = ['맞춤형 솔루션', '1대 1 튜터링', '해외 입시 컨설팅', '맞춤형 기획 서비스'];
     const [contentId, setContentId] = useState(1);
     const [flag, setFlag] = useState(1);
     const [title, setTitle] = useState(titles[1]);

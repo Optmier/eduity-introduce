@@ -93,7 +93,7 @@ $pointColor: #00e099;
             & .sub-product-item-container {
                 & .product-item-header {
                     & .header-font {
-                        font-size: 36px;
+                        // font-size: 36px;
                         font-family: 'Montserrat', 'Noto Sans KR';
                         color: white;
 
@@ -101,11 +101,15 @@ $pointColor: #00e099;
                             color: $pointColor;
                             font-size: 48px;
                             margin-right: 1rem;
+
+                            @media (max-width: 768px) {
+                                font-size: 42px;
+                            }
                         }
                     }
 
                     & .desc-font {
-                        font-size: 22px;
+                        // font-size: 22px;
                         color: white;
                     }
                 }
@@ -190,11 +194,11 @@ $pointColor: #00e099;
                 text-align: center;
                 margin-bottom: 100px;
                 & > .header-font {
-                    font-size: 42px;
+                    // font-size: 42px;
                     color: white;
                 }
                 & > .desc-font {
-                    font-size: 22px;
+                    // font-size: 22px;
                     color: #c5c2c2;
                 }
             }
