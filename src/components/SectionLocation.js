@@ -15,14 +15,14 @@ function SectionLocation() {
             const kakao = window.kakao;
             kakao.maps.load(() => {
                 const mapOption = {
-                    center: new kakao.maps.LatLng(37.499994, 127.035492), // 지도의 중심좌표
+                    center: new kakao.maps.LatLng(37.456089, 126.949751), // 지도의 중심좌표
                     level: 3, // 지도의 확대 레벨
                 };
 
                 const map = new kakao.maps.Map(mapContainer.current, mapOption);
 
                 // 마커가 표시될 위치입니다
-                const markerPosition = new kakao.maps.LatLng(37.499994, 127.035492);
+                const markerPosition = new kakao.maps.LatLng(37.456089, 126.949751);
 
                 // 마커를 생성합니다
                 const marker = new kakao.maps.Marker({
