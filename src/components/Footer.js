@@ -16,8 +16,8 @@ const FooterContent = React.memo(function FooterContent() {
     return (
         <div className="footer-contents">
             <p>
-                <span>대표 전광휘</span> | <span>사업자등록번호 309-30-62706</span>
-                <br></br>
+                {/* <span>대표 전광휘</span> | <span>사업자등록번호 309-30-62706</span>
+                <br></br> */}
                 서울시 관악구 관악로 1 32-1 2층 201호 (서울대학교 해동학술관)
                 <br></br>
                 <span>
