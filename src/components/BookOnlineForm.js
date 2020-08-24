@@ -219,7 +219,7 @@ function BookOnlineForm() {
         <div className="book-online-root">
             <div className="responsive">
                 <div className="header">
-                    <p className="main">교육 상담 신청</p>
+                    <p className="main">Pierce 베타 서비스 사용 상담 신청</p>
                     {/* <p className="sub">친절하게 상담해 드리겠습니다 :)</p> */}
                 </div>
                 <div className="contents">
@@ -281,7 +281,7 @@ function BookOnlineForm() {
                                 <InputLabel id="type-label">상담 유형</InputLabel>
                                 <Select required id="type" value={orderType} onChange={handleSetOrderType} label="상담 유형">
                                     <MenuItem value={'방문상담'}>방문상담</MenuItem>
-                                    <MenuItem value={'전화상담'}>전화상담</MenuItem>
+                                    <MenuItem value={'전화상담'}>문자상담</MenuItem>
                                 </Select>
                             </EdSelectForm>
                         </Grid>
@@ -295,11 +295,13 @@ function BookOnlineForm() {
                                     onChange={handleSetServiceType}
                                     label="상담 신청 서비스"
                                 >
-                                    <MenuItem value={'SAT Writing'}>SAT Writing</MenuItem>
+                                    {/* <MenuItem value={'SAT Writing'}>SAT Writing</MenuItem>
                                     <MenuItem value={'AMC'}>AMC</MenuItem>
                                     <MenuItem value={'AP 수학'}>AP 수학</MenuItem>
                                     <MenuItem value={'Consulting'}>Consulting</MenuItem>
-                                    <MenuItem value={'진로 기획'}>진로 기획</MenuItem>
+                                    <MenuItem value={'진로 기획'}>진로 기획</MenuItem> */}
+                                    <MenuItem value={'TOFEL(Pierce 베타 서비스)'}>TOFEL(Pierce 베타 서비스)</MenuItem>
+                                    <MenuItem value={'베타 서비스 학습 솔루션 컨설팅'}>베타 서비스 학습 솔루션 컨설팅</MenuItem>
                                 </Select>
                             </EdSelectForm>
                         </Grid>

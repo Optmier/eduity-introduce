@@ -14,7 +14,7 @@ function BookOnline() {
     return (
         <>
             <Helmet>
-                <title>상담 신청 :: 에듀이티 | Eduity for infinite pioneer</title>
+                <title>Pierce 상담 신청 :: 에듀이티 | Eduity for infinite pioneer</title>
             </Helmet>
             <BookProvider>
                 <BookOnlineForm />
