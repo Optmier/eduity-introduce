@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/nav.scss';
-import ColorLogo from './svgs/nav_logo_color.png';
-import WhiteLogo from './svgs/nav_logo_white.png';
+import ColorLogo from '../images/nav_logo_color.svg';
 // import { Select, MenuItem, InputBase } from '@material-ui/core';
 // import { withStyles } from '@material-ui/core/styles';
 import { Link, NavLink, withRouter } from 'react-router-dom';
@@ -84,6 +83,10 @@ function Nav({ optStatic }) {
                 window.removeEventListener('scroll', onScroll);
             };
         }, [scroll]);
+
+        useEffect(() => {
+            setScroll('');
+        }, [window.location.pathname]);
         return scroll;
     };
 
@@ -91,32 +94,30 @@ function Nav({ optStatic }) {
 
     return (
         <>
-            <div className={`nav-root ${window.lang} ${scroll}`}>
-                <Link to="/">
-                    <div className="nav-logo">
-                        <img className={`color ${scroll}`} src={ColorLogo} alt="Go to home..." />
-                        <img className={`white ${scroll}`} src={WhiteLogo} alt="Go to home..." />
+            <div className={`nav-root ${scroll}`}>
+                <div className="nav-wrapper">
+                    <Link to="/">
+                        <div className="nav-logo">
+                            <img className="color" src={ColorLogo} alt="Go to home..." />
+                        </div>
+                    </Link>
+                    <div className="nav-menus">
+                        <NavMenuItem linkTo="/introduce">서비스 소개</NavMenuItem>
+                        <NavMenuItem linkTo="/customers">고객센터</NavMenuItem>
+                        <NavMenuItem linkTo="/bookonline">Pierce 상담신청</NavMenuItem>
                     </div>
-                </Link>
-                <div className="nav-menus">
-                    <NavMenuItem linkTo="/about">{nav_menus.about[window.lang]}</NavMenuItem>
-                    <NavMenuItem linkTo="/tech">{nav_menus.tech[window.lang]}</NavMenuItem>
-                    {/* 기술 */}
-                    <NavMenuItem linkTo="/product">{nav_menus.product[window.lang]}</NavMenuItem>
-                    {/* 제품 */}
-                    <NavMenuItem linkTo="/bookonline">{nav_menus.book_online[window.lang]}</NavMenuItem>
-                    {/* 상담 예약 */}
-                </div>
 
-                <div className="nav-right">
-                    {/* <NavMenuItem linkTo="/login">
+                    <div className="nav-right">
+                        {/* <NavMenuItem linkTo="/login">
                         <div className="item login">Log In</div>
                     </NavMenuItem>
                     <div className={`item select-lang ${scroll}`}>
                         <LanguageSelect />
                     </div> */}
-                    <div className="nav-hambuger">
-                        <Hambuger></Hambuger>
+                        <button className="normal login">무료체험하기</button>
+                        <div className="nav-hambuger">
+                            <Hambuger></Hambuger>
+                        </div>
                     </div>
                 </div>
             </div>
