@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import { Fade } from 'react-reveal';
-import WhiteLogo from './svgs/nav_logo_white.png';
+import WhiteLogo from '../images/nav_logo_white.png';
 import '../styles/footer.scss';
 
 const FooterLogo = React.memo(function FooterRoot() {

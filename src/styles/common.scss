@@ -1,7 +1,9 @@
+// def. pixel size: 16
 html,
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', 'Noto Sans KR';
 
     a {
         background: transparent;
@@ -9,22 +11,59 @@ body {
         color: inherit;
     }
 
-    button.normal {
-        background-color: #13e2a1;
-        border: none;
-        border-radius: 115px;
-        color: white;
-        cursor: pointer;
-        font-size: 1rem;
+    h1 {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        word-break: keep-all;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 2.625rem;
+        word-break: keep-all;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        word-break: keep-all;
+    }
+
+    h4 {
+        font-size: 1.125rem;
         font-weight: 500;
         line-height: 1.5rem;
-        outline: none;
-        width: 144px;
-        height: 40px;
+        word-break: keep-all;
+    }
+
+    button {
+        &.normal {
+            background-color: #13e2a1;
+            border: none;
+            border-radius: 115px;
+            color: white;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+            outline: none;
+            width: 144px;
+            height: 40px;
+
+            &.in-section {
+                height: 48px;
+            }
+        }
+    }
+
+    & main {
+        padding-top: 80px;
+        // padding-left: 16px;
+        // padding-right: 16px;
     }
 
     section.root {
-        padding-top: 80px;
         min-height: 128px;
 
         & div.wrapper {

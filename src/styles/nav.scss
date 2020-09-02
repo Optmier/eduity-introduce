@@ -30,7 +30,7 @@ a {
         color: $menuPrimary;
         font-weight: 600;
         width: 100%;
-        max-width: 1024px;
+        max-width: 1080px;
         // transition: background-color 0.2s, height 0.3s, box-shadow 0.3s;
         user-select: none;
 
@@ -39,7 +39,7 @@ a {
             display: flex;
             align-items: center;
             min-width: 148px;
-            padding-left: 64px;
+            padding-left: 32px;
             transition: padding 0.3s;
 
             & img {
@@ -69,6 +69,7 @@ a {
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-left: 72px;
 
             height: 100%;
 
@@ -83,7 +84,7 @@ a {
                 }
 
                 & + a {
-                    margin-left: 36px;
+                    margin-left: 48px;
                 }
             }
         }
@@ -92,7 +93,7 @@ a {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-right: 64px;
+            padding-right: 32px;
             transition: padding 0.3s;
 
             & .item {
@@ -110,7 +111,7 @@ a {
                 }
 
                 & + .item {
-                    margin-left: 36px;
+                    margin-left: 48px;
                 }
             }
         }
@@ -119,18 +120,22 @@ a {
         }
 
         @media (max-width: 960px) {
+            & .nav-menus {
+                margin-left: 42px;
+            }
+
             & .nav-logo {
-                padding-left: 56px;
+                padding-left: 42px;
             }
 
             & .nav-right {
-                padding-right: 56px;
+                padding-right: 42px;
             }
         }
 
         @media (max-width: 768px) {
             & .nav-logo {
-                padding-left: 48px;
+                padding-left: 36px;
             }
 
             & .nav-menus {
@@ -138,7 +143,7 @@ a {
             }
 
             & .nav-right {
-                padding-right: 48px;
+                padding-right: 36px;
 
                 & .login {
                     display: none;
@@ -148,14 +153,14 @@ a {
             & .nav-hambuger {
                 cursor: pointer;
                 display: inline;
-                padding-left: 30px;
+                padding-left: 28px;
                 display: flex;
             }
 
             & .nav-hambuger {
                 cursor: pointer;
                 display: inline;
-                padding-left: 30px;
+                padding-left: 28px;
                 display: flex;
             }
         }
