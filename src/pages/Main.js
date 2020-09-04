@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import SectionFrame from '../components/SectionFrame';
-import Section1 from '../components/MainSectoins/Section1';
-import Section2 from '../components/MainSectoins/Section2';
+import Section1 from '../components/MainSections/Section1';
+import Section2 from '../components/MainSections/Section2';
+import Section3 from '../components/MainSections/Section3';
 
 function Main() {
     useEffect(() => {
@@ -19,6 +20,9 @@ function Main() {
             </SectionFrame>
             <SectionFrame id="main_section_2">
                 <Section2 />
+            </SectionFrame>
+            <SectionFrame id="main_section_3">
+                <Section3 />
             </SectionFrame>
         </>
     );

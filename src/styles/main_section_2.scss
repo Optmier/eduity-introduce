@@ -7,25 +7,6 @@
     padding: 7vh 16px;
 
     & .wrapper {
-        & .title-root {
-            & p.title-tags {
-                color: #2cffbd;
-                font-size: 0.75rem;
-                font-weight: 600;
-                line-height: 1rem;
-                margin: 0;
-            }
-
-            & h1.title {
-                color: #ffffff;
-                margin: 1rem 0;
-                max-width: 40rem;
-
-                &.mobile {
-                    display: none;
-                }
-            }
-        }
         & .middle-buttons-root {
             margin: 24px 0;
 
@@ -133,19 +114,12 @@
         & .wrapper {
             & .title-root {
                 & p.title-tags {
-                    margin-bottom: 1rem;
                 }
 
                 & h1.title {
-                    color: #ffffff;
-                    display: none;
-                    margin: 1rem 0;
                     max-width: 20rem;
 
                     &.mobile {
-                        display: flex;
-                        font-size: 1.75rem;
-                        line-height: 2.25rem;
                     }
                 }
             }

@@ -260,7 +260,7 @@ function Section2() {
     return (
         <>
             <div className="title-root">
-                <p className="title-tags">Feature</p>
+                <p className="title-tags lighter">Feature</p>
                 <Fade bottom distance={'3rem'} delay={333} duration={666} fraction={0.5}>
                     <h1 className="title">에듀이티만의 차별화 된 대표기능 4가지로 새로운 영어교육을 만날 수 있습니다.</h1>
                 </Fade>
