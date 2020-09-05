@@ -36,6 +36,7 @@
                     }
 
                     & img {
+                        background-color: #ffffff;
                         border-radius: 16px;
                         box-shadow: 6px 10px 20px 4px #0000001a;
                         width: 100%;
@@ -110,6 +111,7 @@
                         min-height: 48px;
                         margin-top: -48px;
                         width: 100%;
+
                         & .center {
                             background: linear-gradient(90deg, #505050 10%, #13e2a1 90%);
                             border: none;
@@ -142,6 +144,42 @@
                     margin-top: 56px;
                 }
             }
+
+            & .banner-root {
+                background-color: #ffffff;
+                border-radius: 16px;
+                display: flex;
+                padding: 32px 42px;
+                margin-top: 64px;
+
+                & .left-top {
+                    width: 33.33333%;
+                    min-width: 16rem;
+
+                    & h2 {
+                        line-height: 2.25rem;
+                        margin: 0;
+                    }
+                }
+
+                & .right-bottom {
+                    width: 66.66667%;
+
+                    & p {
+                        color: #465465;
+                        word-break: keep-all;
+                        margin: 0;
+
+                        & span {
+                            font-weight: 600;
+                        }
+
+                        & + p {
+                            margin-top: 2rem;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -154,6 +192,10 @@
 
                 & .comparable-images-root {
                     & .container {
+                        & img {
+                            border-radius: 8px;
+                        }
+
                         & h3 {
                             font-size: 1rem;
                             line-height: 1rem;
@@ -178,9 +220,15 @@
                             }
 
                             &.left {
+                                & h3 {
+                                    padding-left: 1rem;
+                                }
                             }
 
                             &.right {
+                                & h3 {
+                                    padding-right: 1rem;
+                                }
                             }
                         }
 
@@ -189,12 +237,38 @@
                                 width: 96px;
 
                                 & .inner {
-                                    padding: 0 0.75rem;
+                                    padding: 0 0.5rem;
 
                                     & h3 {
                                         font-size: 0.75rem;
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+                & .banner-root {
+                    flex-direction: column;
+                    padding: 20px 16px 16px 16px;
+                    margin-top: 32px;
+
+                    & .left-top {
+                        width: initial;
+                        min-width: initial;
+
+                        & h2 {
+                            font-size: 1.5rem;
+                            line-height: 2rem;
+                        }
+                    }
+
+                    & .right-bottom {
+                        margin-top: 16px;
+                        width: initial;
+
+                        & p {
+                            & + p {
+                                margin-top: 1.5rem;
                             }
                         }
                     }

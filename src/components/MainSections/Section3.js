@@ -54,22 +54,29 @@ function Section3() {
     const [regressionsR, setRegressionsR] = useState(1);
     const [durationsL, setDurationsL] = useState(16);
     const [durationsR, setDurationsR] = useState(16);
+    const [viewMobile, setViewMobile] = useState(true);
+
+    window.onresize = () => {
+        if (window.innerWidth <= 768) {
+            setViewMobile(true);
+        } else {
+            setViewMobile(false);
+        }
+    };
 
     useEffect(() => {
-        setTimeout(() => {
-            setFixationsL(382);
-            setFixationsR(203);
-            setRegressionsL(12);
-            setRegressionsR(4);
-            setDurationsL(500);
-            setDurationsR(205);
-        }, 1000);
+        if (window.innerWidth <= 768) {
+            setViewMobile(true);
+        } else {
+            setViewMobile(false);
+        }
     }, []);
+
     return (
         <>
             <div className="title-root">
                 <p className="title-tags">Topic</p>
-                <Fade bottom distance={'3rem'} delay={333} duration={666} fraction={0.5}>
+                <Fade bottom distance={'3rem'} delay={333} duration={666} fraction={0.7}>
                     <h1 className="title">
                         <div className="left-border" />
                         당신은 올바른 독해를 하고 계십니까?
@@ -85,25 +92,29 @@ function Section3() {
             </div>
             <div className="subs-root">
                 <div className="comparable-images-root">
-                    <div className="left container">
-                        <img src={ImgCompare1} alt="left img..." />
-                        <h3>
-                            독해를 <span>못하는 학생</span>
-                        </h3>
-                    </div>
-                    <div className="right container">
-                        <img src={ImgCompare2} alt="right img..." />
-                        <h3>
-                            독해를 <span>잘하는 학생</span>
-                        </h3>
-                    </div>
+                    <Fade bottom distance={'4rem'} duration={666} fraction={0.5}>
+                        <div className="left container">
+                            <img src={ImgCompare1} alt="left img..." />
+                            <h3>
+                                독해를 <span>못하는 학생</span>
+                            </h3>
+                        </div>
+                    </Fade>
+                    <Fade bottom distance={'4rem'} delay={400} duration={666} fraction={0.5}>
+                        <div className="right container">
+                            <img src={ImgCompare2} alt="right img..." />
+                            <h3>
+                                독해를 <span>잘하는 학생</span>
+                            </h3>
+                        </div>
+                    </Fade>
                 </div>
                 <div className="comparable-graphs-root">
                     <CompareGraph
                         valueLeft={fixationsL}
                         valueRight={fixationsR}
-                        maxLeft={500}
-                        maxRight={300}
+                        maxLeft={460}
+                        maxRight={320}
                         category="응시점 개수"
                         unit="개"
                     />
@@ -112,8 +123,8 @@ function Section3() {
                     <CompareGraph
                         valueLeft={regressionsL}
                         valueRight={regressionsR}
-                        maxLeft={20}
-                        maxRight={12}
+                        maxLeft={16}
+                        maxRight={7.5}
                         category="재응시 횟수"
                         unit="회"
                     />
@@ -125,8 +136,33 @@ function Section3() {
                         maxLeft={500}
                         maxRight={300}
                         category="평균 응시 시간"
-                        unit="밀리초"
+                        unit={viewMobile ? 'ms' : '밀리초'}
                     />
+                </div>
+                <Fade
+                    className="trigger graph"
+                    onReveal={() => {
+                        setFixationsL(382);
+                        setFixationsR(203);
+                        setRegressionsL(12);
+                        setRegressionsR(4);
+                        setDurationsL(500);
+                        setDurationsR(205);
+                    }}
+                ></Fade>
+                <div className="banner-root">
+                    <div className="left-top">
+                        <h2>올바른 시선 유도</h2>
+                    </div>
+                    <div className="right-bottom">
+                        <p>
+                            독해를 잘 하는 학생과 잘 하지 못하는 학생은 위 그림과 같이 안구의 움직임에서 확연한 차이를 보입니다. 독해를
+                            잘하는 학생들은 안구 운동을 최소화하여 움직입니다.
+                        </p>
+                        <p>
+                            <span>에듀이티는 이러한 안구 운동에 대한 객관적인 지표를 제시하며, 올바른 시선으로 유도합니다.</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </>

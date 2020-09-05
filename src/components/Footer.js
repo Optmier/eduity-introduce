@@ -41,18 +41,18 @@ function Footer({ optStatic }) {
                     {optStatic ? (
                         <FooterLogo />
                     ) : (
-                        <Fade bottom distance="72px" duration={800} fraction={0.5}>
-                            <FooterLogo />
-                        </Fade>
+                        // <Fade bottom distance="72px" duration={800} fraction={0.5}>
+                        <FooterLogo />
+                        // </Fade>
                     )}
                 </Grid>
                 <Grid item xs={12} sm={7}>
                     {optStatic ? (
                         <FooterContent />
                     ) : (
-                        <Fade bottom distance="72px" duration={800} delay={200} fraction={0.5}>
-                            <FooterContent />
-                        </Fade>
+                        // <Fade bottom distance="72px" duration={800} delay={200} fraction={0.5}>
+                        <FooterContent />
+                        // </Fade>
                     )}
                 </Grid>
             </Grid>

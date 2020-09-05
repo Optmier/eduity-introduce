@@ -12,6 +12,7 @@
 
             & .items {
                 display: flex;
+                user-select: none;
 
                 & .selector {
                     background-color: #2cffbd;

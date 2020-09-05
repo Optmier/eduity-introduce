@@ -19,9 +19,9 @@ function Section1() {
                         </h1>
                     </Fade>
                     <Fade bottom distance={'3rem'} delay={666} duration={666}>
-                        <h4>에듀이티만의차별화 된 영어학습</h4>
+                        <h4>에듀이티만의 차별화 된 영어학습</h4>
                     </Fade>
-                    <Fade delay={1500} duration={1200}>
+                    <Fade delay={1330} duration={1000}>
                         <button className="normal in-section">무료체험하기</button>
                     </Fade>
                 </div>
