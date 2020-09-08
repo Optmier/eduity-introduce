@@ -33,7 +33,7 @@ function Section4() {
     return (
         <>
             <div className="title-root">
-                <p className="title-tags">Topic</p>
+                <p className="title-tags">Why</p>
                 <Fade bottom distance={'3rem'} delay={333} duration={666} fraction={0.7}>
                     <h1 className="title">
                         <div className="left-border" />
@@ -53,9 +53,9 @@ function Section4() {
                             color="primary"
                             title="학습자 진단 문제"
                             items={[
-                                '강사 역량에 따른 주관적인 학습 진단',
+                                '강사 역량에 따른 주관적인 학습 진단',
                                 '강사의 경험과 정답률에 의존하는 부정확한 진단',
-                                '정확한 진단까지 오랜시간 소요',
+                                '정확한 진단까지 오랜시간 소요',
                             ]}
                         />
                     </div>
@@ -66,7 +66,7 @@ function Section4() {
                             color="secondary"
                             title="교육 방식 문제"
                             items={[
-                                '1:1 방식의 획일화된 교육',
+                                '1:1 방식의 획일화된 교육',
                                 '개별적 능력을 고려하지 않은 패키지 형식의 문제',
                                 '학습자의 이해도 확인이 제한적이며, 일방적인 정보전달',
                             ]}

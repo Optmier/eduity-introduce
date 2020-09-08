@@ -54,7 +54,7 @@ function Section5() {
     return (
         <>
             <div className="title-root">
-                <p className="title-tags">Topic</p>
+                <p className="title-tags">How</p>
                 <Fade bottom distance={'3rem'} delay={333} duration={666} fraction={0.7}>
                     <h1 className="title">
                         <div className="left-border" />
