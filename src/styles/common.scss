@@ -116,6 +116,26 @@ body {
     }
 
     @media all and (max-width: 768px) {
+        h1 {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
         section.root {
             & div.wrapper {
                 & .title-root {

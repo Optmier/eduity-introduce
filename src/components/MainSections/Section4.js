@@ -7,7 +7,7 @@ function IntroCard({ color, title, items }) {
     return (
         <div className={`intro-card root ${color}`}>
             <div className="title-container">
-                <h2 className="title-text">{title}</h2>
+                <h1 className="title-text">{title}</h1>
             </div>
             <div className="item-container">
                 {items.map((item, i) => (

@@ -7,6 +7,7 @@ import { Fade } from 'react-reveal';
  * h2: 32px / 42px
  * h3: 24px / 32px
  * h4: 18px / 24px
+ * p: 16px
  */
 function Section1() {
     return (
