@@ -158,6 +158,12 @@
                 & .contents {
                     margin-left: 1.5rem;
 
+                    & .title-container {
+                        & h4.title-text {
+                            font-size: 1.125rem;
+                        }
+                    }
+
                     & .text-container {
                         & p.text {
                             max-width: initial;
