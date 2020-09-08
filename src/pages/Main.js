@@ -4,6 +4,7 @@ import SectionFrame from '../components/SectionFrame';
 import Section1 from '../components/MainSections/Section1';
 import Section2 from '../components/MainSections/Section2';
 import Section3 from '../components/MainSections/Section3';
+import Section4 from '../components/MainSections/Section4';
 
 function Main() {
     useEffect(() => {
@@ -23,6 +24,9 @@ function Main() {
             </SectionFrame>
             <SectionFrame id="main_section_3">
                 <Section3 />
+            </SectionFrame>
+            <SectionFrame id="main_section_4">
+                <Section4 />
             </SectionFrame>
         </>
     );
