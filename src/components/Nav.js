@@ -4,6 +4,7 @@ import ColorLogo from '../images/nav_logo_color.svg';
 // import { Select, MenuItem, InputBase } from '@material-ui/core';
 // import { withStyles } from '@material-ui/core/styles';
 import { Link, NavLink, withRouter } from 'react-router-dom';
+import { Link as AnimScrollTo } from 'react-scroll';
 import Hambuger from './Hambuger';
 import { strings } from '../datas/strings';
 
@@ -96,11 +97,13 @@ function Nav({ optStatic, history }) {
         <>
             <div className={`nav-root ${scroll}`}>
                 <div className="nav-wrapper">
-                    <Link to="/">
-                        <div className="nav-logo">
-                            <img className="color" src={ColorLogo} alt="Go to home..." />
-                        </div>
-                    </Link>
+                    <AnimScrollTo className="scroll-to-top" to="main_top_start" spy={true} smooth={true} duration={700}>
+                        <Link to="/">
+                            <div className="nav-logo">
+                                <img className="color" src={ColorLogo} alt="Go to home..." />
+                            </div>
+                        </Link>
+                    </AnimScrollTo>
                     <div className="nav-menus">
                         <NavMenuItem linkTo="/introduce">서비스 소개</NavMenuItem>
                         <NavMenuItem linkTo="/customers">고객센터</NavMenuItem>

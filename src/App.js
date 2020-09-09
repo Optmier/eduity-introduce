@@ -6,6 +6,7 @@ import { Route } from 'react-router-dom';
 import BookOnline from './pages/BookOnline';
 import ScrollTop from './components/ScrollTop';
 import { firebase } from './database/DBCtrl';
+import { Element } from 'react-scroll';
 import './styles/common.scss';
 
 if (!localStorage.getItem('lang')) {
@@ -28,6 +29,7 @@ function App() {
 
     return (
         <>
+            <Element name="main_top_start" />
             <Nav optStatic={window.location.pathname === '/' ? false : true} />
             <ScrollTop>
                 <main>
