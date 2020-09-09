@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Fade } from 'react-reveal';
 import CountUp from 'react-countup';
-import ImgCompare1 from '../../images/main_sections/main_3-0.svg';
-import ImgCompare2 from '../../images/main_sections/main_3-1.svg';
+import ImgCompare1 from '../../images/main_sections/main_3-0.png';
+import ImgCompare2 from '../../images/main_sections/main_3-1.png';
 import '../../styles/main_section_3.scss';
 
 function CompareGraph({ valueLeft, maxLeft, valueRight, maxRight, category, unit }) {

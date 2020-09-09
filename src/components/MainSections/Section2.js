@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Fade, Zoom } from 'react-reveal';
-import ImgItem1 from '../../images/main_sections/main_2-0.svg';
-import ImgItem2 from '../../images/main_sections/main_2-1.svg';
-import ImgItem3 from '../../images/main_sections/main_2-2.svg';
-import ImgItem4 from '../../images/main_sections/main_2-3.svg';
+import ImgItem1 from '../../images/main_sections/main_2-0.png';
+import ImgItem2 from '../../images/main_sections/main_2-1.png';
+import ImgItem3 from '../../images/main_sections/main_2-2.png';
+import ImgItem4 from '../../images/main_sections/main_2-3.png';
 import ImgDescriptorSymbor from '../../images/descriptor_head_symbol.svg';
 import '../../styles/main_section_2.scss';
 

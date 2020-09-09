@@ -1,5 +1,5 @@
 import React from 'react';
-import ImgDevices from '../../images/main_sections/main_1-0.svg';
+import ImgDevices from '../../images/main_sections/main_1-0.png';
 import '../../styles/main_section_1.scss';
 import { Fade } from 'react-reveal';
 import { withRouter } from 'react-router-dom';
