@@ -61,7 +61,7 @@ function Hambuger() {
                 </List>
                 <div className="divider"></div> */}
                 <List>
-                    <NavMenuItem linkTo="/about">
+                    {/* <NavMenuItem linkTo="/about">
                         <ListItem button>
                             <span className="list-text">{nav_menus.about[window.lang]}</span>
                         </ListItem>
@@ -79,6 +79,21 @@ function Hambuger() {
                     <NavMenuItem linkTo="/bookonline">
                         <ListItem button>
                             <span className="list-text">{nav_menus.book_online[window.lang]}</span>
+                        </ListItem>
+                    </NavMenuItem> */}
+                    <NavMenuItem linkTo="/introduce">
+                        <ListItem button>
+                            <span className="list-text">{'서비스 소개'}</span>
+                        </ListItem>
+                    </NavMenuItem>
+                    <NavMenuItem linkTo="/customers">
+                        <ListItem button>
+                            <span className="list-text">{'고객센터'}</span>
+                        </ListItem>
+                    </NavMenuItem>
+                    <NavMenuItem linkTo="/bookonline">
+                        <ListItem button>
+                            <span className="list-text">{'무료체험 신청'}</span>
                         </ListItem>
                     </NavMenuItem>
                 </List>

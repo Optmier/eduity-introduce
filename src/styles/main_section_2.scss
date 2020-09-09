@@ -1,10 +1,5 @@
 #main_section_2 {
     background-color: #3b168a;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: fit-content;
-    padding: 7vh 16px;
 
     & .wrapper {
         & .middle-buttons-root {
@@ -110,8 +105,6 @@
     }
 
     @media all and (max-width: 768px) {
-        padding: 48px 32px;
-
         & .wrapper {
             & .title-root {
                 & p.title-tags {
@@ -128,7 +121,7 @@
                     justify-content: center;
 
                     & .selector {
-                        margin-right: 185px;
+                        margin-right: 180px;
                     }
 
                     & .item {

@@ -1,10 +1,5 @@
 #main_section_3 {
     background-color: #f7f9f8;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: fit-content;
-    padding: 7vh 16px;
 
     & .wrapper {
         & .title-root {
@@ -184,8 +179,6 @@
     }
 
     @media all and (max-width: 768px) {
-        padding: 48px 32px;
-
         & .wrapper {
             & .subs-root {
                 margin-top: 32px;

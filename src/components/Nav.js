@@ -65,7 +65,7 @@ const NavMenuItem = React.memo(function NavMenuItem({ linkTo, children }) {
     );
 });
 
-function Nav({ optStatic }) {
+function Nav({ optStatic, history }) {
     const useScroll = () => {
         const [scroll, setScroll] = useState(optStatic ? 'scrolled' : '');
         const onScroll = () => {
@@ -104,7 +104,7 @@ function Nav({ optStatic }) {
                     <div className="nav-menus">
                         <NavMenuItem linkTo="/introduce">서비스 소개</NavMenuItem>
                         <NavMenuItem linkTo="/customers">고객센터</NavMenuItem>
-                        <NavMenuItem linkTo="/bookonline">Pierce 상담신청</NavMenuItem>
+                        {/* <NavMenuItem linkTo="/bookonline">Pierce 상담신청</NavMenuItem> */}
                     </div>
 
                     <div className="nav-right">
@@ -114,7 +114,14 @@ function Nav({ optStatic }) {
                     <div className={`item select-lang ${scroll}`}>
                         <LanguageSelect />
                     </div> */}
-                        <button className="normal login">무료체험하기</button>
+                        <button
+                            className="normal login"
+                            onClick={() => {
+                                history.push('/bookonline');
+                            }}
+                        >
+                            무료체험하기
+                        </button>
                         <div className="nav-hambuger">
                             <Hambuger></Hambuger>
                         </div>

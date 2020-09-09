@@ -2,6 +2,7 @@ import React from 'react';
 import ImgDevices from '../../images/main_sections/main_1-0.svg';
 import '../../styles/main_section_1.scss';
 import { Fade } from 'react-reveal';
+import { withRouter } from 'react-router-dom';
 /**
  * h1: 36px / 44px
  * h2: 32px / 42px
@@ -9,7 +10,7 @@ import { Fade } from 'react-reveal';
  * h4: 18px / 24px
  * p: 16px
  */
-function Section1() {
+function Section1({ history }) {
     return (
         <>
             <div className="left-and-top">
@@ -23,7 +24,16 @@ function Section1() {
                         <h4>에듀이티만의 차별화 된 영어학습</h4>
                     </Fade>
                     <Fade delay={1330} duration={1000}>
-                        <button className="normal in-section">무료체험하기</button>
+                        <div>
+                            <button
+                                className="normal in-section"
+                                onClick={() => {
+                                    history.push('/bookonline');
+                                }}
+                            >
+                                무료체험하기
+                            </button>
+                        </div>
                     </Fade>
                 </div>
             </div>
@@ -36,4 +46,4 @@ function Section1() {
     );
 }
 
-export default React.memo(Section1);
+export default React.memo(withRouter(Section1));
