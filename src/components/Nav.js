@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../styles/nav.scss';
 import ColorLogo from '../images/nav_logo_color.svg';
 // import { Select, MenuItem, InputBase } from '@material-ui/core';
@@ -97,13 +97,24 @@ function Nav({ optStatic, history }) {
         <>
             <div className={`nav-root ${scroll}`}>
                 <div className="nav-wrapper">
-                    <AnimScrollTo className="scroll-to-top" to="main_top_start" spy={true} smooth={true} duration={700}>
-                        <Link to="/">
-                            <div className="nav-logo">
-                                <img className="color" src={ColorLogo} alt="Go to home..." />
-                            </div>
-                        </Link>
-                    </AnimScrollTo>
+                    <Link
+                        to="/"
+                        onClick={() => {
+                            document.getElementsByClassName('scroll-to-top')[0].click();
+                        }}
+                    >
+                        <div className="nav-logo">
+                            <img className="color" src={ColorLogo} alt="Go to home..." />
+                        </div>
+                    </Link>
+                    <AnimScrollTo
+                        to="/"
+                        className="scroll-to-top"
+                        to="main_top_start"
+                        spy={true}
+                        smooth={true}
+                        duration={700}
+                    ></AnimScrollTo>
                     <div className="nav-menus">
                         <NavMenuItem linkTo="/introduce">서비스 소개</NavMenuItem>
                         <NavMenuItem linkTo="/customers">고객센터</NavMenuItem>

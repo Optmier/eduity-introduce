@@ -5,6 +5,7 @@ import ImgStep2 from '../../images/main_sections/main_5-1.svg';
 import ImgStep3 from '../../images/main_sections/main_5-2.svg';
 import ImgStep4 from '../../images/main_sections/main_5-3.svg';
 import '../../styles/main_section_5.scss';
+import SectionTitle from '../SectionTitle';
 
 function StepCard({ icon, title, text, step, delay }) {
     return (
@@ -53,20 +54,11 @@ function Section5() {
 
     return (
         <>
-            <div className="title-root">
-                <p className="title-tags">How</p>
-                <Fade bottom distance={'3rem'} delay={333} duration={666} fraction={0.7}>
-                    <h1 className="title">
-                        <div className="left-border" />
-                        에듀이티는 시선흐름을 통해 독해력을 측정하고 교육합니다.
-                    </h1>
-                    <h1 className="title mobile">
-                        <div className="left-border" />
-                        에듀이티는 시선흐름을 통해 독해력을 측정하고 교육합니다.
-                    </h1>
-                    <h4 className="sub-text">시선흐름 자체 알고리즘을 통하여 독해력 측정이 가능합니다.</h4>
-                </Fade>
-            </div>
+            <SectionTitle
+                tag="How"
+                title="시선흐름을 통해 독해력을 측정하고 교육합니다."
+                subText="시선흐름 자체 알고리즘을 통하여 독해력 측정이 가능합니다."
+            />
             <div className="subs-root">
                 <Fade
                     left={viewMobile ? false : true}
