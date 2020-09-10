@@ -13,27 +13,29 @@
                 display: flex;
                 justify-content: space-between;
 
-                & .solution-card {
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    // max-width: 300px;
+                & .react-reveal {
+                    & .solution-card {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        // max-width: 300px;
 
-                    & h4.title {
-                        font-weight: 600;
-                        margin-top: 1rem;
-                        margin-bottom: 1rem;
-                        max-width: 10rem;
+                        & h4.title {
+                            font-weight: 600;
+                            margin-top: 1rem;
+                            margin-bottom: 1rem;
+                            max-width: 10rem;
+                        }
+
+                        & p.text {
+                            color: #465465;
+                            font-size: 0.875rem;
+                            max-width: 17rem;
+                            word-break: keep-all;
+                        }
                     }
 
-                    & p.text {
-                        color: #465465;
-                        font-size: 0.875rem;
-                        max-width: 17rem;
-                        word-break: keep-all;
-                    }
-
-                    & + .solution-card {
+                    & + .react-reveal {
                         margin-left: 48px;
                     }
                 }
@@ -42,6 +44,8 @@
     }
 
     @media all and (max-width: 768px) {
+        padding-top: 48px;
+
         & .wrapper {
             & .subs-root {
                 margin-top: 32px;
@@ -49,25 +53,26 @@
                 & .solution-cards-root {
                     flex-direction: column;
 
-                    & .solution-card {
-                        flex-direction: row;
+                    & .react-reveal {
+                        & .solution-card {
+                            flex-direction: row;
 
-                        & .icon-container {
-                            margin-right: 20px;
+                            & .icon-container {
+                                margin-right: 20px;
+                            }
+
+                            & h4.title {
+                                margin-top: 0;
+                                margin-bottom: 0.5rem;
+                                max-width: initial;
+                            }
+
+                            & p.text {
+                                margin-top: 0;
+                                max-width: initial;
+                            }
                         }
-
-                        & h4.title {
-                            margin-top: 0;
-                            margin-bottom: 0.5rem;
-                            max-width: initial;
-                        }
-
-                        & p.text {
-                            margin-top: 0;
-                            max-width: initial;
-                        }
-
-                        & + .solution-card {
+                        & + .react-reveal {
                             margin-left: initial;
                             margin-top: 32px;
                         }

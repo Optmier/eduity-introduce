@@ -127,6 +127,9 @@
     }
 
     @media all and (max-width: 768px) {
+        padding-top: 48px;
+        padding-bottom: 48px;
+
         & .wrapper {
             & .subs-root {
                 & .step-card {
