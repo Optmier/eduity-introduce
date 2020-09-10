@@ -1,0 +1,79 @@
+#main_section_6 {
+    padding-top: 9vh;
+    padding-bottom: 0;
+
+    & .wrapper {
+        & h1.title {
+        }
+
+        & .subs-root {
+            margin-top: 64px;
+
+            & .solution-cards-root {
+                display: flex;
+                justify-content: space-between;
+
+                & .solution-card {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    // max-width: 300px;
+
+                    & h4.title {
+                        font-weight: 600;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+                        max-width: 10rem;
+                    }
+
+                    & p.text {
+                        color: #465465;
+                        font-size: 0.875rem;
+                        max-width: 17rem;
+                        word-break: keep-all;
+                    }
+
+                    & + .solution-card {
+                        margin-left: 48px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        & .wrapper {
+            & .subs-root {
+                margin-top: 32px;
+
+                & .solution-cards-root {
+                    flex-direction: column;
+
+                    & .solution-card {
+                        flex-direction: row;
+
+                        & .icon-container {
+                            margin-right: 20px;
+                        }
+
+                        & h4.title {
+                            margin-top: 0;
+                            margin-bottom: 0.5rem;
+                            max-width: initial;
+                        }
+
+                        & p.text {
+                            margin-top: 0;
+                            max-width: initial;
+                        }
+
+                        & + .solution-card {
+                            margin-left: initial;
+                            margin-top: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

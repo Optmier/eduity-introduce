@@ -4,6 +4,7 @@ import CountUp from 'react-countup';
 import ImgCompare1 from '../../images/main_sections/main_3-0.png';
 import ImgCompare2 from '../../images/main_sections/main_3-1.png';
 import '../../styles/main_section_3.scss';
+import SectionTitle from '../SectionTitle';
 
 function CompareGraph({ valueLeft, maxLeft, valueRight, maxRight, category, unit }) {
     const percentLeft = (valueLeft / maxLeft / 2) * 100;
@@ -74,22 +75,11 @@ function Section3() {
 
     return (
         <>
-            <div className="title-root">
-                <p className="title-tags">Topic</p>
-                <Fade bottom distance={'3rem'} delay={333} duration={666} fraction={0.7}>
-                    <h1 className="title">
-                        <div className="left-border" />
-                        당신은 올바른 독해를 하고 계십니까?
-                    </h1>
-                    <h1 className="title mobile">
-                        <div className="left-border" />
-                        당신은 올바른 독해를 하고 계십니까?
-                    </h1>
-                    <h4 className="sub-text">
-                        독해를 잘하는 학생과 못하는 학생의 독해력 비교 분석으로 시선흐름 측정의 장점을 확인해보세요.
-                    </h4>
-                </Fade>
-            </div>
+            <SectionTitle
+                tag="Topic"
+                title="당신은 올바른 독해를 하고 계십니까?"
+                subText="독해를 잘하는 학생과 못하는 학생의 독해력 비교 분석으로 시선흐름 측정의 장점을 확인해보세요."
+            />
             <div className="subs-root">
                 <div className="comparable-images-root">
                     <Fade bottom distance={'4rem'} duration={666} fraction={0.5}>

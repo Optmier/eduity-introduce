@@ -6,6 +6,8 @@ import Section2 from '../components/MainSections/Section2';
 import Section3 from '../components/MainSections/Section3';
 import Section4 from '../components/MainSections/Section4';
 import Section5 from '../components/MainSections/Section5';
+import Section6 from '../components/MainSections/Section6';
+import BannerMatrios from '../components/BannerMatrios';
 
 function Main() {
     useEffect(() => {
@@ -31,6 +33,12 @@ function Main() {
             </SectionFrame>
             <SectionFrame id="main_section_5">
                 <Section5 />
+            </SectionFrame>
+            <SectionFrame id="main_section_6">
+                <Section6 />
+            </SectionFrame>
+            <SectionFrame id="main_section_banner_matrios">
+                <BannerMatrios />
             </SectionFrame>
         </>
     );

@@ -2,6 +2,7 @@ import React from 'react';
 import { Fade } from 'react-reveal';
 import ImgDescriptorSymbor from '../../images/descriptor_head_symbol.svg';
 import '../../styles/main_section_4.scss';
+import SectionTitle from '../SectionTitle';
 
 function IntroCard({ color, title, items }) {
     return (
@@ -32,20 +33,11 @@ IntroCard.defaultProps = {
 function Section4() {
     return (
         <>
-            <div className="title-root">
-                <p className="title-tags">Why</p>
-                <Fade bottom distance={'3rem'} delay={333} duration={666} fraction={0.7}>
-                    <h1 className="title">
-                        <div className="left-border" />
-                        에듀이티는 현 영어교육의 2가지 문제점을 해결하고자 합니다.
-                    </h1>
-                    <h1 className="title mobile">
-                        <div className="left-border" />
-                        에듀이티는 영어교육의 2가지 문제점을 해결하고자 합니다.
-                    </h1>
-                    <h4 className="sub-text">현 영어교육은 학습 진단 과정과 교육 방식에 문제가 있습니다.</h4>
-                </Fade>
-            </div>
+            <SectionTitle
+                tag="Why"
+                title="에듀이티는 영어교육의 2가지 문제점을 해결하고자 합니다."
+                subText="현 영어교육은 학습 진단 과정과 교육 방식에 문제가 있습니다."
+            />
             <div className="subs-root">
                 <Fade bottom distance={'3rem'} delay={0} duration={666} fraction={0.9}>
                     <div className="left-top container">

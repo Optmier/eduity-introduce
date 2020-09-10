@@ -1,0 +1,59 @@
+.banner-matrios-root {
+    padding: 16px;
+
+    & .paper {
+        background-color: #f7f9f8;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        padding: 44px 46px;
+
+        & .company-logo-container {
+            & img {
+                max-height: 38px;
+            }
+        }
+
+        & .company-promo-container {
+            display: flex;
+            margin: 8px 0 16px 0;
+
+            & h2.title {
+                font-weight: 500;
+                margin: 0;
+                margin-right: 32px;
+                max-width: 40rem;
+            }
+
+            & p.text {
+                color: #465465;
+                margin: 0;
+                max-width: 16.6rem;
+                word-break: keep-all;
+            }
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        & .paper {
+            padding: 16px;
+
+            & .company-promo-container {
+                flex-direction: column;
+                margin: 0;
+                margin-top: 16px;
+
+                & h2.title {
+                    margin: 0;
+                    max-width: 24rem;
+                }
+
+                & p.text {
+                    margin: 0;
+                    margin-top: 16px;
+                    max-width: initial;
+                }
+            }
+        }
+    }
+}
