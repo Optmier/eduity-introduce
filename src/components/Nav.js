@@ -116,7 +116,7 @@ function Nav({ optStatic, history }) {
                         duration={700}
                     ></AnimScrollTo>
                     <div className="nav-menus">
-                        <NavMenuItem linkTo="/introduce">서비스 소개</NavMenuItem>
+                        <NavMenuItem linkTo="/service">서비스 소개</NavMenuItem>
                         <NavMenuItem linkTo="/customers">고객센터</NavMenuItem>
                         {/* <NavMenuItem linkTo="/bookonline">Pierce 상담신청</NavMenuItem> */}
                     </div>

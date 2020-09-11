@@ -81,7 +81,7 @@ function Hambuger() {
                             <span className="list-text">{nav_menus.book_online[window.lang]}</span>
                         </ListItem>
                     </NavMenuItem> */}
-                    <NavMenuItem linkTo="/introduce">
+                    <NavMenuItem linkTo="/service">
                         <ListItem button>
                             <span className="list-text">{'서비스 소개'}</span>
                         </ListItem>

@@ -1,0 +1,59 @@
+#service_section_1 {
+    background-image: url('/bg_images/frame_2_bg.png');
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+
+    & .wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 100%;
+        color: white;
+        & .left-and-top {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            & .contents {
+                & h1,
+                & h4 {
+                    margin: 1.2rem 0;
+                }
+            }
+        }
+
+        & .right-and-bottom {
+            width: 100%;
+
+            & img {
+                width: 85%;
+            }
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        background-image: url('/bg_images/frame_2_bg_mobile.png');
+        min-height: initial;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        & .wrapper {
+            flex-direction: column;
+
+            & .left-and-top {
+                & button {
+                    margin-top: 16px;
+                }
+            }
+
+            & .right-and-bottom {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                & img {
+                    padding: 24px;
+                    width: calc(95% - 48px);
+                }
+            }
+        }
+    }
+}

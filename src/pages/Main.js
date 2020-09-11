@@ -18,7 +18,7 @@ function Main() {
     return (
         <>
             <Helmet>
-                <title>미국 대학 보딩스쿨 컨설팅 | 국내 국제고 컨설팅 | 어학연수 컨설팅 :: 에듀이티 | Eduity for infinite pioneer</title>
+                <title>에듀이티, 불필요한 시간과 비용을 없애자! | Eduity for infinite pioneer</title>
             </Helmet>
             <SectionFrame id="main_section_1">
                 <Section1 />
