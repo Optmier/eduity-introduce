@@ -1,7 +1,7 @@
 .footer-root {
-    background-color: #222831;
+    background-color: #f7f9f8;
     padding: 24px 24px 24px 1vw;
-    color: white;
+    color: #465465;
     font-weight: 300;
     font-size: 14px;
     letter-spacing: 0.02em;
@@ -21,6 +21,7 @@
 
         & img {
             height: 36px;
+            opacity: 0.54;
         }
     }
 

@@ -111,6 +111,10 @@ body {
                 height: 48px;
             }
 
+            &.no-op {
+                opacity: 1;
+            }
+
             &:hover {
                 opacity: 1;
             }
@@ -188,6 +192,13 @@ body {
         padding-bottom: 0;
     }
 
+    #main_section_banner_free_trial {
+        background-image: url('/bg_images/banner_free_trial_bg.png');
+        margin-top: 64px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     @media all and (max-width: 768px) {
         h1 {
             font-size: 1.75rem;
@@ -245,6 +256,10 @@ body {
         }
 
         #main_section_banner_matrios {
+            margin-top: 32px;
+        }
+
+        #main_section_banner_free_trial {
             margin-top: 32px;
         }
     }

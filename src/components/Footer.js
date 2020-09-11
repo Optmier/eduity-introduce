@@ -1,13 +1,13 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import { Fade } from 'react-reveal';
-import WhiteLogo from '../images/nav_logo_white.png';
+import BlackLogo from '../images/nav_logo_black.png';
 import '../styles/footer.scss';
 
 const FooterLogo = React.memo(function FooterRoot() {
     return (
         <div className="footer-logo">
-            <img src={WhiteLogo} alt="Go to home..." />
+            <img src={BlackLogo} alt="Go to home..." />
         </div>
     );
 });

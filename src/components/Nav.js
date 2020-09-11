@@ -129,6 +129,7 @@ function Nav({ optStatic, history }) {
                         <LanguageSelect />
                     </div> */}
                         <button
+                            type="button"
                             className="normal login"
                             onClick={() => {
                                 history.push('/bookonline');

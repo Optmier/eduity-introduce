@@ -1,0 +1,41 @@
+.banner-free-trial-root {
+    color: #ffffff;
+    padding: 64px 0;
+
+    & .text-promo-container {
+        & h1 {
+            font-size: 2.5rem;
+            line-height: 3.5rem;
+            margin: 0;
+        }
+
+        & h4 {
+            font-weight: 300;
+            margin: 0;
+        }
+    }
+
+    & .button-promo-container {
+        margin-top: 24px;
+    }
+
+    @media all and (max-width: 768px) {
+        padding: 32px 0;
+
+        & .text-promo-container {
+            & h1 {
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+            }
+
+            & h4 {
+                font-weight: 300;
+                margin-top: 8px;
+            }
+        }
+
+        & .button-promo-container {
+            margin-top: 16px;
+        }
+    }
+}

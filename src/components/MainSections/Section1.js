@@ -26,6 +26,7 @@ function Section1({ history }) {
                     <Fade delay={1330} duration={1000}>
                         <div>
                             <button
+                                type="button"
                                 className="normal in-section"
                                 onClick={() => {
                                     history.push('/bookonline');
