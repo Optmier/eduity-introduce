@@ -1,5 +1,4 @@
 import React from 'react';
-import ServiceDevice from '../../images/service_sections/service_1-0.png';
 import '../../styles/service_section_1.scss';
 import { Fade } from 'react-reveal';
 import { withRouter } from 'react-router-dom';
@@ -44,7 +43,7 @@ function Section1({ history }) {
             </div>
             <div className="right-and-bottom">
                 <Fade right distance={'4rem'} duration={666}>
-                    <img src={ServiceDevice} alt="service in devices..." />
+                    <img src="/service_sections/service_1-0.png" alt="service in devices..." />
                 </Fade>
             </div>
         </>

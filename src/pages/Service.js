@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import SectionFrame from '../components/SectionFrame';
 import Section1 from '../components/ServiceSections/Section1';
+import Section2 from '../components/ServiceSections/Section2';
 
 function Service() {
     useEffect(() => {
@@ -15,6 +16,9 @@ function Service() {
             </Helmet>
             <SectionFrame id="service_section_1">
                 <Section1 />
+            </SectionFrame>
+            <SectionFrame id="service_section_2">
+                <Section2 />
             </SectionFrame>
         </>
     );
