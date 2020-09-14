@@ -9,6 +9,7 @@ import ScrollTop from './components/ScrollTop';
 import { firebase } from './database/DBCtrl';
 import { Element } from 'react-scroll';
 import './styles/common.scss';
+import CustomerServices from './pages/CustomerServices';
 
 if (!localStorage.getItem('lang')) {
     localStorage.setItem('lang', 'ko');
@@ -37,6 +38,7 @@ function App() {
                     <Route path="/" component={Main} exact />
                     <Route path="/service" component={Service} />
                     <Route path="/bookonline" component={BookOnline} />
+                    <Route path="/customer-service" component={CustomerServices} />
                 </main>
             </ScrollTop>
             <Footer optStatic={window.location.pathname === '/' ? false : true} />
