@@ -1,0 +1,252 @@
+$pointColorMain: #13e2a1;
+$pointColorDarker: #12d396;
+
+$textPointPrimary: #00140e;
+$textNormalPrimary: #333333;
+$textNormalSecondary: #909090;
+
+$inputBorderNormal: #f0f0f0;
+$inputBackgroundNormal: #f8f8f8;
+
+$btnBrightBorder: #e0e0e0;
+
+$backgroundFooter: #eaeaea;
+$textFooterInfo: #8a8a8a;
+$textFooterMenu: #3a3a3a;
+
+.customer-service-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    background-image: linear-gradient(#6f6d6dbf, #000000c9), url('../images/cs_img.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    //height: 430px;
+    & ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        & a {
+            background: transparent;
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+    & .customer-container {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        max-width: 900px;
+        padding: 60px 0;
+        & .customer-header {
+            width: 100%;
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        & .customer-header-mobile {
+            display: none;
+            width: 100%;
+            font-size: 1.5em;
+            color: white;
+            padding: 15px 0;
+            text-align: left;
+        }
+
+        & .customer-header-menu {
+            font-size: 0.8em;
+            width: 100%;
+
+            & ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & a {
+                    width: 48%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                & .inactive {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 4px;
+                    border: 1.4px solid white;
+                    color: white;
+                }
+                & .inactive:hover {
+                    background-color: $pointColorMain;
+                    border: 1.4px solid $pointColorMain;
+                    //color: $textNormalPrimary;
+                }
+                & .active > .inactive {
+                    background-color: $pointColorMain;
+                    border: 1.4px solid $pointColorMain;
+                    //color: $pointColorMain;
+                }
+            }
+        }
+
+        & .customer-header-email {
+            width: 100%;
+
+            display: flex;
+            margin-bottom: 40px;
+            align-items: flex-start;
+            color: #c3c2c2;
+            font-size: 0.7em;
+            & div + div {
+                margin-left: 2em;
+            }
+        }
+    }
+    & .customer-header-search {
+        z-index: 999;
+        width: 90%;
+        max-width: 900px;
+        position: absolute;
+        top: calc(100% - 33px);
+        & .search-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100%-20px);
+            padding: 0 10px;
+            background-color: white;
+            box-shadow: 5px 7px 33px 0 rgba(0, 0, 0, 0.2);
+            font-size: 0.8em;
+            & input {
+                border: none;
+                width: 85%;
+                height: 65px;
+                background-color: white;
+            }
+            & input:focus {
+                outline: none;
+            }
+            & button {
+                color: white;
+                border: none;
+                width: 15%;
+                height: 50px;
+                background-color: $pointColorMain;
+            }
+        }
+    }
+    & .customer-subRoute-container {
+        display: flex;
+        flex-direction: column;
+        margin: 130px 10px;
+        max-width: 900px;
+        width: 90%;
+        height: 100%;
+        & .faq-nav {
+            width: 100%;
+            font-size: 0.8em;
+            & ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                & li {
+                    color: #e2e2e2;
+                    padding: 15px 0;
+                    cursor: pointer;
+                    text-align: center;
+                    border-bottom: 2px solid #e2e2e2;
+                    width: 160px;
+                }
+                & .faq-able {
+                    border-bottom: 2px solid $pointColorMain;
+                    color: black;
+                }
+            }
+        }
+
+        & .faq-accordian {
+            margin: 30px 0;
+        }
+    }
+}
+/** 반응형 미디어 쿼리 **/
+@media all and (min-width: 1066px) {
+    .customer-service-root {
+        font-size: 21px;
+    }
+}
+@media all and (max-width: 1065px) and (min-width: 960px) {
+    .customer-service-root {
+        font-size: 19px;
+    }
+}
+@media all and (max-width: 959px) and (min-width: 838px) {
+    .customer-service-root {
+        font-size: 18px;
+    }
+}
+@media all and (max-width: 837px) and (min-width: 769px) {
+    .customer-service-root {
+        font-size: 17px;
+    }
+}
+@media all and (max-width: 768px) and (min-width: 585px) {
+    .customer-service-root {
+        font-size: 16px;
+        & .customer-container {
+            width: 90%;
+        }
+        & .customer-header-search {
+            width: 90%;
+        }
+    }
+}
+@media all and (max-width: 584px) and (min-width: 0px) {
+    .customer-service-root {
+        font-size: 16px;
+
+        & .customer-container {
+            width: 90%;
+            & .customer-header {
+                display: none;
+            }
+            & .customer-header-mobile {
+                display: block;
+            }
+
+            & .customer-header-email {
+                flex-direction: column;
+                & div + div {
+                    margin-left: 0em;
+                    margin-top: 0.3em;
+                }
+            }
+        }
+
+        & .customer-header-search {
+            width: 90%;
+            & .search-box {
+                & button {
+                    width: 25%;
+                }
+            }
+        }
+        & .customer-subRoute-container {
+            & .faq-nav {
+                & ul {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
