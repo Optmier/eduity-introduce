@@ -10,28 +10,54 @@ const StepList = ({ subText }) => {
     );
 };
 
-function StepText({ tag, title, subTitle, subText1, subText2 }) {
+function StepText({ tag, title, subTitle, subText1, subText2, mobile }) {
     return (
-        <div className="title-root" style={{ marginLeft: '1rem' }}>
-            <p className="title-tags">{tag}</p>
-            <h1 className="title">
-                <div className="left-border" />
-                {title}
-            </h1>
-
-            <div className="title-step-contents">
-                <h3>{subTitle}</h3>
-                <StepList subText={subText1} />
-                <StepList subText={subText2} />
-            </div>
+        <div className="title-root step-title-root">
+            {mobile ? (
+                <>
+                    {title ? (
+                        <>
+                            <p className="title-tags">{tag}</p>
+                            <h1 className="title mobile">
+                                <div className="left-border" />
+                                {title}
+                            </h1>
+                        </>
+                    ) : (
+                        <>
+                            <div className="title-step-contents">
+                                <h3>{subTitle}</h3>
+                                <StepList subText={subText1} />
+                                <StepList subText={subText2} />
+                            </div>
+                        </>
+                    )}
+                </>
+            ) : (
+                <>
+                    <p className="title-tags">{tag}</p>
+                    <h1 className="title">
+                        <div className="left-border" />
+                        {title}
+                    </h1>
+                    <div className="title-step-contents">
+                        <h3>{subTitle}</h3>
+                        <StepList subText={subText1} />
+                        <StepList subText={subText2} />
+                    </div>
+                </>
+            )}
         </div>
     );
 }
 
 StepText.defaultProps = {
-    title: 'Title Normal',
-    subText1: 'Sub Text',
-    subText2: 'Sub Text',
+    tag: '',
+    title: '',
+    subTitle: '',
+    subText1: '',
+    subText2: '',
+    mobile: false,
 };
 
 export default React.memo(StepText);

@@ -30,7 +30,7 @@ function Section1({ history }) {
                         <div>
                             <button
                                 type="button"
-                                className="normal in-section"
+                                className="normal in-section no-op"
                                 onClick={() => {
                                     history.push('/bookonline');
                                 }}
