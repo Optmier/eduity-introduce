@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../styles/service_section_3.scss';
-import { Fade } from 'react-reveal';
+import '../../styles/service_section_4.scss';
 import SectionTitle from '../SectionTitle';
+import FAQAccordion from './FAQAccordion';
 
 /**
  * h1: 36px / 44px
@@ -15,7 +15,10 @@ function Section3() {
     return (
         <>
             <SectionTitle tag="FAQ" title="자주 묻는 질문" subText="자주 문의하시는 질문과 답변을 모았습니다." />
-            <Fade bottom distance={'3rem'} delay={0} duration={666} fraction={0.9}></Fade>
+
+            <div className="subs-root">
+                <FAQAccordion />
+            </div>
         </>
     );
 }

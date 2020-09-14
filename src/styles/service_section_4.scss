@@ -1,22 +1,21 @@
-#service_section_3 {
+#service_section_4 {
     padding-top: 9vh;
     padding-bottom: 9vh;
 
-    & .wrapper {
-        & .subs-root {
+    & .subs-root {
+        margin-top: 2rem;
+
+        & .faq-title {
+            width: 100%;
             display: flex;
-            flex-direction: column;
             align-items: center;
+            justify-content: space-between;
+        }
+        & svg {
         }
     }
-
     @media all and (max-width: 768px) {
         padding-top: 48px;
         padding-bottom: 48px;
-
-        & .wrapper {
-            & .subs-root {
-            }
-        }
     }
 }

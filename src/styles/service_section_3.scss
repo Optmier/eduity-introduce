@@ -3,14 +3,6 @@
     padding-top: 9vh;
     padding-bottom: 9vh;
 
-    & .wrapper {
-        & .subs-root {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
     @media all and (max-width: 768px) {
         padding-top: 48px;
         padding-bottom: 48px;
