@@ -10,12 +10,13 @@ import { Element } from 'react-scroll';
 function Accordion({ cusomerService, questionNum }) {
     function AccordionItem({ id, paragraph, title, date }) {
         const [opened, setOpened] = useState(false);
+        console.log(id, questionNum);
 
-        // useEffect(() => {
-        //     if (opened) {
-        //         $('#hidden_' + id).focus();
-        //     }
-        // }, [opened]);
+        if (questionNum === '1') {
+            id += 7;
+        } else if (questionNum === '2') {
+            id += 10;
+        }
 
         return (
             <>
@@ -50,6 +51,7 @@ function Accordion({ cusomerService, questionNum }) {
                       <li key={idx} {...{ className: 'accordion-list__item' }} style={{ position: 'relative' }}>
                           <AccordionItem
                               id={idx}
+                              questionNum={questionNum}
                               cusomerService={cusomerService}
                               title={FAQData[questionNum][k].title}
                               paragraph={FAQData[questionNum][k].paragraph}
@@ -60,6 +62,7 @@ function Accordion({ cusomerService, questionNum }) {
                       <li key={idx} {...{ className: 'accordion-list__item' }} style={{ position: 'relative' }}>
                           <AccordionItem
                               id={idx}
+                              questionNum={questionNum}
                               cusomerService={cusomerService}
                               title={NoticeData[questionNum][k].title}
                               paragraph={NoticeData[questionNum][k].paragraph}

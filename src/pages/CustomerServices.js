@@ -34,11 +34,17 @@ function CustomerServices({ history }) {
     const handleSearchFAQ = () => {
         Object.keys(FAQData).map((i) =>
             FAQData[i].map((j, idx) => {
+                let hidden_num = idx;
                 if (j.title === searchVal) {
+                    if (i === '1') {
+                        hidden_num += 7;
+                    } else if (i === '2') {
+                        hidden_num += 10;
+                    }
                     setQuestionNum(i);
                     setTimeout(() => {
                         $('.accordion-item-scroll')[0].click();
-                        $('#hidden_' + idx).click();
+                        $('#hidden_' + hidden_num).click();
                     }, 100);
                 }
             }),
