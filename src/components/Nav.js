@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/nav.scss';
 import ColorLogo from '../images/nav_logo_color.svg';
 // import { Select, MenuItem, InputBase } from '@material-ui/core';

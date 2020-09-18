@@ -10,11 +10,13 @@ import { FiMail } from 'react-icons/fi';
 import FAQData from '../datas/FAQData.json';
 import NoticeData from '../datas/NoticeData.json';
 import * as $ from 'jquery';
+import { Link as AnimScrollTo } from 'react-scroll';
 
 function CustomerServices({ history }) {
     let path = history.location.pathname;
     const [questionNum, setQuestionNum] = useState('0');
     const [searchVal, setSearchVal] = useState('');
+    const [aniScroll, setAniScroll] = useState('hidden_0');
 
     let dataArr = [];
 
@@ -35,8 +37,9 @@ function CustomerServices({ history }) {
                 if (j.title === searchVal) {
                     setQuestionNum(i);
                     setTimeout(() => {
+                        $('.accordion-item-scroll')[0].click();
                         $('#hidden_' + idx).click();
-                    }, 50);
+                    }, 100);
                 }
             }),
         );
@@ -46,14 +49,17 @@ function CustomerServices({ history }) {
             NoticeData[i].map((j, idx) => {
                 if (j.title === searchVal) {
                     setTimeout(() => {
+                        $('.accordion-item-scroll')[0].click();
                         $('#hidden_' + idx).click();
-                    }, 50);
+                    }, 100);
                 }
             }),
         );
     };
     return (
         <div style={{ minHeight: 'calc((100vh - 216px))' }}>
+            <AnimScrollTo className="accordion-item-scroll" to={aniScroll} spy={true} smooth={true} duration={700}></AnimScrollTo>
+
             <div className="customer-service-root">
                 <div className="customer-container">
                     <div className="customer-header">
@@ -81,19 +87,30 @@ function CustomerServices({ history }) {
                     </div>
                 </div>
                 <div className="customer-header-search">
-                    <Autocomplete
-                        id="custom-input"
-                        options={dataArr}
-                        onChange={(event, newValue) => {
-                            setSearchVal(newValue);
-                        }}
-                        renderInput={(params) => (
-                            <div className="search-box" ref={params.InputProps.ref}>
-                                <input type="text" {...params.inputProps} />
-                                <button onClick={path === '/customer-service/notice' ? handleSearchNotice : handleSearchFAQ}>검색</button>
-                            </div>
-                        )}
-                    />
+                    <div className="search-box">
+                        <div style={{ width: '80%' }}>
+                            <Autocomplete
+                                id="custom-input"
+                                options={dataArr}
+                                onChange={(event, newValue) => {
+                                    setSearchVal(newValue);
+                                    setAniScroll('hidden_' + event.target.dataset.optionIndex);
+                                    console.log(event.target.dataset.optionIndex, newValue);
+                                }}
+                                renderInput={(params) => (
+                                    <div ref={params.InputProps.ref}>
+                                        <input type="text" {...params.inputProps} />
+                                    </div>
+                                )}
+                            />
+                        </div>
+                        <div
+                            className="search-box-button"
+                            onClick={path === '/customer-service/notice' ? handleSearchNotice : handleSearchFAQ}
+                        >
+                            검색
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="customer-service-root" style={{ background: 'none', justifyContent: 'flex-start' }}>

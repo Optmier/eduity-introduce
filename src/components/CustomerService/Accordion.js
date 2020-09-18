@@ -4,20 +4,22 @@ import FAQData from '../../datas/FAQData.json';
 import NoticeData from '../../datas/NoticeData.json';
 import ReactHtmlParser from 'react-html-parser';
 import classNames from 'classnames';
-import '../../styles/accordion.scss';
+import '../../styles/cs_accordion.scss';
+import { Element } from 'react-scroll';
 
 function Accordion({ cusomerService, questionNum }) {
     function AccordionItem({ id, paragraph, title, date }) {
         const [opened, setOpened] = useState(false);
 
-        useEffect(() => {
-            if (opened) {
-                $('#hidden_' + id).focus();
-            }
-        }, [opened]);
+        // useEffect(() => {
+        //     if (opened) {
+        //         $('#hidden_' + id).focus();
+        //     }
+        // }, [opened]);
 
         return (
             <>
+                <Element name={'hidden_' + id} style={{ position: 'absolute', top: -80 }} />
                 <div
                     className={classNames('accordion-item', { 'accordion-item--opened': opened })}
                     onClick={() => {
@@ -45,7 +47,7 @@ function Accordion({ cusomerService, questionNum }) {
         <ul className="accordion-list">
             {cusomerService === 'faq'
                 ? Object.keys(FAQData[questionNum]).map((k, idx) => (
-                      <li key={idx} {...{ className: 'accordion-list__item' }}>
+                      <li key={idx} {...{ className: 'accordion-list__item' }} style={{ position: 'relative' }}>
                           <AccordionItem
                               id={idx}
                               cusomerService={cusomerService}
@@ -55,7 +57,7 @@ function Accordion({ cusomerService, questionNum }) {
                       </li>
                   ))
                 : Object.keys(NoticeData[questionNum]).map((k, idx) => (
-                      <li key={idx} {...{ className: 'accordion-list__item' }}>
+                      <li key={idx} {...{ className: 'accordion-list__item' }} style={{ position: 'relative' }}>
                           <AccordionItem
                               id={idx}
                               cusomerService={cusomerService}
