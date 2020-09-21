@@ -32,13 +32,13 @@ function App() {
     return (
         <>
             <Element name="main_top_start" />
-            <Nav optStatic={window.location.pathname === '/' ? false : true} />
+            {/* <Nav optStatic={window.location.pathname === '/' ? false : true} /> */}
             <ScrollTop>
                 <main>
-                    <Route path="/" component={Main} exact />
-                    <Route path="/service" component={Service} />
-                    <Route path="/bookonline" component={BookOnline} />
-                    <Route path="/customer-service" component={CustomerServices} />
+                    {/* <Route path="/" component={Main} exact /> */}
+                    {/* <Route path="/service" component={Service} /> */}
+                    <Route path="/" component={BookOnline} />
+                    {/* <Route path="/customer-service" component={CustomerServices} /> */}
                 </main>
             </ScrollTop>
             <Footer optStatic={window.location.pathname === '/' ? false : true} />
