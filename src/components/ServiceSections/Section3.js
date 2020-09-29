@@ -19,9 +19,24 @@ function Section3() {
                 subText="동영상을 통해 시선흐름 측정 방법을 확인할 수 있습니다."
             />
             <Fade bottom distance={'3rem'} delay={0} duration={666} fraction={0.9}>
-                <video style={{ width: '100%' }} controls>
+                {/* <video style={{ width: '100%' }} controls>
                     <source src="/videos/eyetracking_demo.mp4" type="video/mp4" />
-                </video>
+                </video> */}
+                <div
+                    style={{
+                        width: '100%',
+                        height: '400px',
+                        background: '#d6d5d5',
+                        color: '#737171',
+                        fontSize: '2rem',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '11px',
+                    }}
+                >
+                    추후, 준비 예정입니다 :(
+                </div>
             </Fade>
         </>
     );
