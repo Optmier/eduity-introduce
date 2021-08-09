@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# (구)에듀이티 소개 홈페이지
+> [@Sain-Tech](https://github.com/Sain-Tech) 의 [eduity-introduce](https://github.com/Sain-Tech/eduity-introduce) 에서 추가됨.
+
 ## Available Scripts
 
 In the project directory, you can run:
